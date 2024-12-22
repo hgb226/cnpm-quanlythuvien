@@ -1,4 +1,5 @@
 Create an App.config file and change its content to your need
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
     <startup> 
@@ -9,3 +10,4 @@ Create an App.config file and change its content to your need
   </connectionStrings>
 
 </configuration>
+```
