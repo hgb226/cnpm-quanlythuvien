@@ -8,19 +8,24 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Bao\\.nuget\\packages\\": {}
+    "C:\\Users\\KIEN\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bao\\Documents\\Learn\\code\\qltv\\qltv.csproj",
+      "projectUniqueName": "C:\\Users\\KIEN\\Desktop\\KIEN\\Bai_tap\\Nam_4\\Nhap_mon_CNPM\\Project\\cnpm-quanlythuvien\\qltv.csproj",
       "projectName": "qltv",
-      "projectPath": "C:\\Users\\Bao\\Documents\\Learn\\code\\qltv\\qltv.csproj",
-      "packagesPath": "C:\\Users\\Bao\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bao\\Documents\\Learn\\code\\qltv\\obj\\",
+      "projectPath": "C:\\Users\\KIEN\\Desktop\\KIEN\\Bai_tap\\Nam_4\\Nhap_mon_CNPM\\Project\\cnpm-quanlythuvien\\qltv.csproj",
+      "packagesPath": "C:\\Users\\KIEN\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\KIEN\\Desktop\\KIEN\\Bai_tap\\Nam_4\\Nhap_mon_CNPM\\Project\\cnpm-quanlythuvien\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Bao\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\KIEN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -28,6 +33,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
