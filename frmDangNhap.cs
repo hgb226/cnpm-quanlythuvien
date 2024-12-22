@@ -24,19 +24,22 @@ namespace qltv
 
         private void DongForm(object sender, FormClosedEventArgs e)
         {
-            this.Close();
+            this.Hide();
+            txtTenDangNhap.Clear();
+            txtMatKhau.Clear();
+            this.Show();
         }
 
         // Phương thức kiểm tra Đk tài khoản
-        private int kq=0;
+        private int kq = 0;
         private void kTraDK()
         {
             if (txtTenDangNhap.Text.Length > 0 && txtMatKhau.Text.Length > 0)
-                kq=1;
+                kq = 1;
         }
 
         // Phương thức kiểm tra TKTT
-        private int x1=0,x2=0;
+        private int x1 = 0, x2 = 0;
         private void xacThucTKTT()
         {
             myConnection = new SqlConnection(chuoiKetNoi);
@@ -66,7 +69,7 @@ namespace qltv
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             kTraDK();
-            if(kq==1)
+            if (kq == 1)
             {
                 if (chkQuanTri.Checked)
                 {
@@ -101,13 +104,11 @@ namespace qltv
                         xacThucTKDG();
                         if (x2 == 1)
                         {
-                            MessageBox.Show("ĐG Đăng Nhập thành công.", "Thông Báo");
-                            //frmGiaoDienChinh GiaoDienChinh = new frmGiaoDienChinh();
-                            //GiaoDienChinh.FormClosed += new FormClosedEventHandler(DongForm);
-                            //this.Hide();
-                            //GiaoDienChinh.Show();
-
-                            frmDocGia DG = new frmDocGia(txtTenDangNhap.Text);
+                            MessageBox.Show("Đăng Nhập thành công.", "Thông Báo");
+                            //frmDocGia DG = new frmDocGia(txtTenDangNhap.Text);
+                            frmDocGia DG = new frmDocGia();
+                            DG.FormClosed += new FormClosedEventHandler(DongForm);
+                            this.Hide();
                             DG.Show();
                         }
                         else
@@ -123,7 +124,7 @@ namespace qltv
                         MessageBox.Show(ex.Message);
                     }
                 }
-                
+
             }
             else
                 MessageBox.Show("Vui lòng nhập Tài Khoản và Mật Khẩu.", "Thông Báo");
@@ -133,11 +134,6 @@ namespace qltv
         {
             frmDangKy DK = new frmDangKy();
             DK.Show();
-        }
-
-        private void picLockDangNhap_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void frmDangNhap_Load(object sender, EventArgs e)
