@@ -1,10 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Bao\\Documents\\Learn\\code\\qltv\\",
+  "WorkspaceRootPath": "D:\\qltv\\cnpm-quanlythuvien\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CF2DDE6B-348E-49A0-BA8A-83E235818662}|qltv.csproj|c:\\users\\bao\\documents\\learn\\code\\qltv\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CF2DDE6B-348E-49A0-BA8A-83E235818662}|qltv.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{CF2DDE6B-348E-49A0-BA8A-83E235818662}|qltv.csproj|d:\\qltv\\cnpm-quanlythuvien\\frmqlsach.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF2DDE6B-348E-49A0-BA8A-83E235818662}|qltv.csproj|solutionrelative:frmqlsach.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF2DDE6B-348E-49A0-BA8A-83E235818662}|qltv.csproj|d:\\qltv\\cnpm-quanlythuvien\\frmqlsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CF2DDE6B-348E-49A0-BA8A-83E235818662}|qltv.csproj|solutionrelative:frmqlsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF2DDE6B-348E-49A0-BA8A-83E235818662}|qltv.csproj|d:\\qltv\\cnpm-quanlythuvien\\frmqlsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF2DDE6B-348E-49A0-BA8A-83E235818662}|qltv.csproj|solutionrelative:frmqlsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,23 +22,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmQLSach.Designer.cs",
+              "DocumentMoniker": "D:\\qltv\\cnpm-quanlythuvien\\frmQLSach.Designer.cs",
+              "RelativeDocumentMoniker": "frmQLSach.Designer.cs",
+              "ToolTip": "D:\\qltv\\cnpm-quanlythuvien\\frmQLSach.Designer.cs",
+              "RelativeToolTip": "frmQLSach.Designer.cs",
+              "ViewState": "AQIAAMsCAAAAAAAAAAAAAJsAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T04:50:25.955Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Bao\\Documents\\Learn\\code\\qltv\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Bao\\Documents\\Learn\\code\\qltv\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "frmQLSach.cs [Design]",
+              "DocumentMoniker": "D:\\qltv\\cnpm-quanlythuvien\\frmQLSach.cs",
+              "RelativeDocumentMoniker": "frmQLSach.cs",
+              "ToolTip": "D:\\qltv\\cnpm-quanlythuvien\\frmQLSach.cs [Design]",
+              "RelativeToolTip": "frmQLSach.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T03:31:00.31Z",
+              "WhenOpened": "2024-12-22T07:00:27.567Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmQLSach.cs",
+              "DocumentMoniker": "D:\\qltv\\cnpm-quanlythuvien\\frmQLSach.cs",
+              "RelativeDocumentMoniker": "frmQLSach.cs",
+              "ToolTip": "D:\\qltv\\cnpm-quanlythuvien\\frmQLSach.cs",
+              "RelativeToolTip": "frmQLSach.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T06:58:04.146Z",
+              "EditorCaption": ""
             }
           ]
         }
