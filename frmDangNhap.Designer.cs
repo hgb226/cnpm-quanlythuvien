@@ -137,7 +137,7 @@
             AcceptButton = btnDangNhap;
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.PowderBlue;
+            BackColor = SystemColors.Control;
             CancelButton = btnThoat;
             ClientSize = new Size(390, 204);
             Controls.Add(chkDocGia);
