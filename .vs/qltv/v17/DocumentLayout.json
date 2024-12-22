@@ -1,9 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Bao\\Documents\\Learn\\code\\qltv\\",
+  "WorkspaceRootPath": "C:\\Users\\KIEN\\Desktop\\KIEN\\Bai_tap\\Nam_4\\Nhap_mon_CNPM\\Project\\cnpm-quanlythuvien\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CF2DDE6B-348E-49A0-BA8A-83E235818662}|qltv.csproj|c:\\users\\bao\\documents\\learn\\code\\qltv\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{CF2DDE6B-348E-49A0-BA8A-83E235818662}|qltv.csproj|c:\\users\\kien\\desktop\\kien\\bai_tap\\nam_4\\nhap_mon_cnpm\\project\\cnpm-quanlythuvien\\frmdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF2DDE6B-348E-49A0-BA8A-83E235818662}|qltv.csproj|solutionrelative:frmdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF2DDE6B-348E-49A0-BA8A-83E235818662}|qltv.csproj|c:\\users\\kien\\desktop\\kien\\bai_tap\\nam_4\\nhap_mon_cnpm\\project\\cnpm-quanlythuvien\\frmdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CF2DDE6B-348E-49A0-BA8A-83E235818662}|qltv.csproj|solutionrelative:frmdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF2DDE6B-348E-49A0-BA8A-83E235818662}|qltv.csproj|c:\\users\\kien\\desktop\\kien\\bai_tap\\nam_4\\nhap_mon_cnpm\\project\\cnpm-quanlythuvien\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF2DDE6B-348E-49A0-BA8A-83E235818662}|qltv.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF2DDE6B-348E-49A0-BA8A-83E235818662}|qltv.csproj|c:\\users\\kien\\desktop\\kien\\bai_tap\\nam_4\\nhap_mon_cnpm\\project\\cnpm-quanlythuvien\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{CF2DDE6B-348E-49A0-BA8A-83E235818662}|qltv.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -17,16 +29,50 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmDangNhap.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\KIEN\\Desktop\\KIEN\\Bai_tap\\Nam_4\\Nhap_mon_CNPM\\Project\\cnpm-quanlythuvien\\frmDangNhap.cs",
+              "RelativeDocumentMoniker": "frmDangNhap.cs",
+              "ToolTip": "C:\\Users\\KIEN\\Desktop\\KIEN\\Bai_tap\\Nam_4\\Nhap_mon_CNPM\\Project\\cnpm-quanlythuvien\\frmDangNhap.cs [Design]",
+              "RelativeToolTip": "frmDangNhap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T05:03:04.746Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "frmDangNhap.cs",
+              "DocumentMoniker": "C:\\Users\\KIEN\\Desktop\\KIEN\\Bai_tap\\Nam_4\\Nhap_mon_CNPM\\Project\\cnpm-quanlythuvien\\frmDangNhap.cs",
+              "RelativeDocumentMoniker": "frmDangNhap.cs",
+              "ToolTip": "C:\\Users\\KIEN\\Desktop\\KIEN\\Bai_tap\\Nam_4\\Nhap_mon_CNPM\\Project\\cnpm-quanlythuvien\\frmDangNhap.cs",
+              "RelativeToolTip": "frmDangNhap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T04:28:06.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\KIEN\\Desktop\\KIEN\\Bai_tap\\Nam_4\\Nhap_mon_CNPM\\Project\\cnpm-quanlythuvien\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\KIEN\\Desktop\\KIEN\\Bai_tap\\Nam_4\\Nhap_mon_CNPM\\Project\\cnpm-quanlythuvien\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T04:23:59.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Bao\\Documents\\Learn\\code\\qltv\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\KIEN\\Desktop\\KIEN\\Bai_tap\\Nam_4\\Nhap_mon_CNPM\\Project\\cnpm-quanlythuvien\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Bao\\Documents\\Learn\\code\\qltv\\Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\KIEN\\Desktop\\KIEN\\Bai_tap\\Nam_4\\Nhap_mon_CNPM\\Project\\cnpm-quanlythuvien\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-22T03:31:00.31Z",
