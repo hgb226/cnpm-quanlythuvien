@@ -400,7 +400,7 @@ FodyWeavers.xsd
 *.sln.iml
 
 ### VisualStudio ###
-
+App.config
 # User-specific files
 
 # User-specific files (MonoDevelop/Xamarin Studio)
