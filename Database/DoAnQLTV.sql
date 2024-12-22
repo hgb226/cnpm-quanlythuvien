@@ -139,9 +139,6 @@ insert into tblHSPhieuMuon values ('MP004','DG003','MS002','02/12/2024','22/12/2
 insert into tblHSPhieuMuon values ('MP005','DG004','MS007','03/12/2024','21/12/2024','1',N'Mới','...')
 insert into tblHSPhieuMuon values ('MP006','DG004','MS003','03/12/2024','21/12/2024','1',N'Mới','...')
 insert into tblHSPhieuMuon values ('MP007','DG004','MS004','04/12/2024','22/12/2024','1',N'Mới','...')
-insert into tblHSPhieuMuon values ('MP008','DG007','MS009','04/12/2024','21/12/2024','1',N'Mới','...')
-insert into tblHSPhieuMuon values ('MP009','DG008','MS010','05/12/2024','24/12/2024','1',N'Mới','...')
-insert into tblHSPhieuMuon values ('MP010','DG006','MS006','05/12/2024','12/12/2024','1',N'Mới','...')
 go
 
 -- Chèn dữ liệu bảng tblThuThu
