@@ -333,9 +333,9 @@
             label4.AutoSize = true;
             label4.Location = new Point(36, 148);
             label4.Name = "label4";
-            label4.Size = new Size(76, 19);
+            label4.Size = new Size(68, 19);
             label4.TabIndex = 0;
-            label4.Text = "Ngày XB:";
+            label4.Text = "Nhà XB:";
             // 
             // label3
             // 

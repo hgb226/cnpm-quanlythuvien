@@ -177,12 +177,12 @@ namespace qltv
             {
                 string query = "set dateformat dmy; insert into tblSach values ('" + txtMaSach.Text + "','" + dtmNgNhapSach.Text + "', N'" + txtTenSach.Text + "',N'" + txtTheLoai.Text + "',N'" + txtTacGia.Text + "',N'" + txtNXB.Text + "','" + txtNamXB.Text + "','" + txtSLNhap.Text + "','" + txtTriGia.Text + "',N'" + cboTinhTrang.Text + "',N'" + txtGhiChu.Text + "')";
                 ketnoi(query);
-                myCommand.ExecuteNonQuery();
                 MessageBox.Show("Thêm thành công.", "Thông Báo");
                 myConnection.Close();
             }
             catch
             {
+                MessageBox.Show("Thêm không thành công.", "Thông Báo");
             }
         }
 

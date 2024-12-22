@@ -22,6 +22,9 @@ namespace qltv
             tKDG = tkDG;
         }
 
+        public frmDocGia()
+        {
+        }
 
         string strKetNoi = ConfigurationManager.ConnectionStrings["strConn"].ConnectionString;
         private SqlConnection myConnection;
