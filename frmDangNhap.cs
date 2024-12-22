@@ -130,10 +130,18 @@ namespace qltv
                 MessageBox.Show("Vui lòng nhập Tài Khoản và Mật Khẩu.", "Thông Báo");
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
+        private void btnDangKy_Click(object sender, EventArgs e)
         {
-            frmDangKy DK = new frmDangKy();
-            DK.Show();
+            if (chkQuanTri.Checked == true)
+            {
+                frmDangKyTT DKTT = new frmDangKyTT();
+                DKTT.Show();
+            }
+            else if (chkDocGia.Checked == true)
+            {
+                frmDangKy DK = new frmDangKy();
+                DK.Show();
+            }
         }
 
         private void frmDangNhap_Load(object sender, EventArgs e)
