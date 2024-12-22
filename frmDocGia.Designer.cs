@@ -168,7 +168,7 @@
             this.dataGridViewDSSach0.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewDSSach0.Size = new System.Drawing.Size(707, 176);
             this.dataGridViewDSSach0.TabIndex = 6;
-            //this.dataGridViewDSSach0.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDSSach0_CellContentClick);
+            this.dataGridViewDSSach0.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDSSach0_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -271,14 +271,14 @@
             this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
             this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
             this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi Mật Khẩu";
-            //this.đổiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.đổiMậtKhẩuToolStripMenuItem_Click);
+            this.đổiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.đổiMậtKhẩuToolStripMenuItem_Click);
             // 
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
             this.thoátToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.thoátToolStripMenuItem.Text = "Thoát";
-            //this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
+            this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
             // frmDocGia
             // 
@@ -294,7 +294,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmDocGia";
             this.Text = "frmDocGia";
-            //this.Load += new System.EventHandler(this.frmDocGia_Load);
+            this.Load += new System.EventHandler(this.frmDocGia_Load);
             this.groupBox3.ResumeLayout(false);
             this.grpTimKiem.ResumeLayout(false);
             this.grpTimKiem.PerformLayout();
