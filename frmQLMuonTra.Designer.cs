@@ -196,6 +196,7 @@
             btnLoadDanhSach0.Text = "Load Danh Sách";
             btnLoadDanhSach0.TextAlign = ContentAlignment.MiddleRight;
             btnLoadDanhSach0.UseVisualStyleBackColor = true;
+            btnLoadDanhSach0.Click += btnLoadDanhSach0_Click;
             // 
             // btnNhap
             // 
@@ -687,6 +688,7 @@
             btnLoadDS1.Text = "Load Danh Sách";
             btnLoadDS1.TextAlign = ContentAlignment.MiddleRight;
             btnLoadDS1.UseVisualStyleBackColor = true;
+            btnLoadDS1.Click += btnLoadDS1_Click_1;
             // 
             // groupBox9
             // 
@@ -1057,6 +1059,7 @@
             Name = "frmQLMuonTra";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Quản lý Mượn - Trả";
+            Load += frmQLMuonTra_Load_1;
             tabQLMuonTraSach.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             groupBox8.ResumeLayout(false);
