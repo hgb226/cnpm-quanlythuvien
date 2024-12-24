@@ -111,15 +111,6 @@ namespace qltv
                 errDC.Clear();
             }
 
-            if (txtTenTK.Text == "")
-            {
-                errTenTK.SetError(txtTenTK, "Vui lòng nhập Tên TK");
-            }
-            else
-            {
-                errTenTK.Clear();
-            }
-
             if (txtMK.Text == "")
             {
                 errMK.SetError(txtMK, "Vui lòng nhập MK");
@@ -131,7 +122,7 @@ namespace qltv
 
             if (cboGioiTinh.Text == "")
             {
-                errGT.SetError(cboGioiTinh, "Vui lòng nhập GT");
+                errGT.SetError(cboGioiTinh, "Vui lòng chọn Giới Tính");
             }
             else
             {
