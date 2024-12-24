@@ -182,6 +182,7 @@
             // 
             // cboGioiTinh
             // 
+            cboGioiTinh.DropDownStyle = ComboBoxStyle.DropDownList;
             cboGioiTinh.FormattingEnabled = true;
             cboGioiTinh.Items.AddRange(new object[] { "Nam", "Nữ" });
             cboGioiTinh.Location = new Point(478, 23);
@@ -226,18 +227,18 @@
             label4.AutoSize = true;
             label4.Location = new Point(371, 26);
             label4.Name = "label4";
-            label4.Size = new Size(83, 19);
+            label4.Size = new Size(79, 19);
             label4.TabIndex = 18;
-            label4.Text = "Giới Tính :";
+            label4.Text = "Giới Tính:";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Location = new Point(35, 85);
             label3.Name = "label3";
-            label3.Size = new Size(87, 19);
+            label3.Size = new Size(83, 19);
             label3.TabIndex = 17;
-            label3.Text = "Ngày Sinh :";
+            label3.Text = "Ngày Sinh:";
             // 
             // txtTenTT
             // 
@@ -331,6 +332,7 @@
             dataGridViewDSTT.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewDSTT.Size = new Size(761, 172);
             dataGridViewDSTT.TabIndex = 40;
+            dataGridViewDSTT.Visible = false;
             // 
             // colMaDG
             // 
@@ -442,7 +444,7 @@
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(664, 238);
+            ClientSize = new Size(693, 238);
             Controls.Add(dataGridViewDSTT);
             Controls.Add(btnThoat);
             Controls.Add(btnThem);
