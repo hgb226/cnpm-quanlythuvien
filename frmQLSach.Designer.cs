@@ -248,7 +248,7 @@
             // 
             cboTinhTrang.FormattingEnabled = true;
             cboTinhTrang.Items.AddRange(new object[] { "Mới", "Cũ" });
-            cboTinhTrang.Location = new Point(463, 145);
+            cboTinhTrang.Location = new Point(489, 145);
             cboTinhTrang.Name = "cboTinhTrang";
             cboTinhTrang.Size = new Size(198, 27);
             cboTinhTrang.TabIndex = 8;
@@ -264,7 +264,7 @@
             // 
             // txtGhiChu
             // 
-            txtGhiChu.Location = new Point(463, 174);
+            txtGhiChu.Location = new Point(489, 174);
             txtGhiChu.Name = "txtGhiChu";
             txtGhiChu.Size = new Size(198, 27);
             txtGhiChu.TabIndex = 7;
@@ -280,7 +280,7 @@
             // 
             // txtTriGia
             // 
-            txtTriGia.Location = new Point(463, 116);
+            txtTriGia.Location = new Point(489, 116);
             txtTriGia.Name = "txtTriGia";
             txtTriGia.Size = new Size(198, 27);
             txtTriGia.TabIndex = 7;
@@ -296,7 +296,7 @@
             // 
             // txtSLNhap
             // 
-            txtSLNhap.Location = new Point(463, 85);
+            txtSLNhap.Location = new Point(489, 85);
             txtSLNhap.Name = "txtSLNhap";
             txtSLNhap.Size = new Size(198, 27);
             txtSLNhap.TabIndex = 5;
@@ -348,35 +348,35 @@
             // 
             // txtTheLoai
             // 
-            txtTheLoai.Location = new Point(463, 55);
+            txtTheLoai.Location = new Point(489, 55);
             txtTheLoai.Name = "txtTheLoai";
             txtTheLoai.Size = new Size(198, 27);
             txtTheLoai.TabIndex = 1;
             // 
             // txtNamXB
             // 
-            txtNamXB.Location = new Point(114, 175);
+            txtNamXB.Location = new Point(127, 175);
             txtNamXB.Name = "txtNamXB";
             txtNamXB.Size = new Size(196, 27);
             txtNamXB.TabIndex = 1;
             // 
             // txtNXB
             // 
-            txtNXB.Location = new Point(114, 145);
+            txtNXB.Location = new Point(127, 145);
             txtNXB.Name = "txtNXB";
             txtNXB.Size = new Size(196, 27);
             txtNXB.TabIndex = 1;
             // 
             // txtTacGia
             // 
-            txtTacGia.Location = new Point(114, 115);
+            txtTacGia.Location = new Point(127, 115);
             txtTacGia.Name = "txtTacGia";
             txtTacGia.Size = new Size(196, 27);
             txtTacGia.TabIndex = 1;
             // 
             // txtTenSach
             // 
-            txtTenSach.Location = new Point(114, 85);
+            txtTenSach.Location = new Point(127, 85);
             txtTenSach.Name = "txtTenSach";
             txtTenSach.Size = new Size(196, 27);
             txtTenSach.TabIndex = 1;
@@ -392,7 +392,7 @@
             // 
             // txtMaSach
             // 
-            txtMaSach.Location = new Point(114, 56);
+            txtMaSach.Location = new Point(127, 56);
             txtMaSach.Name = "txtMaSach";
             txtMaSach.Size = new Size(196, 27);
             txtMaSach.TabIndex = 0;
@@ -545,7 +545,7 @@
             grpTimKiem.Controls.Add(txtNDTimKiem);
             grpTimKiem.Location = new Point(435, 19);
             grpTimKiem.Name = "grpTimKiem";
-            grpTimKiem.Size = new Size(243, 60);
+            grpTimKiem.Size = new Size(258, 60);
             grpTimKiem.TabIndex = 1;
             grpTimKiem.TabStop = false;
             grpTimKiem.Text = "Nhập thông tin cần Tìm Kiếm";
@@ -554,7 +554,7 @@
             // 
             txtNDTimKiem.Location = new Point(11, 24);
             txtNDTimKiem.Name = "txtNDTimKiem";
-            txtNDTimKiem.Size = new Size(218, 27);
+            txtNDTimKiem.Size = new Size(241, 27);
             txtNDTimKiem.TabIndex = 0;
             txtNDTimKiem.TextChanged += txtNDTimKiem_TextChanged;
             // 
@@ -566,7 +566,7 @@
             groupBox4.Controls.Add(radMaSach);
             groupBox4.Location = new Point(31, 19);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(376, 60);
+            groupBox4.Size = new Size(384, 60);
             groupBox4.TabIndex = 0;
             groupBox4.TabStop = false;
             groupBox4.Text = "Tìm Theo";
@@ -617,7 +617,7 @@
             // 
             // btnThoat
             // 
-            btnThoat.BackColor = Color.CornflowerBlue;
+            btnThoat.BackColor = Color.AliceBlue;
             btnThoat.Image = Properties.Resources.home;
             btnThoat.ImageAlign = ContentAlignment.MiddleLeft;
             btnThoat.Location = new Point(272, 114);
@@ -743,7 +743,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveBorder;
+            BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(760, 647);
             Controls.Add(btnLoadDS);
             Controls.Add(groupBox3);
