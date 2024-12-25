@@ -34,7 +34,7 @@
             lblMatKhau = new Label();
             txtMatKhau = new TextBox();
             btnDangNhap = new Button();
-            btnThoat = new Button();
+            btnDangKy = new Button();
             picLockDangNhap = new PictureBox();
             chkQuanTri = new RadioButton();
             chkDocGia = new RadioButton();
@@ -87,17 +87,17 @@
             btnDangNhap.UseVisualStyleBackColor = false;
             btnDangNhap.Click += btnDangNhap_Click;
             // 
-            // btnThoat
+            // btnDangKy
             // 
-            btnThoat.BackColor = Color.Red;
-            btnThoat.DialogResult = DialogResult.Cancel;
-            btnThoat.Location = new Point(278, 160);
-            btnThoat.Name = "btnThoat";
-            btnThoat.Size = new Size(87, 27);
-            btnThoat.TabIndex = 4;
-            btnThoat.Text = "Thoát";
-            btnThoat.UseVisualStyleBackColor = false;
-            btnThoat.Click += btnThoat_Click;
+            btnDangKy.BackColor = Color.CornflowerBlue;
+            btnDangKy.DialogResult = DialogResult.Cancel;
+            btnDangKy.Location = new Point(278, 160);
+            btnDangKy.Name = "btnDangKy";
+            btnDangKy.Size = new Size(87, 27);
+            btnDangKy.TabIndex = 4;
+            btnDangKy.Text = "Đăng ký";
+            btnDangKy.UseVisualStyleBackColor = false;
+            btnDangKy.Click += btnDangKy_Click;
             // 
             // picLockDangNhap
             // 
@@ -138,11 +138,11 @@
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            CancelButton = btnThoat;
+            CancelButton = btnDangKy;
             ClientSize = new Size(390, 204);
             Controls.Add(chkDocGia);
             Controls.Add(chkQuanTri);
-            Controls.Add(btnThoat);
+            Controls.Add(btnDangKy);
             Controls.Add(btnDangNhap);
             Controls.Add(txtMatKhau);
             Controls.Add(txtTenDangNhap);
@@ -170,7 +170,7 @@
         private System.Windows.Forms.Label lblMatKhau;
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Button btnDangNhap;
-        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btnDangKy;
         private System.Windows.Forms.RadioButton chkQuanTri;
         private System.Windows.Forms.RadioButton chkDocGia;
     }
