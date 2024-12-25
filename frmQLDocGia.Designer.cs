@@ -183,7 +183,6 @@
             this.txtMaDG.Name = "txtMaDG";
             this.txtMaDG.Size = new System.Drawing.Size(169, 27);
             this.txtMaDG.TabIndex = 0;
-            this.txtMaDG.TextChanged += new System.EventHandler(this.txtMaDG_TextChanged);
             // 
             // label1
             // 
@@ -231,7 +230,6 @@
             this.dataGridViewDSDocGia.Size = new System.Drawing.Size(747, 172);
             this.dataGridViewDSDocGia.TabIndex = 2;
             this.dataGridViewDSDocGia.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDSDocGia_CellClick);
-            this.dataGridViewDSDocGia.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDSDocGia_CellContentClick);
             this.dataGridViewDSDocGia.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDSDocGia_RowEnter);
             // 
             // groupBox1
