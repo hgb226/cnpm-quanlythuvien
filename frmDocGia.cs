@@ -98,12 +98,12 @@ namespace qltv
             }
         }
 
-        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmDoiMKDG MKDG = new frmDoiMKDG();
             MKDG.Show();
