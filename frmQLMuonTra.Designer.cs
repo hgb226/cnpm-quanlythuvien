@@ -179,11 +179,12 @@
             btnGiaHan.ImageAlign = ContentAlignment.MiddleLeft;
             btnGiaHan.Location = new Point(403, 301);
             btnGiaHan.Name = "btnGiaHan";
-            btnGiaHan.Size = new Size(103, 39);
+            btnGiaHan.Size = new Size(101, 39);
             btnGiaHan.TabIndex = 9;
             btnGiaHan.Text = "Gia Hạn";
             btnGiaHan.TextAlign = ContentAlignment.MiddleRight;
             btnGiaHan.UseVisualStyleBackColor = true;
+            btnGiaHan.Click += btnGiaHan_Click;
             // 
             // btnLoadDanhSach0
             // 
@@ -191,7 +192,7 @@
             btnLoadDanhSach0.ImageAlign = ContentAlignment.MiddleLeft;
             btnLoadDanhSach0.Location = new Point(583, 62);
             btnLoadDanhSach0.Name = "btnLoadDanhSach0";
-            btnLoadDanhSach0.Size = new Size(159, 39);
+            btnLoadDanhSach0.Size = new Size(162, 39);
             btnLoadDanhSach0.TabIndex = 1;
             btnLoadDanhSach0.Text = "Load Danh Sách";
             btnLoadDanhSach0.TextAlign = ContentAlignment.MiddleRight;
@@ -202,13 +203,14 @@
             // 
             btnNhap.Image = Properties.Resources.add;
             btnNhap.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNhap.Location = new Point(160, 301);
+            btnNhap.Location = new Point(155, 301);
             btnNhap.Name = "btnNhap";
             btnNhap.Size = new Size(121, 39);
             btnNhap.TabIndex = 3;
             btnNhap.Text = "Mượn Mới";
             btnNhap.TextAlign = ContentAlignment.MiddleRight;
             btnNhap.UseVisualStyleBackColor = true;
+            btnNhap.Click += btnThem_Click;
             // 
             // groupBox8
             // 
@@ -222,21 +224,21 @@
             groupBox8.Controls.Add(txtTTSLCon);
             groupBox8.Location = new Point(16, 117);
             groupBox8.Name = "groupBox8";
-            groupBox8.Size = new Size(225, 178);
+            groupBox8.Size = new Size(234, 178);
             groupBox8.TabIndex = 2;
             groupBox8.TabStop = false;
             groupBox8.Text = "Thông tin Sách";
             // 
             // txtTTMaSach
             // 
-            txtTTMaSach.Location = new Point(88, 23);
+            txtTTMaSach.Location = new Point(92, 23);
             txtTTMaSach.Name = "txtTTMaSach";
             txtTTMaSach.Size = new Size(128, 27);
             txtTTMaSach.TabIndex = 4;
             // 
             // txtTTTenTG
             // 
-            txtTTTenTG.Location = new Point(88, 135);
+            txtTTTenTG.Location = new Point(92, 135);
             txtTTTenTG.Name = "txtTTTenTG";
             txtTTTenTG.Size = new Size(128, 27);
             txtTTTenTG.TabIndex = 3;
@@ -255,9 +257,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(14, 24);
             label1.Name = "label1";
-            label1.Size = new Size(75, 19);
+            label1.Size = new Size(72, 19);
             label1.TabIndex = 0;
-            label1.Text = "Mã Sách  ";
+            label1.Text = "Mã Sách:";
             // 
             // label2
             // 
@@ -279,14 +281,14 @@
             // 
             // txtTTTenSach
             // 
-            txtTTTenSach.Location = new Point(88, 59);
+            txtTTTenSach.Location = new Point(92, 59);
             txtTTTenSach.Name = "txtTTTenSach";
             txtTTTenSach.Size = new Size(128, 27);
             txtTTTenSach.TabIndex = 1;
             // 
             // txtTTSLCon
             // 
-            txtTTSLCon.Location = new Point(88, 97);
+            txtTTSLCon.Location = new Point(92, 97);
             txtTTSLCon.Name = "txtTTSLCon";
             txtTTSLCon.Size = new Size(128, 27);
             txtTTSLCon.TabIndex = 2;
@@ -295,13 +297,14 @@
             // 
             btnHuy0.Image = Properties.Resources.cancel;
             btnHuy0.ImageAlign = ContentAlignment.MiddleLeft;
-            btnHuy0.Location = new Point(511, 301);
+            btnHuy0.Location = new Point(510, 301);
             btnHuy0.Name = "btnHuy0";
-            btnHuy0.Size = new Size(85, 39);
+            btnHuy0.Size = new Size(79, 39);
             btnHuy0.TabIndex = 6;
             btnHuy0.Text = "Hủy";
             btnHuy0.TextAlign = ContentAlignment.MiddleRight;
             btnHuy0.UseVisualStyleBackColor = true;
+            btnHuy0.Click += btnHuy0_Click;
             // 
             // btnThoat0
             // 
@@ -310,23 +313,25 @@
             btnThoat0.ImageAlign = ContentAlignment.MiddleLeft;
             btnThoat0.Location = new Point(615, 17);
             btnThoat0.Name = "btnThoat0";
-            btnThoat0.Size = new Size(85, 39);
+            btnThoat0.Size = new Size(90, 39);
             btnThoat0.TabIndex = 8;
             btnThoat0.Text = "Home";
             btnThoat0.TextAlign = ContentAlignment.MiddleRight;
             btnThoat0.UseVisualStyleBackColor = false;
+            btnThoat0.Click += btnThoat0_Click;
             // 
             // btnChoMuon0
             // 
             btnChoMuon0.Image = Properties.Resources.check;
             btnChoMuon0.ImageAlign = ContentAlignment.MiddleLeft;
-            btnChoMuon0.Location = new Point(284, 301);
+            btnChoMuon0.Location = new Point(282, 301);
             btnChoMuon0.Name = "btnChoMuon0";
-            btnChoMuon0.Size = new Size(113, 39);
+            btnChoMuon0.Size = new Size(115, 39);
             btnChoMuon0.TabIndex = 5;
             btnChoMuon0.Text = "Cho mượn";
             btnChoMuon0.TextAlign = ContentAlignment.MiddleRight;
             btnChoMuon0.UseVisualStyleBackColor = true;
+            btnChoMuon0.Click += btnChoMuon0_Click;
             // 
             // groupBox1
             // 
@@ -344,7 +349,7 @@
             groupBox6.Controls.Add(txtNDTimKiem);
             groupBox6.Location = new Point(240, 19);
             groupBox6.Name = "groupBox6";
-            groupBox6.Size = new Size(299, 60);
+            groupBox6.Size = new Size(310, 60);
             groupBox6.TabIndex = 1;
             groupBox6.TabStop = false;
             groupBox6.Text = "Nhập thông tin cần Tìm Kiếm";
@@ -353,8 +358,9 @@
             // 
             txtNDTimKiem.Location = new Point(11, 24);
             txtNDTimKiem.Name = "txtNDTimKiem";
-            txtNDTimKiem.Size = new Size(249, 27);
+            txtNDTimKiem.Size = new Size(293, 27);
             txtNDTimKiem.TabIndex = 0;
+            txtNDTimKiem.TextChanged += txtNDTimKiem_TextChanged;
             // 
             // groupBox7
             // 
@@ -414,6 +420,8 @@
             dataGridViewDSMuon0.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewDSMuon0.Size = new Size(718, 180);
             dataGridViewDSMuon0.TabIndex = 0;
+            dataGridViewDSMuon0.RowEnter += dataGridViewDSMuon0_RowEnter;
+            dataGridViewDSMuon0.TabIndexChanged += dataGridViewDSMuon0_TabIndexChanged;
             // 
             // colMaPhieu
             // 
@@ -529,6 +537,7 @@
             cboMaSach0.Name = "cboMaSach0";
             cboMaSach0.Size = new Size(128, 27);
             cboMaSach0.TabIndex = 13;
+            cboMaSach0.SelectedIndexChanged += cboMaSach0_SelectedIndexChanged;
             // 
             // lblNhapSLNhap
             // 
@@ -564,11 +573,12 @@
             dtmNgayMuon0.Size = new Size(148, 27);
             dtmNgayMuon0.TabIndex = 4;
             dtmNgayMuon0.Value = new DateTime(2021, 7, 6, 0, 0, 0, 0);
+            dtmNgayMuon0.ValueChanged += dtmNgayMuon0_ValueChanged;
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(240, 27);
+            label10.Location = new Point(246, 27);
             label10.Name = "label10";
             label10.Size = new Size(94, 19);
             label10.TabIndex = 3;
@@ -587,7 +597,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(240, 65);
+            label9.Location = new Point(246, 65);
             label9.Name = "label9";
             label9.Size = new Size(74, 19);
             label9.TabIndex = 3;
@@ -611,7 +621,7 @@
             // 
             // txtGhiChu0
             // 
-            txtGhiChu0.Location = new Point(341, 134);
+            txtGhiChu0.Location = new Point(340, 134);
             txtGhiChu0.Name = "txtGhiChu0";
             txtGhiChu0.Size = new Size(148, 27);
             txtGhiChu0.TabIndex = 6;
@@ -619,7 +629,7 @@
             // label19
             // 
             label19.AutoSize = true;
-            label19.Location = new Point(242, 103);
+            label19.Location = new Point(248, 103);
             label19.Name = "label19";
             label19.Size = new Size(85, 19);
             label19.TabIndex = 0;
@@ -637,7 +647,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(242, 137);
+            label6.Location = new Point(248, 137);
             label6.Name = "label6";
             label6.Size = new Size(74, 19);
             label6.TabIndex = 0;
@@ -676,9 +686,11 @@
             tabPage2.Size = new Size(769, 553);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Quản lý Trả Sách";
+            tabPage2.Click += tabPage2_Click;
             // 
             // btnLoadDS1
             // 
+            btnLoadDS1.BackColor = SystemColors.ButtonHighlight;
             btnLoadDS1.Image = Properties.Resources.load;
             btnLoadDS1.ImageAlign = ContentAlignment.MiddleLeft;
             btnLoadDS1.Location = new Point(168, 194);
@@ -687,8 +699,8 @@
             btnLoadDS1.TabIndex = 6;
             btnLoadDS1.Text = "Load Danh Sách";
             btnLoadDS1.TextAlign = ContentAlignment.MiddleRight;
-            btnLoadDS1.UseVisualStyleBackColor = true;
-            btnLoadDS1.Click += btnLoadDS1_Click_1;
+            btnLoadDS1.UseVisualStyleBackColor = false;
+            btnLoadDS1.Click += btnLoadDS1_Click;
             // 
             // groupBox9
             // 
@@ -717,6 +729,7 @@
             txtNDTimKiem1.Name = "txtNDTimKiem1";
             txtNDTimKiem1.Size = new Size(198, 27);
             txtNDTimKiem1.TabIndex = 0;
+            txtNDTimKiem1.TextChanged += txtNDTimKiem1_TextChanged;
             // 
             // groupBox11
             // 
@@ -724,7 +737,7 @@
             groupBox11.Controls.Add(radMaDG1);
             groupBox11.Location = new Point(10, 21);
             groupBox11.Name = "groupBox11";
-            groupBox11.Size = new Size(209, 53);
+            groupBox11.Size = new Size(194, 53);
             groupBox11.TabIndex = 0;
             groupBox11.TabStop = false;
             groupBox11.Text = "Tìm Theo";
@@ -732,7 +745,7 @@
             // radMaSach1
             // 
             radMaSach1.AutoSize = true;
-            radMaSach1.Location = new Point(115, 23);
+            radMaSach1.Location = new Point(99, 23);
             radMaSach1.Name = "radMaSach1";
             radMaSach1.Size = new Size(88, 23);
             radMaSach1.TabIndex = 1;
@@ -778,7 +791,7 @@
             // 
             // txtTinhTrang1
             // 
-            txtTinhTrang1.Location = new Point(339, 94);
+            txtTinhTrang1.Location = new Point(348, 94);
             txtTinhTrang1.Name = "txtTinhTrang1";
             txtTinhTrang1.Size = new Size(130, 27);
             txtTinhTrang1.TabIndex = 16;
@@ -786,7 +799,7 @@
             // label20
             // 
             label20.AutoSize = true;
-            label20.Location = new Point(246, 97);
+            label20.Location = new Point(244, 97);
             label20.Name = "label20";
             label20.Size = new Size(85, 19);
             label20.TabIndex = 15;
@@ -794,14 +807,14 @@
             // 
             // txtMaDG1
             // 
-            txtMaDG1.Location = new Point(95, 57);
+            txtMaDG1.Location = new Point(102, 57);
             txtMaDG1.Name = "txtMaDG1";
             txtMaDG1.Size = new Size(128, 27);
             txtMaDG1.TabIndex = 14;
             // 
             // txtMaPhieu1
             // 
-            txtMaPhieu1.Location = new Point(95, 22);
+            txtMaPhieu1.Location = new Point(102, 22);
             txtMaPhieu1.Name = "txtMaPhieu1";
             txtMaPhieu1.Size = new Size(128, 27);
             txtMaPhieu1.TabIndex = 12;
@@ -809,7 +822,7 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.Location = new Point(13, 25);
+            label18.Location = new Point(19, 25);
             label18.Name = "label18";
             label18.Size = new Size(79, 19);
             label18.TabIndex = 13;
@@ -819,7 +832,7 @@
             // 
             dtmNgayMuon1.CustomFormat = "dd/MM/yyyy";
             dtmNgayMuon1.Format = DateTimePickerFormat.Custom;
-            dtmNgayMuon1.Location = new Point(341, 22);
+            dtmNgayMuon1.Location = new Point(350, 22);
             dtmNgayMuon1.Name = "dtmNgayMuon1";
             dtmNgayMuon1.Size = new Size(128, 27);
             dtmNgayMuon1.TabIndex = 3;
@@ -827,7 +840,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(246, 25);
+            label11.Location = new Point(244, 25);
             label11.Name = "label11";
             label11.Size = new Size(94, 19);
             label11.TabIndex = 3;
@@ -837,7 +850,7 @@
             // 
             dtmNgayTra1.CustomFormat = "dd/MM/yyyy";
             dtmNgayTra1.Format = DateTimePickerFormat.Custom;
-            dtmNgayTra1.Location = new Point(341, 59);
+            dtmNgayTra1.Location = new Point(350, 59);
             dtmNgayTra1.Name = "dtmNgayTra1";
             dtmNgayTra1.Size = new Size(128, 27);
             dtmNgayTra1.TabIndex = 4;
@@ -845,7 +858,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(246, 62);
+            label12.Location = new Point(244, 62);
             label12.Name = "label12";
             label12.Size = new Size(74, 19);
             label12.TabIndex = 3;
@@ -853,21 +866,21 @@
             // 
             // txtSLMuon1
             // 
-            txtSLMuon1.Location = new Point(95, 131);
+            txtSLMuon1.Location = new Point(102, 131);
             txtSLMuon1.Name = "txtSLMuon1";
             txtSLMuon1.Size = new Size(128, 27);
             txtSLMuon1.TabIndex = 2;
             // 
             // txtGhiChu1
             // 
-            txtGhiChu1.Location = new Point(342, 133);
+            txtGhiChu1.Location = new Point(351, 133);
             txtGhiChu1.Name = "txtGhiChu1";
             txtGhiChu1.Size = new Size(128, 27);
             txtGhiChu1.TabIndex = 5;
             // 
             // txtMaSach1
             // 
-            txtMaSach1.Location = new Point(95, 94);
+            txtMaSach1.Location = new Point(102, 94);
             txtMaSach1.Name = "txtMaSach1";
             txtMaSach1.Size = new Size(128, 27);
             txtMaSach1.TabIndex = 1;
@@ -875,7 +888,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(13, 134);
+            label13.Location = new Point(19, 134);
             label13.Name = "label13";
             label13.Size = new Size(81, 19);
             label13.TabIndex = 0;
@@ -884,7 +897,7 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(249, 135);
+            label14.Location = new Point(247, 135);
             label14.Name = "label14";
             label14.Size = new Size(74, 19);
             label14.TabIndex = 0;
@@ -893,7 +906,7 @@
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(13, 97);
+            label15.Location = new Point(19, 97);
             label15.Name = "label15";
             label15.Size = new Size(72, 19);
             label15.TabIndex = 0;
@@ -902,7 +915,7 @@
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(13, 60);
+            label16.Location = new Point(19, 60);
             label16.Name = "label16";
             label16.Size = new Size(72, 19);
             label16.TabIndex = 0;
@@ -920,6 +933,7 @@
             btnThoat1.Text = "Home";
             btnThoat1.TextAlign = ContentAlignment.MiddleRight;
             btnThoat1.UseVisualStyleBackColor = false;
+            btnThoat1.Click += btnThoat1_Click;
             // 
             // groupBox4
             // 
@@ -945,6 +959,8 @@
             dataGridViewDSMuon1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewDSMuon1.Size = new Size(717, 279);
             dataGridViewDSMuon1.TabIndex = 1;
+            dataGridViewDSMuon1.RowEnter += dataGridViewDSMuon1_RowEnter;
+            dataGridViewDSMuon1.TabIndexChanged += dataGridViewDSMuon1_TabIndexChanged;
             // 
             // colMaPhieu1
             // 
@@ -1020,15 +1036,16 @@
             // 
             // btnTraSach1
             // 
-            btnTraSach1.Image = Properties.Resources.add;
+            btnTraSach1.Image = Properties.Resources.check;
             btnTraSach1.ImageAlign = ContentAlignment.MiddleLeft;
             btnTraSach1.Location = new Point(334, 194);
             btnTraSach1.Name = "btnTraSach1";
-            btnTraSach1.Size = new Size(112, 39);
+            btnTraSach1.Size = new Size(98, 39);
             btnTraSach1.TabIndex = 2;
             btnTraSach1.Text = "Trả Sách";
             btnTraSach1.TextAlign = ContentAlignment.MiddleRight;
             btnTraSach1.UseVisualStyleBackColor = true;
+            btnTraSach1.Click += btnTraSach1_Click;
             // 
             // errMaDG0
             // 
@@ -1059,7 +1076,7 @@
             Name = "frmQLMuonTra";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Quản lý Mượn - Trả";
-            Load += frmQLMuonTra_Load_1;
+            Load += frmQLMuonTra_Load;
             tabQLMuonTraSach.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             groupBox8.ResumeLayout(false);
