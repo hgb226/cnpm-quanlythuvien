@@ -1,5 +1,4 @@
-﻿namespace qltv
-{
+﻿namespace qltv { 
     partial class frmQLDocGia
     {
         /// <summary>
@@ -432,6 +431,7 @@
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnXoa
             // 
@@ -444,6 +444,7 @@
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -456,6 +457,7 @@
             this.btnSua.Text = "Sửa";
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThoat
             // 
@@ -469,6 +471,7 @@
             this.btnThoat.Text = "Home";
             this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnHuy
             // 
@@ -481,6 +484,7 @@
             this.btnHuy.Text = "Hủy";
             this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnThem
             // 
@@ -493,6 +497,7 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // groupBox3
             // 
@@ -521,6 +526,7 @@
             this.txtNDTimKiem.Name = "txtNDTimKiem";
             this.txtNDTimKiem.Size = new System.Drawing.Size(332, 27);
             this.txtNDTimKiem.TabIndex = 0;
+            this.txtNDTimKiem.TextChanged += new System.EventHandler(this.txtNDTimKiem_TextChanged);
             // 
             // groupBox4
             // 
@@ -566,6 +572,7 @@
             this.btnLoadDS.Text = "Load Danh Sách";
             this.btnLoadDS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLoadDS.UseVisualStyleBackColor = true;
+            this.btnLoadDS.Click += new System.EventHandler(this.btnLoadDS_Click);
             // 
             // errTenDG
             // 
