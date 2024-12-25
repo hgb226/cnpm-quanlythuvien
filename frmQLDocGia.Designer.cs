@@ -183,9 +183,6 @@
             this.txtMaDG.Name = "txtMaDG";
             this.txtMaDG.Size = new System.Drawing.Size(169, 27);
             this.txtMaDG.TabIndex = 0;
-            //this.txtMaDG.TextChanged += new System.EventHandler(this.txtMaDG_TextChanged);
-            
-            
             // 
             // label1
             // 
@@ -232,10 +229,8 @@
             this.dataGridViewDSDocGia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewDSDocGia.Size = new System.Drawing.Size(747, 172);
             this.dataGridViewDSDocGia.TabIndex = 2;
-            //this.dataGridViewDSDocGia.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDSDocGia_CellClick);
-            //this.dataGridViewDSDocGia.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDSDocGia_CellContentClick);
-            //this.dataGridViewDSDocGia.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDSDocGia_RowEnter);
-            
+            this.dataGridViewDSDocGia.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDSDocGia_CellClick);
+            this.dataGridViewDSDocGia.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDSDocGia_RowEnter);
             // 
             // groupBox1
             // 
@@ -437,7 +432,6 @@
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.UseVisualStyleBackColor = true;
-
             // 
             // btnXoa
             // 
@@ -450,7 +444,6 @@
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoa.UseVisualStyleBackColor = true;
-
             // 
             // btnSua
             // 
@@ -724,6 +717,7 @@
             this.Name = "frmQLDocGia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Quản lý Độc giả";
+            this.Load += new System.EventHandler(this.frmQLDocGia_Load);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSDocGia)).EndInit();
             this.groupBox1.ResumeLayout(false);
