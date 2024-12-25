@@ -105,8 +105,7 @@ namespace qltv
                         if (x2 == 1)
                         {
                             MessageBox.Show("Đăng Nhập thành công.", "Thông Báo");
-                            //frmDocGia DG = new frmDocGia(txtTenDangNhap.Text);
-                            frmDocGia DG = new();
+                            frmDocGia DG = new frmDocGia(txtTenDangNhap.Text);
                             DG.FormClosed += new FormClosedEventHandler(DongForm);
                             this.Hide();
                             DG.Show();
