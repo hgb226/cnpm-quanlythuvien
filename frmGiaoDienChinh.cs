@@ -17,13 +17,13 @@ namespace qltv
 
         private void quánLýĐộcGiảToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmQLDocGia QLDocGia  = new frmQLDocGia();
+            frmQLDocGia QLDocGia = new frmQLDocGia();
             QLDocGia.Show();
         }
 
         private void quảnLýMượnTrảToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmQLMuonTra QLMuonTra  = new frmQLMuonTra();
+            frmQLMuonTra QLMuonTra = new frmQLMuonTra();
             QLMuonTra.Show();
         }
 
@@ -48,6 +48,12 @@ namespace qltv
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void đăngKýThủThưToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDangKyTT frmDangKyTT = new frmDangKyTT();
+            frmDangKyTT.Show();
         }
     }
 }
