@@ -300,6 +300,7 @@
             // dtmNgayLapThe
             // 
             dtmNgayLapThe.CustomFormat = "dd/MM/yyyy";
+            dtmNgayLapThe.Enabled = false;
             dtmNgayLapThe.Format = DateTimePickerFormat.Custom;
             dtmNgayLapThe.Location = new Point(125, 162);
             dtmNgayLapThe.Name = "dtmNgayLapThe";

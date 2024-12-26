@@ -120,6 +120,7 @@
             chkQuanTri.TabStop = true;
             chkQuanTri.Text = "Thủ Thư";
             chkQuanTri.UseVisualStyleBackColor = true;
+            chkQuanTri.CheckedChanged += chkQuanTri_CheckedChanged;
             // 
             // chkDocGia
             // 
@@ -131,6 +132,7 @@
             chkDocGia.TabStop = true;
             chkDocGia.Text = "Độc Giả";
             chkDocGia.UseVisualStyleBackColor = true;
+            chkDocGia.CheckedChanged += chkDocGia_CheckedChanged;
             // 
             // frmDangNhap
             // 

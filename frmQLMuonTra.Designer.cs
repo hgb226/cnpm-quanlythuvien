@@ -150,7 +150,7 @@
             tabQLMuonTraSach.Location = new Point(-4, 2);
             tabQLMuonTraSach.Name = "tabQLMuonTraSach";
             tabQLMuonTraSach.SelectedIndex = 0;
-            tabQLMuonTraSach.Size = new Size(777, 585);
+            tabQLMuonTraSach.Size = new Size(917, 912);
             tabQLMuonTraSach.TabIndex = 0;
             // 
             // tabPage1
@@ -169,7 +169,7 @@
             tabPage1.Location = new Point(4, 28);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(769, 553);
+            tabPage1.Size = new Size(909, 880);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Quản lý Mượn Sách";
             // 
@@ -400,7 +400,7 @@
             groupBox3.Controls.Add(dataGridViewDSMuon0);
             groupBox3.Location = new Point(16, 341);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(736, 206);
+            groupBox3.Size = new Size(890, 543);
             groupBox3.TabIndex = 7;
             groupBox3.TabStop = false;
             groupBox3.Text = "Danh sách Mượn";
@@ -413,12 +413,12 @@
             dataGridViewDSMuon0.AllowUserToResizeRows = false;
             dataGridViewDSMuon0.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewDSMuon0.Columns.AddRange(new DataGridViewColumn[] { colMaPhieu, colMaDG, colMaSach, colNgayMuon, colNgayTra, colSLMuon, colTinhTrang, colGhiChu });
-            dataGridViewDSMuon0.Location = new Point(8, 20);
+            dataGridViewDSMuon0.Location = new Point(6, 20);
             dataGridViewDSMuon0.Name = "dataGridViewDSMuon0";
             dataGridViewDSMuon0.ReadOnly = true;
             dataGridViewDSMuon0.RowHeadersWidth = 62;
             dataGridViewDSMuon0.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewDSMuon0.Size = new Size(718, 180);
+            dataGridViewDSMuon0.Size = new Size(879, 523);
             dataGridViewDSMuon0.TabIndex = 0;
             dataGridViewDSMuon0.RowEnter += dataGridViewDSMuon0_RowEnter;
             dataGridViewDSMuon0.TabIndexChanged += dataGridViewDSMuon0_TabIndexChanged;
@@ -680,10 +680,10 @@
             tabPage2.Controls.Add(btnThoat1);
             tabPage2.Controls.Add(groupBox4);
             tabPage2.Controls.Add(btnTraSach1);
-            tabPage2.Location = new Point(4, 28);
+            tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(769, 553);
+            tabPage2.Size = new Size(769, 552);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Quản lý Trả Sách";
             tabPage2.Click += tabPage2_Click;
@@ -1068,7 +1068,7 @@
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(767, 583);
+            ClientSize = new Size(925, 926);
             Controls.Add(tabQLMuonTraSach);
             Font = new Font("Times New Roman", 10F, FontStyle.Regular, GraphicsUnit.Point, 163);
             FormBorderStyle = FormBorderStyle.FixedDialog;
