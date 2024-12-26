@@ -64,7 +64,7 @@ namespace qltv
 
             myConnection.Close();
 
-            setControls(false);
+            setControls(true);
             dataGridViewDSDocGia.Enabled = true;
 
             btnLuu.Enabled = false;

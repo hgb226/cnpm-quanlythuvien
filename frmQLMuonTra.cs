@@ -111,7 +111,6 @@ namespace qltv
             dataGridViewDSMuon1.DataSource = ketnoi(cauTruyVan);
             dataGridViewDSMuon1.AutoGenerateColumns = false;
             myConnection.Close();
-
             radMaDG.Checked = true;
             radMaDG1.Checked = true;
 
@@ -152,6 +151,19 @@ namespace qltv
                 tinhTrang0 = cboTinhTrang0.Text;
                 txtGhiChu0.Text = myTable.Rows[row]["GhiChu"].ToString();
                 ghiChu0 = txtGhiChu0.Text;
+                string strlaydulieu = "select * from tblSach where MaSach='" + maSach0 + "'";
+                myConnection = new SqlConnection(strKetNoi);
+                myConnection.Open();
+                string thuchiencaulenh = strlaydulieu;
+                myCommand = new SqlCommand(thuchiencaulenh, myConnection);
+                myDataReaderSach = myCommand.ExecuteReader();
+                while (myDataReaderSach.Read())
+                {
+                    txtTTMaSach.Text = myDataReaderSach.GetString(0);
+                    txtTTTenSach.Text = myDataReaderSach.GetString(2);
+                    txtTTTenTG.Text = myDataReaderSach.GetString(4);
+                    txtTTSLCon.Text = myDataReaderSach.GetInt32(7).ToString();
+                }
             }
             catch (Exception)
             {
@@ -237,8 +249,6 @@ namespace qltv
         public static DateTime newday = today.AddDays(5);
         private void btnThem_Click(object sender, EventArgs e)
         {
-
-
             layMaDGMuon();
             layMaSachMuon();
 
