@@ -62,6 +62,9 @@ namespace qltv
             printDocument1.DefaultPageSettings.Landscape = false;
             printDocument1.DefaultPageSettings.PaperSize = new PaperSize("custom", 970, 234);
 
+            // Đăng ký sự kiện PrintPage
+            printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
+
             // Khởi tạo PrintPreviewDialog
             PrintPreviewDialog printPreviewDialog1 = new PrintPreviewDialog();
             printPreviewDialog1.Document = printDocument1;
@@ -74,22 +77,7 @@ namespace qltv
             }
         }
 
-
-
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
-            //e.Graphics.DrawImage(bitmap, 0, 0);
-            e.Graphics.DrawRectangle(new Pen(Brushes.Black), new Rectangle(12, 9, 926, 50));
-            e.Graphics.DrawString("PHIẾU THU TIỀN PHẠT", new Font("Times New Roman", 14, FontStyle.Regular), Brushes.Black, new Point(376, 26));
-            e.Graphics.DrawString("Mã đọc giả: " + this.txtMaDG.Text, new Font("Times New Roman", 14, FontStyle.Regular), Brushes.Black, new Point(32, 86));
-            e.Graphics.DrawString("Họ tên độc giả: " + this.txtHotenDG.Text, new Font("Times New Roman", 14, FontStyle.Regular), Brushes.Black, new Point(533, 86));
-            e.Graphics.DrawString("Tổng nợ: " + this.txtTongno.Text, new Font("Times New Roman", 14, FontStyle.Regular), Brushes.Black, new Point(32, 124));
-            e.Graphics.DrawString("Tiền thu: " + this.txtSotienthu.Text, new Font("Times New Roman", 14, FontStyle.Regular), Brushes.Black, new Point(533, 124));
-            e.Graphics.DrawString("Còn lại: " + txtConlai.Text, new Font("Times New Roman", 14, FontStyle.Regular), Brushes.Black, new Point(533, 170));
-        }
-
-
-        private void txtMaDG_TextChanged(object sender, EventArgs e)
+        private void txtMaDG_TextChanged_1(object sender, EventArgs e)
         {
             if (txtMaDG.Text == "")
             {
@@ -126,7 +114,7 @@ namespace qltv
             txtTongno.Text = (cnt * tongngay * tp).ToString();
         }
 
-        private void txtSotienthu_TextChanged(object sender, EventArgs e)
+        private void txtSotienthu_TextChanged_1(object sender, EventArgs e)
         {
             if (txtSotienthu.Text == "")
                 return;
@@ -134,6 +122,18 @@ namespace qltv
             txtConlai.Text = (tienthu - Convert.ToInt32(txtTongno.Text)).ToString();
         }
 
-        
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            //e.Graphics.DrawImage(bitmap, 0, 0);
+            e.Graphics.DrawRectangle(new Pen(Brushes.Black), new Rectangle(12, 9, 926, 50));
+            e.Graphics.DrawString("PHIẾU THU TIỀN PHẠT", new Font("Times New Roman", 14, FontStyle.Regular), Brushes.Black, new Point(376, 26));
+            e.Graphics.DrawString("Mã đọc giả: " + this.txtMaDG.Text, new Font("Times New Roman", 14, FontStyle.Regular), Brushes.Black, new Point(32, 86));
+            e.Graphics.DrawString("Họ tên độc giả: " + this.txtHotenDG.Text, new Font("Times New Roman", 14, FontStyle.Regular), Brushes.Black, new Point(533, 86));
+            e.Graphics.DrawString("Tổng nợ: " + this.txtTongno.Text, new Font("Times New Roman", 14, FontStyle.Regular), Brushes.Black, new Point(32, 124));
+            e.Graphics.DrawString("Tiền thu: " + this.txtSotienthu.Text, new Font("Times New Roman", 14, FontStyle.Regular), Brushes.Black, new Point(533, 124));
+            e.Graphics.DrawString("Còn lại: " + txtConlai.Text, new Font("Times New Roman", 14, FontStyle.Regular), Brushes.Black, new Point(533, 170));
+        }
+
+
     }
 }
