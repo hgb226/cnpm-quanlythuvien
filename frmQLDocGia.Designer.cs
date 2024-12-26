@@ -563,6 +563,7 @@
             dataGridViewDSDocGia.AllowUserToAddRows = false;
             dataGridViewDSDocGia.AllowUserToDeleteRows = false;
             dataGridViewDSDocGia.AllowUserToResizeRows = false;
+            dataGridViewDSDocGia.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewDSDocGia.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewDSDocGia.Columns.AddRange(new DataGridViewColumn[] { colMaDG, colTenDG, colGioiTinh, colNgaySinh, colEmail, colDiaChi, colLoaiDG, colGhiChu, colTaiKhoan, colMatKhau, colNgayLapThe });
             dataGridViewDSDocGia.Location = new Point(6, 26);
@@ -582,7 +583,6 @@
             colMaDG.MinimumWidth = 6;
             colMaDG.Name = "colMaDG";
             colMaDG.ReadOnly = true;
-            colMaDG.Width = 125;
             // 
             // colTenDG
             // 
@@ -591,7 +591,6 @@
             colTenDG.MinimumWidth = 8;
             colTenDG.Name = "colTenDG";
             colTenDG.ReadOnly = true;
-            colTenDG.Width = 115;
             // 
             // colGioiTinh
             // 
@@ -600,7 +599,6 @@
             colGioiTinh.MinimumWidth = 8;
             colGioiTinh.Name = "colGioiTinh";
             colGioiTinh.ReadOnly = true;
-            colGioiTinh.Width = 45;
             // 
             // colNgaySinh
             // 
@@ -609,7 +607,6 @@
             colNgaySinh.MinimumWidth = 8;
             colNgaySinh.Name = "colNgaySinh";
             colNgaySinh.ReadOnly = true;
-            colNgaySinh.Width = 80;
             // 
             // colEmail
             // 
@@ -618,7 +615,6 @@
             colEmail.MinimumWidth = 6;
             colEmail.Name = "colEmail";
             colEmail.ReadOnly = true;
-            colEmail.Width = 125;
             // 
             // colDiaChi
             // 
@@ -627,7 +623,6 @@
             colDiaChi.MinimumWidth = 8;
             colDiaChi.Name = "colDiaChi";
             colDiaChi.ReadOnly = true;
-            colDiaChi.Width = 75;
             // 
             // colLoaiDG
             // 
@@ -636,7 +631,6 @@
             colLoaiDG.MinimumWidth = 8;
             colLoaiDG.Name = "colLoaiDG";
             colLoaiDG.ReadOnly = true;
-            colLoaiDG.Width = 50;
             // 
             // colGhiChu
             // 
@@ -645,7 +639,6 @@
             colGhiChu.MinimumWidth = 8;
             colGhiChu.Name = "colGhiChu";
             colGhiChu.ReadOnly = true;
-            colGhiChu.Width = 50;
             // 
             // colTaiKhoan
             // 
@@ -654,7 +647,6 @@
             colTaiKhoan.MinimumWidth = 8;
             colTaiKhoan.Name = "colTaiKhoan";
             colTaiKhoan.ReadOnly = true;
-            colTaiKhoan.Width = 134;
             // 
             // colMatKhau
             // 
@@ -663,7 +655,6 @@
             colMatKhau.MinimumWidth = 8;
             colMatKhau.Name = "colMatKhau";
             colMatKhau.ReadOnly = true;
-            colMatKhau.Width = 50;
             // 
             // colNgayLapThe
             // 
@@ -672,7 +663,6 @@
             colNgayLapThe.MinimumWidth = 8;
             colNgayLapThe.Name = "colNgayLapThe";
             colNgayLapThe.ReadOnly = true;
-            colNgayLapThe.Width = 55;
             // 
             // groupBox2
             // 
