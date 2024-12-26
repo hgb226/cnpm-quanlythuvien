@@ -418,7 +418,7 @@
             dataGridViewDSSach.Name = "dataGridViewDSSach";
             dataGridViewDSSach.RowHeadersWidth = 32;
             dataGridViewDSSach.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewDSSach.Size = new Size(707, 183);
+            dataGridViewDSSach.Size = new Size(1023, 430);
             dataGridViewDSSach.TabIndex = 2;
             dataGridViewDSSach.CellClick += dataGridViewDSSach_CellClick;
             dataGridViewDSSach.RowEnter += dataGridViewDSSach_RowEnter;
@@ -524,7 +524,7 @@
             groupBox2.Controls.Add(dataGridViewDSSach);
             groupBox2.Location = new Point(19, 431);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(719, 208);
+            groupBox2.Size = new Size(1029, 456);
             groupBox2.TabIndex = 9;
             groupBox2.TabStop = false;
             groupBox2.Text = "Danh sách Sách";
@@ -744,7 +744,7 @@
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(760, 647);
+            ClientSize = new Size(1060, 899);
             Controls.Add(btnLoadDS);
             Controls.Add(groupBox3);
             Controls.Add(btnThoat);

@@ -474,7 +474,7 @@
             MaximizeBox = false;
             Name = "frmDangKy";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "frmDangKy";
+            Text = "Đăng ký độc giả";
             Load += frmDangKy_Load;
             ((System.ComponentModel.ISupportInitialize)errTenDG).EndInit();
             ((System.ComponentModel.ISupportInitialize)errEmail).EndInit();
