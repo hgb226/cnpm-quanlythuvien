@@ -147,5 +147,15 @@ namespace qltv
         {
             chkQuanTri.Checked = true;
         }
+
+        private void chkQuanTri_CheckedChanged(object sender, EventArgs e)
+        {
+            btnDangKy.Enabled = false;
+        }
+
+        private void chkDocGia_CheckedChanged(object sender, EventArgs e)
+        {
+            btnDangKy.Enabled = true;
+        }
     }
 }
