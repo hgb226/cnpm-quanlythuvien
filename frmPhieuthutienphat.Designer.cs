@@ -46,6 +46,7 @@
             txtMaDG.Name = "txtMaDG";
             txtMaDG.Size = new Size(297, 23);
             txtMaDG.TabIndex = 0;
+            txtMaDG.TextChanged += txtMaDG_TextChanged_1;
             // 
             // txtHotenDG
             // 
@@ -67,6 +68,7 @@
             txtSotienthu.Name = "txtSotienthu";
             txtSotienthu.Size = new Size(297, 23);
             txtSotienthu.TabIndex = 3;
+            txtSotienthu.TextChanged += txtSotienthu_TextChanged_1;
             // 
             // txtConlai
             // 
