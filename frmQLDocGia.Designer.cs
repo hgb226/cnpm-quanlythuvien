@@ -377,6 +377,7 @@
             // 
             // btnLuu
             // 
+            btnLuu.Image = Properties.Resources.save;
             btnLuu.ImageAlign = ContentAlignment.MiddleLeft;
             btnLuu.Location = new Point(466, 368);
             btnLuu.Name = "btnLuu";
@@ -389,6 +390,7 @@
             // 
             // btnXoa
             // 
+            btnXoa.Image = Properties.Resources.delete;
             btnXoa.ImageAlign = ContentAlignment.MiddleLeft;
             btnXoa.Location = new Point(375, 368);
             btnXoa.Name = "btnXoa";
@@ -401,6 +403,7 @@
             // 
             // btnSua
             // 
+            btnSua.Image = Properties.Resources.change;
             btnSua.ImageAlign = ContentAlignment.MiddleLeft;
             btnSua.Location = new Point(284, 368);
             btnSua.Name = "btnSua";
@@ -415,6 +418,7 @@
             // 
             btnThoat.BackColor = Color.CornflowerBlue;
             btnThoat.ForeColor = Color.White;
+            btnThoat.Image = Properties.Resources.home;
             btnThoat.ImageAlign = ContentAlignment.MiddleLeft;
             btnThoat.Location = new Point(290, 116);
             btnThoat.Name = "btnThoat";
@@ -427,6 +431,7 @@
             // 
             // btnHuy
             // 
+            btnHuy.Image = Properties.Resources.cancel;
             btnHuy.ImageAlign = ContentAlignment.MiddleLeft;
             btnHuy.Location = new Point(557, 368);
             btnHuy.Name = "btnHuy";
@@ -439,6 +444,7 @@
             // 
             // btnThem
             // 
+            btnThem.Image = Properties.Resources.add;
             btnThem.ImageAlign = ContentAlignment.MiddleLeft;
             btnThem.Location = new Point(193, 368);
             btnThem.Name = "btnThem";
@@ -513,6 +519,7 @@
             // 
             // btnLoadDS
             // 
+            btnLoadDS.Image = Properties.Resources.load;
             btnLoadDS.ImageAlign = ContentAlignment.MiddleLeft;
             btnLoadDS.Location = new Point(381, 116);
             btnLoadDS.Name = "btnLoadDS";
