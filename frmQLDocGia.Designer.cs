@@ -464,7 +464,7 @@
             groupBox3.Size = new Size(658, 97);
             groupBox3.TabIndex = 0;
             groupBox3.TabStop = false;
-            groupBox3.Text = "Tìm kiếm đọc giả";
+            groupBox3.Text = "Tìm kiếm độc giả";
             // 
             // groupBox5
             // 
@@ -705,7 +705,7 @@
             MaximizeBox = false;
             Name = "frmQLDocGia";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = " Quản lý đọc giả";
+            Text = " Quản lý độc giả";
             Load += frmQLDocGia_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
