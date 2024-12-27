@@ -107,6 +107,7 @@
             // 
             // cboGioiTinh
             // 
+            cboGioiTinh.Enabled = false;
             cboGioiTinh.FormattingEnabled = true;
             cboGioiTinh.Items.AddRange(new object[] { "Nam", "Nữ" });
             cboGioiTinh.Location = new Point(449, 28);
@@ -116,6 +117,7 @@
             // 
             // txtEmail
             // 
+            txtEmail.Enabled = false;
             txtEmail.Location = new Point(449, 87);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(165, 27);
@@ -159,6 +161,7 @@
             // 
             // txtTenDG
             // 
+            txtTenDG.Enabled = false;
             txtTenDG.Location = new Point(114, 57);
             txtTenDG.Name = "txtTenDG";
             txtTenDG.Size = new Size(169, 27);
@@ -238,6 +241,7 @@
             // dtmNgLapThe
             // 
             dtmNgLapThe.CustomFormat = "dd/MM/yyyy";
+            dtmNgLapThe.Enabled = false;
             dtmNgLapThe.Format = DateTimePickerFormat.Custom;
             dtmNgLapThe.Location = new Point(312, 174);
             dtmNgLapThe.Name = "dtmNgLapThe";
@@ -255,6 +259,7 @@
             // 
             // cboLoaiDG
             // 
+            cboLoaiDG.Enabled = false;
             cboLoaiDG.FormattingEnabled = true;
             cboLoaiDG.Items.AddRange(new object[] { "X", "Y" });
             cboLoaiDG.Location = new Point(449, 115);
@@ -273,6 +278,7 @@
             // 
             // txtGhiChu
             // 
+            txtGhiChu.Enabled = false;
             txtGhiChu.Location = new Point(449, 147);
             txtGhiChu.Name = "txtGhiChu";
             txtGhiChu.Size = new Size(165, 27);
@@ -289,6 +295,7 @@
             // 
             // txtTenTK
             // 
+            txtTenTK.Enabled = false;
             txtTenTK.Location = new Point(114, 115);
             txtTenTK.Name = "txtTenTK";
             txtTenTK.Size = new Size(169, 27);
@@ -305,6 +312,7 @@
             // 
             // txtMK
             // 
+            txtMK.Enabled = false;
             txtMK.Location = new Point(114, 144);
             txtMK.Name = "txtMK";
             txtMK.Size = new Size(169, 27);
@@ -362,6 +370,7 @@
             // dtmNgaySinh
             // 
             dtmNgaySinh.CustomFormat = "dd/MM/yyyy";
+            dtmNgaySinh.Enabled = false;
             dtmNgaySinh.Format = DateTimePickerFormat.Custom;
             dtmNgaySinh.Location = new Point(114, 86);
             dtmNgaySinh.Name = "dtmNgaySinh";
@@ -370,6 +379,7 @@
             // 
             // txtDiaChi
             // 
+            txtDiaChi.Enabled = false;
             txtDiaChi.Location = new Point(449, 57);
             txtDiaChi.Name = "txtDiaChi";
             txtDiaChi.Size = new Size(165, 27);
