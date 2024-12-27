@@ -62,6 +62,9 @@
             // 
             // txtSLDauSach
             // 
+            txtSLDauSach.BackColor = SystemColors.Window;
+            txtSLDauSach.BorderStyle = BorderStyle.FixedSingle;
+            txtSLDauSach.Enabled = false;
             txtSLDauSach.Location = new Point(163, 29);
             txtSLDauSach.Margin = new Padding(3, 4, 3, 4);
             txtSLDauSach.Name = "txtSLDauSach";
@@ -148,6 +151,9 @@
             // 
             // txtSLSachQuaHan
             // 
+            txtSLSachQuaHan.BackColor = SystemColors.Window;
+            txtSLSachQuaHan.BorderStyle = BorderStyle.FixedSingle;
+            txtSLSachQuaHan.Enabled = false;
             txtSLSachQuaHan.Location = new Point(646, 107);
             txtSLSachQuaHan.Margin = new Padding(3, 4, 3, 4);
             txtSLSachQuaHan.Name = "txtSLSachQuaHan";
@@ -157,6 +163,9 @@
             // 
             // txtTongGiaTriSach
             // 
+            txtTongGiaTriSach.BackColor = SystemColors.Window;
+            txtTongGiaTriSach.BorderStyle = BorderStyle.FixedSingle;
+            txtTongGiaTriSach.Enabled = false;
             txtTongGiaTriSach.Location = new Point(646, 68);
             txtTongGiaTriSach.Margin = new Padding(3, 4, 3, 4);
             txtTongGiaTriSach.Name = "txtTongGiaTriSach";
@@ -166,6 +175,9 @@
             // 
             // txtSLCon
             // 
+            txtSLCon.BackColor = SystemColors.Window;
+            txtSLCon.BorderStyle = BorderStyle.FixedSingle;
+            txtSLCon.Enabled = false;
             txtSLCon.Location = new Point(646, 29);
             txtSLCon.Margin = new Padding(3, 4, 3, 4);
             txtSLCon.Name = "txtSLCon";
@@ -175,6 +187,9 @@
             // 
             // txtSLMuon
             // 
+            txtSLMuon.BackColor = SystemColors.Window;
+            txtSLMuon.BorderStyle = BorderStyle.FixedSingle;
+            txtSLMuon.Enabled = false;
             txtSLMuon.Location = new Point(163, 107);
             txtSLMuon.Margin = new Padding(3, 4, 3, 4);
             txtSLMuon.Name = "txtSLMuon";
@@ -184,6 +199,9 @@
             // 
             // txtSLCuon
             // 
+            txtSLCuon.BackColor = SystemColors.Window;
+            txtSLCuon.BorderStyle = BorderStyle.FixedSingle;
+            txtSLCuon.Enabled = false;
             txtSLCuon.Location = new Point(163, 68);
             txtSLCuon.Margin = new Padding(3, 4, 3, 4);
             txtSLCuon.Name = "txtSLCuon";
@@ -256,6 +274,9 @@
             // 
             // txtSLDGQuaHan
             // 
+            txtSLDGQuaHan.BackColor = SystemColors.Window;
+            txtSLDGQuaHan.BorderStyle = BorderStyle.FixedSingle;
+            txtSLDGQuaHan.Enabled = false;
             txtSLDGQuaHan.Location = new Point(646, 27);
             txtSLDGQuaHan.Margin = new Padding(3, 4, 3, 4);
             txtSLDGQuaHan.Name = "txtSLDGQuaHan";
@@ -265,6 +286,9 @@
             // 
             // txtSLDGMuon
             // 
+            txtSLDGMuon.BackColor = SystemColors.Window;
+            txtSLDGMuon.BorderStyle = BorderStyle.FixedSingle;
+            txtSLDGMuon.Enabled = false;
             txtSLDGMuon.Location = new Point(163, 68);
             txtSLDGMuon.Margin = new Padding(3, 4, 3, 4);
             txtSLDGMuon.Name = "txtSLDGMuon";
@@ -274,6 +298,9 @@
             // 
             // txtSLDocGia
             // 
+            txtSLDocGia.BackColor = SystemColors.Window;
+            txtSLDocGia.BorderStyle = BorderStyle.FixedSingle;
+            txtSLDocGia.Enabled = false;
             txtSLDocGia.Location = new Point(163, 29);
             txtSLDocGia.Margin = new Padding(3, 4, 3, 4);
             txtSLDocGia.Name = "txtSLDocGia";
