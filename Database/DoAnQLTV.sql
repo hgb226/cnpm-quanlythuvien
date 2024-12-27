@@ -100,6 +100,16 @@ go
 
 -- Insert dữ liệu vào các bảng
 
+-- Chèn dữ liệu bảng tblChiTietPM
+insert into ChiTietPM values ('CT001', 'MS001', '2024-12-01', 1);
+insert into ChiTietPM values ('CT002', 'MS002', '2024-12-01', 1);
+insert into ChiTietPM values ('CT002', 'MS005', '2024-12-02', 1);
+insert into ChiTietPM values ('CT003', 'MS002', '2024-12-02', 1);
+insert into ChiTietPM values ('CT004', 'MS007', '2024-12-03', 1);
+insert into ChiTietPM values ('CT005', 'MS003', '2024-12-03', 1);
+insert into ChiTietPM values ('CT006', 'MS004', '2024-12-04', 1);
+go
+
 -- Chèn dữ liệu bảng tblSach
 insert into tblSach values ('MS001','20/06/2005',N'Lập trình Windown',N'Lập trình',N'Nguyễn Xuân Nam',N'NXB Hồng Bàng','2000','100','50000',N'Mới','...')
 insert into tblSach values ('MS002','25/05/2004',N'Lập trình Web',N'Lập trình',N'Lê Hồng Nhân',N'NXB Giáo Dục','2001','100','50000',N'Mới','...')
