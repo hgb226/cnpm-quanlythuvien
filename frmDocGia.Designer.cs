@@ -82,6 +82,7 @@
             // 
             // txtNDTimKiem
             // 
+            txtNDTimKiem.BorderStyle = BorderStyle.FixedSingle;
             txtNDTimKiem.Location = new Point(11, 24);
             txtNDTimKiem.Name = "txtNDTimKiem";
             txtNDTimKiem.Size = new Size(218, 27);
@@ -95,7 +96,7 @@
             groupBox4.Controls.Add(radMaSach);
             groupBox4.Location = new Point(31, 19);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(376, 60);
+            groupBox4.Size = new Size(387, 60);
             groupBox4.TabIndex = 0;
             groupBox4.TabStop = false;
             groupBox4.Text = "Tìm Theo";
@@ -283,7 +284,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveBorder;
+            BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(767, 385);
             Controls.Add(groupBox1);
             Controls.Add(groupBox3);
@@ -291,7 +292,7 @@
             Font = new Font("Times New Roman", 10F, FontStyle.Regular, GraphicsUnit.Point, 163);
             MainMenuStrip = menuStrip1;
             Name = "frmDocGia";
-            Text = "frmDocGia";
+            Text = "Độc Giả";
             groupBox3.ResumeLayout(false);
             grpTimKiem.ResumeLayout(false);
             grpTimKiem.PerformLayout();
