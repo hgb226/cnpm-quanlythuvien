@@ -98,6 +98,7 @@
             // 
             // txtNhapLaiMKMoi
             // 
+            txtNhapLaiMKMoi.BorderStyle = BorderStyle.FixedSingle;
             txtNhapLaiMKMoi.Location = new Point(195, 143);
             txtNhapLaiMKMoi.Name = "txtNhapLaiMKMoi";
             txtNhapLaiMKMoi.Size = new Size(189, 27);
@@ -105,6 +106,7 @@
             // 
             // txtMatKhauMoi
             // 
+            txtMatKhauMoi.BorderStyle = BorderStyle.FixedSingle;
             txtMatKhauMoi.Location = new Point(195, 96);
             txtMatKhauMoi.Name = "txtMatKhauMoi";
             txtMatKhauMoi.Size = new Size(189, 27);
@@ -112,6 +114,7 @@
             // 
             // txtMatKhau
             // 
+            txtMatKhau.BorderStyle = BorderStyle.FixedSingle;
             txtMatKhau.Location = new Point(195, 51);
             txtMatKhau.Name = "txtMatKhau";
             txtMatKhau.Size = new Size(189, 27);
@@ -119,6 +122,7 @@
             // 
             // txtTenTaiKhoan
             // 
+            txtTenTaiKhoan.BorderStyle = BorderStyle.FixedSingle;
             txtTenTaiKhoan.Location = new Point(195, 12);
             txtTenTaiKhoan.Name = "txtTenTaiKhoan";
             txtTenTaiKhoan.Size = new Size(189, 27);

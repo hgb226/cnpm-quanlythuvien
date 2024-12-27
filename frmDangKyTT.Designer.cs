@@ -84,6 +84,7 @@
             // 
             // txtGhiChu
             // 
+            txtGhiChu.BorderStyle = BorderStyle.FixedSingle;
             txtGhiChu.Location = new Point(134, 141);
             txtGhiChu.Name = "txtGhiChu";
             txtGhiChu.Size = new Size(169, 27);
@@ -100,6 +101,7 @@
             // 
             // txtTenTK
             // 
+            txtTenTK.BorderStyle = BorderStyle.FixedSingle;
             txtTenTK.Enabled = false;
             txtTenTK.Location = new Point(478, 80);
             txtTenTK.Name = "txtTenTK";
@@ -117,6 +119,7 @@
             // 
             // txtMK
             // 
+            txtMK.BorderStyle = BorderStyle.FixedSingle;
             txtMK.Location = new Point(478, 109);
             txtMK.Name = "txtMK";
             txtMK.Size = new Size(169, 27);
@@ -192,6 +195,7 @@
             // 
             // txtDiaChi
             // 
+            txtDiaChi.BorderStyle = BorderStyle.FixedSingle;
             txtDiaChi.Location = new Point(478, 52);
             txtDiaChi.Name = "txtDiaChi";
             txtDiaChi.Size = new Size(169, 27);
@@ -199,6 +203,7 @@
             // 
             // txtEmail
             // 
+            txtEmail.BorderStyle = BorderStyle.FixedSingle;
             txtEmail.Location = new Point(134, 112);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(169, 27);
@@ -242,6 +247,7 @@
             // 
             // txtTenTT
             // 
+            txtTenTT.BorderStyle = BorderStyle.FixedSingle;
             txtTenTT.Location = new Point(134, 52);
             txtTenTT.Name = "txtTenTT";
             txtTenTT.Size = new Size(169, 27);
@@ -258,6 +264,7 @@
             // 
             // txtMaTT
             // 
+            txtMaTT.BorderStyle = BorderStyle.FixedSingle;
             txtMaTT.Enabled = false;
             txtMaTT.Location = new Point(134, 23);
             txtMaTT.Name = "txtMaTT";
@@ -285,6 +292,7 @@
             // 
             // txtNhapLaiMK
             // 
+            txtNhapLaiMK.BorderStyle = BorderStyle.FixedSingle;
             txtNhapLaiMK.Location = new Point(478, 138);
             txtNhapLaiMK.Name = "txtNhapLaiMK";
             txtNhapLaiMK.Size = new Size(169, 27);

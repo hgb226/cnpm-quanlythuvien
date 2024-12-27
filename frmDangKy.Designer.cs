@@ -111,6 +111,7 @@
             // 
             // txtGhiChu
             // 
+            txtGhiChu.BorderStyle = BorderStyle.FixedSingle;
             txtGhiChu.Location = new Point(125, 132);
             txtGhiChu.Name = "txtGhiChu";
             txtGhiChu.Size = new Size(169, 27);
@@ -127,6 +128,7 @@
             // 
             // txtTenTK
             // 
+            txtTenTK.BorderStyle = BorderStyle.FixedSingle;
             txtTenTK.Enabled = false;
             txtTenTK.Location = new Point(454, 73);
             txtTenTK.Name = "txtTenTK";
@@ -144,6 +146,7 @@
             // 
             // txtNhapLaiMK
             // 
+            txtNhapLaiMK.BorderStyle = BorderStyle.FixedSingle;
             txtNhapLaiMK.Location = new Point(454, 131);
             txtNhapLaiMK.Name = "txtNhapLaiMK";
             txtNhapLaiMK.Size = new Size(169, 27);
@@ -160,6 +163,7 @@
             // 
             // txtMK
             // 
+            txtMK.BorderStyle = BorderStyle.FixedSingle;
             txtMK.Location = new Point(454, 102);
             txtMK.Name = "txtMK";
             txtMK.Size = new Size(169, 27);
@@ -195,6 +199,7 @@
             // 
             // txtEmail
             // 
+            txtEmail.BorderStyle = BorderStyle.FixedSingle;
             txtEmail.Location = new Point(125, 103);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(169, 27);
@@ -238,6 +243,7 @@
             // 
             // txtTenDG
             // 
+            txtTenDG.BorderStyle = BorderStyle.FixedSingle;
             txtTenDG.Location = new Point(125, 45);
             txtTenDG.Name = "txtTenDG";
             txtTenDG.Size = new Size(169, 27);
@@ -254,6 +260,7 @@
             // 
             // txtMaDG
             // 
+            txtMaDG.BorderStyle = BorderStyle.FixedSingle;
             txtMaDG.Enabled = false;
             txtMaDG.Location = new Point(125, 16);
             txtMaDG.Name = "txtMaDG";
@@ -272,6 +279,7 @@
             // 
             // txtDiaChi
             // 
+            txtDiaChi.BorderStyle = BorderStyle.FixedSingle;
             txtDiaChi.Location = new Point(454, 45);
             txtDiaChi.Name = "txtDiaChi";
             txtDiaChi.Size = new Size(169, 27);

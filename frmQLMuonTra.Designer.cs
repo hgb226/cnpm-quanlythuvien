@@ -231,6 +231,7 @@
             // 
             // txtTTMaSach
             // 
+            txtTTMaSach.BorderStyle = BorderStyle.FixedSingle;
             txtTTMaSach.Location = new Point(92, 23);
             txtTTMaSach.Name = "txtTTMaSach";
             txtTTMaSach.Size = new Size(128, 27);
@@ -238,6 +239,7 @@
             // 
             // txtTTTenTG
             // 
+            txtTTTenTG.BorderStyle = BorderStyle.FixedSingle;
             txtTTTenTG.Location = new Point(92, 135);
             txtTTTenTG.Name = "txtTTTenTG";
             txtTTTenTG.Size = new Size(128, 27);
@@ -281,6 +283,7 @@
             // 
             // txtTTTenSach
             // 
+            txtTTTenSach.BorderStyle = BorderStyle.FixedSingle;
             txtTTTenSach.Location = new Point(92, 59);
             txtTTTenSach.Name = "txtTTTenSach";
             txtTTTenSach.Size = new Size(128, 27);
@@ -288,6 +291,7 @@
             // 
             // txtTTSLCon
             // 
+            txtTTSLCon.BorderStyle = BorderStyle.FixedSingle;
             txtTTSLCon.Location = new Point(92, 97);
             txtTTSLCon.Name = "txtTTSLCon";
             txtTTSLCon.Size = new Size(128, 27);
@@ -356,6 +360,7 @@
             // 
             // txtNDTimKiem
             // 
+            txtNDTimKiem.BorderStyle = BorderStyle.FixedSingle;
             txtNDTimKiem.Location = new Point(11, 24);
             txtNDTimKiem.Name = "txtNDTimKiem";
             txtNDTimKiem.Size = new Size(293, 27);
@@ -549,6 +554,7 @@
             // 
             // txtMaPhieu0
             // 
+            txtMaPhieu0.BorderStyle = BorderStyle.FixedSingle;
             txtMaPhieu0.Location = new Point(100, 23);
             txtMaPhieu0.Name = "txtMaPhieu0";
             txtMaPhieu0.Size = new Size(128, 27);
@@ -613,6 +619,7 @@
             // 
             // txtSLMuon0
             // 
+            txtSLMuon0.BorderStyle = BorderStyle.FixedSingle;
             txtSLMuon0.Location = new Point(100, 134);
             txtSLMuon0.MaxLength = 9;
             txtSLMuon0.Name = "txtSLMuon0";
@@ -621,6 +628,7 @@
             // 
             // txtGhiChu0
             // 
+            txtGhiChu0.BorderStyle = BorderStyle.FixedSingle;
             txtGhiChu0.Location = new Point(340, 134);
             txtGhiChu0.Name = "txtGhiChu0";
             txtGhiChu0.Size = new Size(148, 27);
@@ -683,7 +691,7 @@
             tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(769, 552);
+            tabPage2.Size = new Size(909, 879);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Quản lý Trả Sách";
             tabPage2.Click += tabPage2_Click;

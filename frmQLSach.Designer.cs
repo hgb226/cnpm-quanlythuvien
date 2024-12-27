@@ -264,6 +264,7 @@
             // 
             // txtGhiChu
             // 
+            txtGhiChu.BorderStyle = BorderStyle.FixedSingle;
             txtGhiChu.Location = new Point(489, 174);
             txtGhiChu.Name = "txtGhiChu";
             txtGhiChu.Size = new Size(198, 27);
@@ -280,6 +281,7 @@
             // 
             // txtTriGia
             // 
+            txtTriGia.BorderStyle = BorderStyle.FixedSingle;
             txtTriGia.Location = new Point(489, 116);
             txtTriGia.Name = "txtTriGia";
             txtTriGia.Size = new Size(198, 27);
@@ -296,6 +298,7 @@
             // 
             // txtSLNhap
             // 
+            txtSLNhap.BorderStyle = BorderStyle.FixedSingle;
             txtSLNhap.Location = new Point(489, 85);
             txtSLNhap.Name = "txtSLNhap";
             txtSLNhap.Size = new Size(198, 27);
@@ -348,6 +351,7 @@
             // 
             // txtTheLoai
             // 
+            txtTheLoai.BorderStyle = BorderStyle.FixedSingle;
             txtTheLoai.Location = new Point(489, 55);
             txtTheLoai.Name = "txtTheLoai";
             txtTheLoai.Size = new Size(198, 27);
@@ -355,6 +359,7 @@
             // 
             // txtNamXB
             // 
+            txtNamXB.BorderStyle = BorderStyle.FixedSingle;
             txtNamXB.Location = new Point(127, 175);
             txtNamXB.Name = "txtNamXB";
             txtNamXB.Size = new Size(196, 27);
@@ -362,6 +367,7 @@
             // 
             // txtNXB
             // 
+            txtNXB.BorderStyle = BorderStyle.FixedSingle;
             txtNXB.Location = new Point(127, 145);
             txtNXB.Name = "txtNXB";
             txtNXB.Size = new Size(196, 27);
@@ -369,6 +375,7 @@
             // 
             // txtTacGia
             // 
+            txtTacGia.BorderStyle = BorderStyle.FixedSingle;
             txtTacGia.Location = new Point(127, 115);
             txtTacGia.Name = "txtTacGia";
             txtTacGia.Size = new Size(196, 27);
@@ -376,6 +383,7 @@
             // 
             // txtTenSach
             // 
+            txtTenSach.BorderStyle = BorderStyle.FixedSingle;
             txtTenSach.Location = new Point(127, 85);
             txtTenSach.Name = "txtTenSach";
             txtTenSach.Size = new Size(196, 27);
@@ -392,6 +400,7 @@
             // 
             // txtMaSach
             // 
+            txtMaSach.BorderStyle = BorderStyle.FixedSingle;
             txtMaSach.Location = new Point(127, 56);
             txtMaSach.Name = "txtMaSach";
             txtMaSach.Size = new Size(196, 27);
@@ -552,6 +561,7 @@
             // 
             // txtNDTimKiem
             // 
+            txtNDTimKiem.BorderStyle = BorderStyle.FixedSingle;
             txtNDTimKiem.Location = new Point(11, 24);
             txtNDTimKiem.Name = "txtNDTimKiem";
             txtNDTimKiem.Size = new Size(241, 27);
