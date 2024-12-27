@@ -220,8 +220,24 @@ namespace qltv
 
         private void btnXemSLSachQuaHan_Click(object sender, EventArgs e)
         {
-            dtpBaocao.Enabled = false;
-            string strTimSLSQuaHan = @"SELECT MaPhieu as 'Mã Phiếu', MaDG as 'Mã DG', MaSach as 'Mã Sách', NgayMuon as 'Ngày Mượn', NgayTra as 'Ngày Trả', GhiChu as 'Ghi Chú' from tblHSPhieuMuon where CONVERT (datetime, NgayTra, 103) < getdate()";
+            dtpBaocao.Enabled = true;
+
+            // Lấy giá trị ngày từ DateTimePicker
+            DateTime selectedDate = dtpBaocao.Value.Date; // Chỉ lấy phần ngày, bỏ qua giờ
+
+            // Tạo chuỗi truy vấn với điều kiện Ngày Mượn trùng với ngày đã chọn
+            string strTimSLSQuaHan = $@"
+            SELECT 
+            MaPhieu AS 'Mã Phiếu', 
+            MaDG AS 'Mã DG', 
+            MaSach AS 'Mã Sách', 
+            NgayMuon AS 'Ngày Mượn', 
+            NgayTra AS 'Ngày Trả', 
+            DATEDIFF(day, CONVERT(datetime, NgayMuon, 103), CONVERT(datetime, NgayTra, 103)) - 4 AS 'Số Ngày Trả Trễ'
+            FROM tblHSPhieuMuon
+            WHERE CONVERT(datetime, NgayMuon, 103) = '{selectedDate:yyyy-MM-dd}'";
+
+            // Kết nối và hiển thị dữ liệu lên DataGridView
             dataGridViewDSDGQuaHan.DataSource = ketnoi(strTimSLSQuaHan);
             dataGridViewDSDGQuaHan.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewDSDGQuaHan.Show();
