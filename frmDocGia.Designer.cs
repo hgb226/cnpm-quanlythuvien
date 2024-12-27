@@ -87,6 +87,7 @@
             txtNDTimKiem.Name = "txtNDTimKiem";
             txtNDTimKiem.Size = new Size(218, 27);
             txtNDTimKiem.TabIndex = 0;
+            txtNDTimKiem.TextChanged += txtNDTimKiem_TextChanged;
             // 
             // groupBox4
             // 
@@ -273,12 +274,14 @@
             changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
             changePasswordToolStripMenuItem.Size = new Size(114, 24);
             changePasswordToolStripMenuItem.Text = "Đổi Mật Khẩu";
+            changePasswordToolStripMenuItem.Click += changePasswordToolStripMenuItem_Click;
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             exitToolStripMenuItem.Size = new Size(61, 24);
             exitToolStripMenuItem.Text = "Thoát";
+            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
             // frmDocGia
             // 
