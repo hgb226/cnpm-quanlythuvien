@@ -232,10 +232,14 @@ namespace qltv
         private void btnBaocao_Click(object sender, EventArgs e)
         {
             dtpBaocao.Enabled = true;
-            string query = "select TheLoai as [Thể loại], sum(SoLanMuon) as [Số lần mượn] from tblSach S, ChiTietPM CT where S.MaSach = CT.MaSach and month(CT.NgayThang) = " + dtpBaocao.Value.Month + "and year(CT.NgayThang) = " + dtpBaocao.Value.Year + " group by S.TheLoai";
+            string query = "select TheLoai as [Thể loại], sum(SoLanMuon) as [Số lần mượn] from tblSach S, ChiTietPM CT where S.MaSach = CT.MaSach and month(CT.NgayThang) = " + dtpBaocao.Value.Month +
+                           " and year(CT.NgayThang) = " + dtpBaocao.Value.Year +
+                           " and day(CT.NgayThang) = " + dtpBaocao.Value.Day +
+                           " group by S.TheLoai";
             dataGridViewDSDGQuaHan.DataSource = ketnoi(query);
             dataGridViewDSDGQuaHan.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewDSDGQuaHan.Show();
+
 
         }
 

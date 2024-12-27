@@ -220,7 +220,7 @@
             // 
             // dtpBaocao
             // 
-            dtpBaocao.CustomFormat = "MM/yyyy";
+            dtpBaocao.CustomFormat = "dd/MM/yyyy";
             dtpBaocao.Enabled = false;
             dtpBaocao.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpBaocao.Format = DateTimePickerFormat.Custom;
