@@ -117,7 +117,10 @@ namespace qltv
         private void txtSotienthu_TextChanged_1(object sender, EventArgs e)
         {
             if (txtSotienthu.Text == "")
+            {
+                txtConlai.Text = "";
                 return;
+            }
             int tienthu = Convert.ToInt32(txtSotienthu.Text);
             txtConlai.Text = (tienthu - Convert.ToInt32(txtTongno.Text)).ToString();
         }
