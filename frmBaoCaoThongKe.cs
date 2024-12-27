@@ -227,16 +227,16 @@ namespace qltv
 
             // Tạo chuỗi truy vấn với điều kiện Ngày Mượn trùng với ngày đã chọn và Số Ngày Trả Trễ > 0
             string strTimSLSQuaHan = $@"
-        SELECT 
+            SELECT 
             MaPhieu AS 'Mã Phiếu', 
             MaDG AS 'Mã DG', 
             MaSach AS 'Mã Sách', 
             NgayMuon AS 'Ngày Mượn', 
             NgayTra AS 'Ngày Trả', 
             DATEDIFF(day, CONVERT(datetime, NgayMuon, 103), CONVERT(datetime, NgayTra, 103)) - 4 AS 'Số Ngày Trả Trễ'
-        FROM tblHSPhieuMuon
-        WHERE CONVERT(datetime, NgayMuon, 103) = '{selectedDate:yyyy-MM-dd}'
-        AND DATEDIFF(day, CONVERT(datetime, NgayMuon, 103), CONVERT(datetime, NgayTra, 103)) - 4 > 0";
+            FROM tblHSPhieuMuon
+            WHERE CONVERT(datetime, NgayMuon, 103) = '{selectedDate:yyyy-MM-dd}'
+            AND DATEDIFF(day, CONVERT(datetime, NgayMuon, 103), CONVERT(datetime, NgayTra, 103)) - 4 > 0";
 
             // Kết nối và hiển thị dữ liệu lên DataGridView
             dataGridViewDSDGQuaHan.DataSource = ketnoi(strTimSLSQuaHan);
@@ -249,10 +249,17 @@ namespace qltv
         private void btnBaocao_Click(object sender, EventArgs e)
         {
             dtpBaocao.Enabled = true;
-            string query = "select TheLoai as [Thể loại], sum(SoLanMuon) as [Số lần mượn] from tblSach S, ChiTietPM CT where S.MaSach = CT.MaSach and month(CT.NgayThang) = " + dtpBaocao.Value.Month +
-                           " and year(CT.NgayThang) = " + dtpBaocao.Value.Year +
-                           " and day(CT.NgayThang) = " + dtpBaocao.Value.Day +
+
+            // Truy vấn để lấy dữ liệu
+            string query = "select S.TheLoai as [Thể loại], sum(MT.SLMuon) as [Số lần mượn] " +
+                           "from tblSach S, tblHSPhieuMuon MT " +
+                           "where S.MaSach = MT.MaSach " +
+                           "and day(MT.NgayMuon) = " + dtpBaocao.Value.Day +
+                           " and month(MT.NgayMuon) = " + dtpBaocao.Value.Month +
+                           " and year(MT.NgayMuon) = " + dtpBaocao.Value.Year +
                            " group by S.TheLoai";
+
+            // Thiết lập DataSource cho DataGridView
             dataGridViewDSDGQuaHan.DataSource = ketnoi(query);
             dataGridViewDSDGQuaHan.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewDSDGQuaHan.Show();
