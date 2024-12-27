@@ -117,6 +117,7 @@
             // 
             // txtEmail
             // 
+            txtEmail.BorderStyle = BorderStyle.FixedSingle;
             txtEmail.Enabled = false;
             txtEmail.Location = new Point(449, 87);
             txtEmail.Name = "txtEmail";
@@ -161,6 +162,7 @@
             // 
             // txtTenDG
             // 
+            txtTenDG.BorderStyle = BorderStyle.FixedSingle;
             txtTenDG.Enabled = false;
             txtTenDG.Location = new Point(114, 57);
             txtTenDG.Name = "txtTenDG";
@@ -178,6 +180,7 @@
             // 
             // txtMaDG
             // 
+            txtMaDG.BorderStyle = BorderStyle.FixedSingle;
             txtMaDG.Location = new Point(114, 28);
             txtMaDG.Name = "txtMaDG";
             txtMaDG.Size = new Size(169, 27);
@@ -278,6 +281,7 @@
             // 
             // txtGhiChu
             // 
+            txtGhiChu.BorderStyle = BorderStyle.FixedSingle;
             txtGhiChu.Enabled = false;
             txtGhiChu.Location = new Point(449, 147);
             txtGhiChu.Name = "txtGhiChu";
@@ -295,6 +299,7 @@
             // 
             // txtTenTK
             // 
+            txtTenTK.BorderStyle = BorderStyle.FixedSingle;
             txtTenTK.Enabled = false;
             txtTenTK.Location = new Point(114, 115);
             txtTenTK.Name = "txtTenTK";
@@ -312,6 +317,7 @@
             // 
             // txtMK
             // 
+            txtMK.BorderStyle = BorderStyle.FixedSingle;
             txtMK.Enabled = false;
             txtMK.Location = new Point(114, 144);
             txtMK.Name = "txtMK";
@@ -379,6 +385,7 @@
             // 
             // txtDiaChi
             // 
+            txtDiaChi.BorderStyle = BorderStyle.FixedSingle;
             txtDiaChi.Enabled = false;
             txtDiaChi.Location = new Point(449, 57);
             txtDiaChi.Name = "txtDiaChi";
@@ -488,6 +495,7 @@
             // 
             // txtNDTimKiem
             // 
+            txtNDTimKiem.BorderStyle = BorderStyle.FixedSingle;
             txtNDTimKiem.Location = new Point(11, 24);
             txtNDTimKiem.Name = "txtNDTimKiem";
             txtNDTimKiem.Size = new Size(332, 27);

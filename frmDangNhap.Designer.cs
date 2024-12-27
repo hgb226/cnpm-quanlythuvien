@@ -53,6 +53,7 @@
             // 
             // txtTenDangNhap
             // 
+            txtTenDangNhap.BorderStyle = BorderStyle.FixedSingle;
             txtTenDangNhap.Location = new Point(174, 35);
             txtTenDangNhap.Name = "txtTenDangNhap";
             txtTenDangNhap.Size = new Size(191, 27);
@@ -70,6 +71,7 @@
             // 
             // txtMatKhau
             // 
+            txtMatKhau.BorderStyle = BorderStyle.FixedSingle;
             txtMatKhau.Location = new Point(174, 93);
             txtMatKhau.Name = "txtMatKhau";
             txtMatKhau.Size = new Size(191, 27);
