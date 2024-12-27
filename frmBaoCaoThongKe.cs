@@ -251,7 +251,7 @@ namespace qltv
             dtpBaocao.Enabled = true;
 
             // Truy vấn để lấy dữ liệu
-            string query = "select S.TheLoai as [Thể loại], sum(MT.SLMuon) as [Số lần mượn] " +
+            string query = "select S.TheLoai as [Thể loại], sum(MT.SLMuon) as [Số lượng mượn] " +
                            "from tblSach S, tblHSPhieuMuon MT " +
                            "where S.MaSach = MT.MaSach " +
                            "and day(MT.NgayMuon) = " + dtpBaocao.Value.Day +
