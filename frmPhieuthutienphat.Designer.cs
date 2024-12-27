@@ -43,7 +43,7 @@
             // txtMaDG
             // 
             txtMaDG.BorderStyle = BorderStyle.FixedSingle;
-            txtMaDG.Location = new Point(402, 85);
+            txtMaDG.Location = new Point(150, 13);
             txtMaDG.Margin = new Padding(3, 4, 3, 4);
             txtMaDG.Name = "txtMaDG";
             txtMaDG.Size = new Size(339, 27);
@@ -54,7 +54,7 @@
             // 
             txtHotenDG.BorderStyle = BorderStyle.FixedSingle;
             txtHotenDG.Enabled = false;
-            txtHotenDG.Location = new Point(402, 188);
+            txtHotenDG.Location = new Point(150, 51);
             txtHotenDG.Margin = new Padding(3, 4, 3, 4);
             txtHotenDG.Name = "txtHotenDG";
             txtHotenDG.Size = new Size(339, 27);
@@ -64,7 +64,7 @@
             // 
             txtTongno.BorderStyle = BorderStyle.FixedSingle;
             txtTongno.Enabled = false;
-            txtTongno.Location = new Point(402, 315);
+            txtTongno.Location = new Point(150, 89);
             txtTongno.Margin = new Padding(3, 4, 3, 4);
             txtTongno.Name = "txtTongno";
             txtTongno.Size = new Size(339, 27);
@@ -73,7 +73,7 @@
             // txtSotienthu
             // 
             txtSotienthu.BorderStyle = BorderStyle.FixedSingle;
-            txtSotienthu.Location = new Point(402, 419);
+            txtSotienthu.Location = new Point(150, 127);
             txtSotienthu.Margin = new Padding(3, 4, 3, 4);
             txtSotienthu.Name = "txtSotienthu";
             txtSotienthu.Size = new Size(339, 27);
@@ -84,7 +84,7 @@
             // 
             txtConlai.BorderStyle = BorderStyle.FixedSingle;
             txtConlai.Enabled = false;
-            txtConlai.Location = new Point(402, 531);
+            txtConlai.Location = new Point(150, 165);
             txtConlai.Margin = new Padding(3, 4, 3, 4);
             txtConlai.Name = "txtConlai";
             txtConlai.Size = new Size(339, 27);
@@ -93,7 +93,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(126, 85);
+            label1.Location = new Point(57, 20);
             label1.Name = "label1";
             label1.Size = new Size(87, 20);
             label1.TabIndex = 5;
@@ -102,7 +102,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(126, 188);
+            label2.Location = new Point(12, 58);
             label2.Name = "label2";
             label2.Size = new Size(132, 20);
             label2.TabIndex = 6;
@@ -111,7 +111,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(126, 315);
+            label3.Location = new Point(80, 96);
             label3.Name = "label3";
             label3.Size = new Size(64, 20);
             label3.TabIndex = 7;
@@ -120,7 +120,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(126, 429);
+            label4.Location = new Point(64, 134);
             label4.Name = "label4";
             label4.Size = new Size(80, 20);
             label4.TabIndex = 8;
@@ -129,7 +129,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(126, 535);
+            label5.Location = new Point(89, 172);
             label5.Name = "label5";
             label5.Size = new Size(55, 20);
             label5.TabIndex = 9;
@@ -137,10 +137,10 @@
             // 
             // btnPrint
             // 
-            btnPrint.Location = new Point(795, 471);
+            btnPrint.Location = new Point(495, 13);
             btnPrint.Margin = new Padding(3, 4, 3, 4);
             btnPrint.Name = "btnPrint";
-            btnPrint.Size = new Size(86, 63);
+            btnPrint.Size = new Size(100, 100);
             btnPrint.TabIndex = 10;
             btnPrint.Text = "Print";
             btnPrint.UseVisualStyleBackColor = true;
@@ -151,7 +151,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(716, 207);
             Controls.Add(btnPrint);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -164,6 +164,7 @@
             Controls.Add(txtHotenDG);
             Controls.Add(txtMaDG);
             Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
             Name = "frmPhieuthutienphat";
             Text = "Phiếu thu tiền phạt";
             ResumeLayout(false);
