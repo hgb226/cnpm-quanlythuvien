@@ -165,7 +165,7 @@
             Controls.Add(txtMaDG);
             Margin = new Padding(3, 4, 3, 4);
             Name = "frmPhieuthutienphat";
-            Text = "frmPhieuthutienphat";
+            Text = "Phiếu thu tiền phạt";
             ResumeLayout(false);
             PerformLayout();
         }
