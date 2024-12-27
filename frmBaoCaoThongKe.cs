@@ -225,17 +225,18 @@ namespace qltv
             // Lấy giá trị ngày từ DateTimePicker
             DateTime selectedDate = dtpBaocao.Value.Date; // Chỉ lấy phần ngày, bỏ qua giờ
 
-            // Tạo chuỗi truy vấn với điều kiện Ngày Mượn trùng với ngày đã chọn
+            // Tạo chuỗi truy vấn với điều kiện Ngày Mượn trùng với ngày đã chọn và Số Ngày Trả Trễ > 0
             string strTimSLSQuaHan = $@"
-            SELECT 
+        SELECT 
             MaPhieu AS 'Mã Phiếu', 
             MaDG AS 'Mã DG', 
             MaSach AS 'Mã Sách', 
             NgayMuon AS 'Ngày Mượn', 
             NgayTra AS 'Ngày Trả', 
             DATEDIFF(day, CONVERT(datetime, NgayMuon, 103), CONVERT(datetime, NgayTra, 103)) - 4 AS 'Số Ngày Trả Trễ'
-            FROM tblHSPhieuMuon
-            WHERE CONVERT(datetime, NgayMuon, 103) = '{selectedDate:yyyy-MM-dd}'";
+        FROM tblHSPhieuMuon
+        WHERE CONVERT(datetime, NgayMuon, 103) = '{selectedDate:yyyy-MM-dd}'
+        AND DATEDIFF(day, CONVERT(datetime, NgayMuon, 103), CONVERT(datetime, NgayTra, 103)) - 4 > 0";
 
             // Kết nối và hiển thị dữ liệu lên DataGridView
             dataGridViewDSDGQuaHan.DataSource = ketnoi(strTimSLSQuaHan);
