@@ -42,91 +42,105 @@
             // 
             // txtMaDG
             // 
-            txtMaDG.Location = new Point(352, 64);
+            txtMaDG.BorderStyle = BorderStyle.FixedSingle;
+            txtMaDG.Location = new Point(402, 85);
+            txtMaDG.Margin = new Padding(3, 4, 3, 4);
             txtMaDG.Name = "txtMaDG";
-            txtMaDG.Size = new Size(297, 23);
+            txtMaDG.Size = new Size(339, 27);
             txtMaDG.TabIndex = 0;
             txtMaDG.TextChanged += txtMaDG_TextChanged_1;
             // 
             // txtHotenDG
             // 
-            txtHotenDG.Location = new Point(352, 141);
+            txtHotenDG.BorderStyle = BorderStyle.FixedSingle;
+            txtHotenDG.Enabled = false;
+            txtHotenDG.Location = new Point(402, 188);
+            txtHotenDG.Margin = new Padding(3, 4, 3, 4);
             txtHotenDG.Name = "txtHotenDG";
-            txtHotenDG.Size = new Size(297, 23);
+            txtHotenDG.Size = new Size(339, 27);
             txtHotenDG.TabIndex = 1;
             // 
             // txtTongno
             // 
-            txtTongno.Location = new Point(352, 236);
+            txtTongno.BorderStyle = BorderStyle.FixedSingle;
+            txtTongno.Enabled = false;
+            txtTongno.Location = new Point(402, 315);
+            txtTongno.Margin = new Padding(3, 4, 3, 4);
             txtTongno.Name = "txtTongno";
-            txtTongno.Size = new Size(297, 23);
+            txtTongno.Size = new Size(339, 27);
             txtTongno.TabIndex = 2;
             // 
             // txtSotienthu
             // 
-            txtSotienthu.Location = new Point(352, 314);
+            txtSotienthu.BorderStyle = BorderStyle.FixedSingle;
+            txtSotienthu.Location = new Point(402, 419);
+            txtSotienthu.Margin = new Padding(3, 4, 3, 4);
             txtSotienthu.Name = "txtSotienthu";
-            txtSotienthu.Size = new Size(297, 23);
+            txtSotienthu.Size = new Size(339, 27);
             txtSotienthu.TabIndex = 3;
             txtSotienthu.TextChanged += txtSotienthu_TextChanged_1;
             // 
             // txtConlai
             // 
-            txtConlai.Location = new Point(352, 398);
+            txtConlai.BorderStyle = BorderStyle.FixedSingle;
+            txtConlai.Enabled = false;
+            txtConlai.Location = new Point(402, 531);
+            txtConlai.Margin = new Padding(3, 4, 3, 4);
             txtConlai.Name = "txtConlai";
-            txtConlai.Size = new Size(297, 23);
+            txtConlai.Size = new Size(339, 27);
             txtConlai.TabIndex = 4;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(110, 64);
+            label1.Location = new Point(126, 85);
             label1.Name = "label1";
-            label1.Size = new Size(68, 15);
+            label1.Size = new Size(87, 20);
             label1.TabIndex = 5;
             label1.Text = "Mã Độc Giả";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(110, 141);
+            label2.Location = new Point(126, 188);
             label2.Name = "label2";
-            label2.Size = new Size(103, 15);
+            label2.Size = new Size(132, 20);
             label2.TabIndex = 6;
             label2.Text = "Họ và Tên Độc Giả";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(110, 236);
+            label3.Location = new Point(126, 315);
             label3.Name = "label3";
-            label3.Size = new Size(51, 15);
+            label3.Size = new Size(64, 20);
             label3.TabIndex = 7;
             label3.Text = "Tổng nợ";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(110, 322);
+            label4.Location = new Point(126, 429);
             label4.Name = "label4";
-            label4.Size = new Size(64, 15);
+            label4.Size = new Size(80, 20);
             label4.TabIndex = 8;
             label4.Text = "Số tiền thu";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(110, 401);
+            label5.Location = new Point(126, 535);
             label5.Name = "label5";
-            label5.Size = new Size(44, 15);
+            label5.Size = new Size(55, 20);
             label5.TabIndex = 9;
             label5.Text = "Còn lại";
             // 
             // btnPrint
             // 
-            btnPrint.Location = new Point(696, 353);
+            btnPrint.Location = new Point(795, 471);
+            btnPrint.Margin = new Padding(3, 4, 3, 4);
             btnPrint.Name = "btnPrint";
-            btnPrint.Size = new Size(75, 47);
+            btnPrint.Size = new Size(86, 63);
             btnPrint.TabIndex = 10;
             btnPrint.Text = "Print";
             btnPrint.UseVisualStyleBackColor = true;
@@ -134,9 +148,10 @@
             // 
             // frmPhieuthutienphat
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = SystemColors.ButtonHighlight;
+            ClientSize = new Size(914, 600);
             Controls.Add(btnPrint);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -148,6 +163,7 @@
             Controls.Add(txtTongno);
             Controls.Add(txtHotenDG);
             Controls.Add(txtMaDG);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmPhieuthutienphat";
             Text = "frmPhieuthutienphat";
             ResumeLayout(false);
