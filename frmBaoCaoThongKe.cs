@@ -17,6 +17,8 @@ namespace qltv
         public frmBaoCaoThongKe()
         {
             InitializeComponent();
+            this.Load += new System.EventHandler(this.frmBaoCaoThongKe_Load);
+
         }
         string strKetNoi = ConfigurationManager.ConnectionStrings["strConn"].ConnectionString;
         private SqlConnection myConnection;
@@ -53,15 +55,37 @@ namespace qltv
         private void slDauSach()
         {
             string strTinhSLDauSach = "select count(MaSach) as TongSLDauSach, sum(SLNhap) as TongSLSach, sum(TriGia) as TongGiaTriSach from tblSach";
-            myConnection = new SqlConnection(strKetNoi);
-            myConnection.Open();
-            myCommand = new SqlCommand(strTinhSLDauSach, myConnection);
-            myDataReaderSLDauSach = myCommand.ExecuteReader();
-            while (myDataReaderSLDauSach.Read())
+            try
             {
-                luuSLDauSach = myDataReaderSLDauSach.GetInt32(0).ToString();
-                luuSLCuon = myDataReaderSLDauSach.GetInt32(1).ToString();
-                luuTongGiaTriSach = myDataReaderSLDauSach.GetInt32(2).ToString();
+                myConnection = new SqlConnection(strKetNoi);
+                myConnection.Open();
+                myCommand = new SqlCommand(strTinhSLDauSach, myConnection);
+                myDataReaderSLDauSach = myCommand.ExecuteReader();
+
+                if (myDataReaderSLDauSach.HasRows)
+                {
+                    while (myDataReaderSLDauSach.Read())
+                    {
+                        luuSLDauSach = myDataReaderSLDauSach.GetInt32(0).ToString();
+                        luuSLCuon = myDataReaderSLDauSach.GetInt32(1).ToString();
+                        luuTongGiaTriSach = myDataReaderSLDauSach.GetInt32(2).ToString();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Không có dữ liệu đầu sách!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+            finally
+            {
+                if (myConnection != null && myConnection.State == ConnectionState.Open)
+                {
+                    myConnection.Close();
+                }
             }
 
         }
@@ -146,16 +170,16 @@ namespace qltv
 
         private void frmBaoCaoThongKe_Load(object sender, EventArgs e)
         {
-            txtSLDauSach.Enabled = false;
-            txtSLCuon.Enabled = false;
-            txtSLCon.Enabled = false;
-            txtSLMuon.Enabled = false;
-            txtTongGiaTriSach.Enabled = false;
-            txtSLSachQuaHan.Enabled = false;
+            txtSLDauSach.ReadOnly = true;
+            txtSLCuon.ReadOnly = true;
+            txtSLCon.ReadOnly = true;
+            txtSLMuon.ReadOnly = true;
+            txtTongGiaTriSach.ReadOnly = true;
+            txtSLSachQuaHan.ReadOnly = true;
+            txtSLDGQuaHan.ReadOnly = true;
+            txtSLDocGia.ReadOnly = true;
+            txtSLDGMuon.ReadOnly = true;
 
-            txtSLDGQuaHan.Enabled = false;
-            txtSLDocGia.Enabled = false;
-            txtSLDGMuon.Enabled = false;
 
             dataGridViewDSDGQuaHan.Hide();
 
@@ -203,10 +227,7 @@ namespace qltv
             dataGridViewDSDGQuaHan.Show();
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
 
-        }
 
         private void btnBaocao_Click(object sender, EventArgs e)
         {
@@ -218,7 +239,7 @@ namespace qltv
 
         }
 
-        
+
         private void btnSLDGQuaHan_Click(object sender, EventArgs e)
         {
             dtpBaocao.Enabled = false;
@@ -233,5 +254,7 @@ namespace qltv
         {
             this.Close();
         }
+
+        
     }
 }
