@@ -98,7 +98,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(482, 117);
+            label6.Location = new Point(554, 114);
             label6.Name = "label6";
             label6.Size = new Size(86, 20);
             label6.TabIndex = 11;
@@ -107,7 +107,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(482, 79);
+            label5.Location = new Point(551, 75);
             label5.Name = "label5";
             label5.Size = new Size(89, 20);
             label5.TabIndex = 10;
@@ -116,7 +116,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(482, 33);
+            label4.Location = new Point(586, 36);
             label4.Name = "label4";
             label4.Size = new Size(54, 20);
             label4.TabIndex = 9;
@@ -125,7 +125,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(25, 117);
+            label3.Location = new Point(90, 114);
             label3.Name = "label3";
             label3.Size = new Size(67, 20);
             label3.TabIndex = 8;
@@ -134,7 +134,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(25, 79);
+            label2.Location = new Point(95, 75);
             label2.Name = "label2";
             label2.Size = new Size(62, 20);
             label2.TabIndex = 7;
@@ -143,7 +143,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(22, 33);
+            label1.Location = new Point(67, 36);
             label1.Name = "label1";
             label1.Size = new Size(90, 20);
             label1.TabIndex = 6;
@@ -230,7 +230,7 @@
             // 
             // dtpBaocao
             // 
-            dtpBaocao.Location = new Point(603, 71);
+            dtpBaocao.Location = new Point(603, 72);
             dtpBaocao.Margin = new Padding(3, 4, 3, 4);
             dtpBaocao.Name = "dtpBaocao";
             dtpBaocao.Size = new Size(228, 27);
@@ -239,7 +239,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(482, 79);
+            label8.Location = new Point(481, 75);
             label8.Name = "label8";
             label8.Size = new Size(108, 20);
             label8.TabIndex = 10;
@@ -248,7 +248,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(482, 37);
+            label9.Location = new Point(482, 30);
             label9.Name = "label9";
             label9.Size = new Size(107, 20);
             label9.TabIndex = 9;
@@ -257,7 +257,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(25, 79);
+            label11.Location = new Point(42, 75);
             label11.Name = "label11";
             label11.Size = new Size(115, 20);
             label11.TabIndex = 7;
@@ -266,7 +266,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(25, 37);
+            label12.Location = new Point(76, 30);
             label12.Name = "label12";
             label12.Size = new Size(81, 20);
             label12.TabIndex = 6;
@@ -277,7 +277,7 @@
             txtSLDGQuaHan.BackColor = SystemColors.Window;
             txtSLDGQuaHan.BorderStyle = BorderStyle.FixedSingle;
             txtSLDGQuaHan.Enabled = false;
-            txtSLDGQuaHan.Location = new Point(646, 27);
+            txtSLDGQuaHan.Location = new Point(603, 27);
             txtSLDGQuaHan.Margin = new Padding(3, 4, 3, 4);
             txtSLDGQuaHan.Name = "txtSLDGQuaHan";
             txtSLDGQuaHan.ReadOnly = true;
@@ -289,7 +289,7 @@
             txtSLDGMuon.BackColor = SystemColors.Window;
             txtSLDGMuon.BorderStyle = BorderStyle.FixedSingle;
             txtSLDGMuon.Enabled = false;
-            txtSLDGMuon.Location = new Point(163, 68);
+            txtSLDGMuon.Location = new Point(163, 72);
             txtSLDGMuon.Margin = new Padding(3, 4, 3, 4);
             txtSLDGMuon.Name = "txtSLDGMuon";
             txtSLDGMuon.ReadOnly = true;
@@ -301,7 +301,7 @@
             txtSLDocGia.BackColor = SystemColors.Window;
             txtSLDocGia.BorderStyle = BorderStyle.FixedSingle;
             txtSLDocGia.Enabled = false;
-            txtSLDocGia.Location = new Point(163, 29);
+            txtSLDocGia.Location = new Point(163, 27);
             txtSLDocGia.Margin = new Padding(3, 4, 3, 4);
             txtSLDocGia.Name = "txtSLDocGia";
             txtSLDocGia.ReadOnly = true;
@@ -355,11 +355,11 @@
             // dataGridViewDSDGQuaHan
             // 
             dataGridViewDSDGQuaHan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewDSDGQuaHan.Location = new Point(30, 381);
+            dataGridViewDSDGQuaHan.Location = new Point(12, 381);
             dataGridViewDSDGQuaHan.Margin = new Padding(3, 4, 3, 4);
             dataGridViewDSDGQuaHan.Name = "dataGridViewDSDGQuaHan";
             dataGridViewDSDGQuaHan.RowHeadersWidth = 51;
-            dataGridViewDSDGQuaHan.Size = new Size(839, 203);
+            dataGridViewDSDGQuaHan.Size = new Size(890, 371);
             dataGridViewDSDGQuaHan.TabIndex = 16;
             // 
             // frmBaoCaoThongKe
@@ -367,7 +367,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(914, 765);
             Controls.Add(dataGridViewDSDGQuaHan);
             Controls.Add(btnSLDGQuaHan);
             Controls.Add(btnXemSLSachQuaHan);
