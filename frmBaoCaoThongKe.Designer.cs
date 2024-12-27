@@ -377,7 +377,7 @@
             Controls.Add(groupBox1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "frmBaoCaoThongKe";
-            Text = "frmBaoCaoThongKe";
+            Text = "Báo cáo thống kê";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
