@@ -65,11 +65,10 @@
             txtSLDauSach.BackColor = SystemColors.Window;
             txtSLDauSach.BorderStyle = BorderStyle.FixedSingle;
             txtSLDauSach.Enabled = false;
-            txtSLDauSach.Location = new Point(163, 29);
-            txtSLDauSach.Margin = new Padding(3, 4, 3, 4);
+            txtSLDauSach.Location = new Point(143, 22);
             txtSLDauSach.Name = "txtSLDauSach";
             txtSLDauSach.ReadOnly = true;
-            txtSLDauSach.Size = new Size(114, 27);
+            txtSLDauSach.Size = new Size(100, 23);
             txtSLDauSach.TabIndex = 0;
             // 
             // groupBox1
@@ -86,11 +85,9 @@
             groupBox1.Controls.Add(txtSLMuon);
             groupBox1.Controls.Add(txtSLCuon);
             groupBox1.Controls.Add(txtSLDauSach);
-            groupBox1.Location = new Point(30, 29);
-            groupBox1.Margin = new Padding(3, 4, 3, 4);
+            groupBox1.Location = new Point(26, 22);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(3, 4, 3, 4);
-            groupBox1.Size = new Size(839, 157);
+            groupBox1.Size = new Size(734, 118);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Thống Kê Sách";
@@ -98,54 +95,54 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(554, 114);
+            label6.Location = new Point(485, 86);
             label6.Name = "label6";
-            label6.Size = new Size(86, 20);
+            label6.Size = new Size(69, 15);
             label6.TabIndex = 11;
             label6.Text = "SL Quá Hạn";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(551, 75);
+            label5.Location = new Point(482, 56);
             label5.Name = "label5";
-            label5.Size = new Size(89, 20);
+            label5.Size = new Size(69, 15);
             label5.TabIndex = 10;
             label5.Text = "Tổng Giá Trị";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(586, 36);
+            label4.Location = new Point(513, 27);
             label4.Name = "label4";
-            label4.Size = new Size(54, 20);
+            label4.Size = new Size(44, 15);
             label4.TabIndex = 9;
             label4.Text = "SL Còn";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(90, 114);
+            label3.Location = new Point(79, 86);
             label3.Name = "label3";
-            label3.Size = new Size(67, 20);
+            label3.Size = new Size(54, 15);
             label3.TabIndex = 8;
             label3.Text = "SL Mượn";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(95, 75);
+            label2.Location = new Point(83, 56);
             label2.Name = "label2";
-            label2.Size = new Size(62, 20);
+            label2.Size = new Size(51, 15);
             label2.TabIndex = 7;
             label2.Text = "SL Cuốn";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(67, 36);
+            label1.Location = new Point(59, 27);
             label1.Name = "label1";
-            label1.Size = new Size(90, 20);
+            label1.Size = new Size(71, 15);
             label1.TabIndex = 6;
             label1.Text = "SL Đầu Sách";
             // 
@@ -154,11 +151,10 @@
             txtSLSachQuaHan.BackColor = SystemColors.Window;
             txtSLSachQuaHan.BorderStyle = BorderStyle.FixedSingle;
             txtSLSachQuaHan.Enabled = false;
-            txtSLSachQuaHan.Location = new Point(646, 107);
-            txtSLSachQuaHan.Margin = new Padding(3, 4, 3, 4);
+            txtSLSachQuaHan.Location = new Point(565, 80);
             txtSLSachQuaHan.Name = "txtSLSachQuaHan";
             txtSLSachQuaHan.ReadOnly = true;
-            txtSLSachQuaHan.Size = new Size(114, 27);
+            txtSLSachQuaHan.Size = new Size(100, 23);
             txtSLSachQuaHan.TabIndex = 5;
             // 
             // txtTongGiaTriSach
@@ -166,11 +162,10 @@
             txtTongGiaTriSach.BackColor = SystemColors.Window;
             txtTongGiaTriSach.BorderStyle = BorderStyle.FixedSingle;
             txtTongGiaTriSach.Enabled = false;
-            txtTongGiaTriSach.Location = new Point(646, 68);
-            txtTongGiaTriSach.Margin = new Padding(3, 4, 3, 4);
+            txtTongGiaTriSach.Location = new Point(565, 51);
             txtTongGiaTriSach.Name = "txtTongGiaTriSach";
             txtTongGiaTriSach.ReadOnly = true;
-            txtTongGiaTriSach.Size = new Size(114, 27);
+            txtTongGiaTriSach.Size = new Size(100, 23);
             txtTongGiaTriSach.TabIndex = 4;
             // 
             // txtSLCon
@@ -178,11 +173,10 @@
             txtSLCon.BackColor = SystemColors.Window;
             txtSLCon.BorderStyle = BorderStyle.FixedSingle;
             txtSLCon.Enabled = false;
-            txtSLCon.Location = new Point(646, 29);
-            txtSLCon.Margin = new Padding(3, 4, 3, 4);
+            txtSLCon.Location = new Point(565, 22);
             txtSLCon.Name = "txtSLCon";
             txtSLCon.ReadOnly = true;
-            txtSLCon.Size = new Size(114, 27);
+            txtSLCon.Size = new Size(100, 23);
             txtSLCon.TabIndex = 3;
             // 
             // txtSLMuon
@@ -190,11 +184,10 @@
             txtSLMuon.BackColor = SystemColors.Window;
             txtSLMuon.BorderStyle = BorderStyle.FixedSingle;
             txtSLMuon.Enabled = false;
-            txtSLMuon.Location = new Point(163, 107);
-            txtSLMuon.Margin = new Padding(3, 4, 3, 4);
+            txtSLMuon.Location = new Point(143, 80);
             txtSLMuon.Name = "txtSLMuon";
             txtSLMuon.ReadOnly = true;
-            txtSLMuon.Size = new Size(114, 27);
+            txtSLMuon.Size = new Size(100, 23);
             txtSLMuon.TabIndex = 2;
             // 
             // txtSLCuon
@@ -202,11 +195,10 @@
             txtSLCuon.BackColor = SystemColors.Window;
             txtSLCuon.BorderStyle = BorderStyle.FixedSingle;
             txtSLCuon.Enabled = false;
-            txtSLCuon.Location = new Point(163, 68);
-            txtSLCuon.Margin = new Padding(3, 4, 3, 4);
+            txtSLCuon.Location = new Point(143, 51);
             txtSLCuon.Name = "txtSLCuon";
             txtSLCuon.ReadOnly = true;
-            txtSLCuon.Size = new Size(114, 27);
+            txtSLCuon.Size = new Size(100, 23);
             txtSLCuon.TabIndex = 1;
             // 
             // groupBox2
@@ -219,56 +211,58 @@
             groupBox2.Controls.Add(txtSLDGQuaHan);
             groupBox2.Controls.Add(txtSLDGMuon);
             groupBox2.Controls.Add(txtSLDocGia);
-            groupBox2.Location = new Point(30, 195);
-            groupBox2.Margin = new Padding(3, 4, 3, 4);
+            groupBox2.Location = new Point(26, 146);
             groupBox2.Name = "groupBox2";
-            groupBox2.Padding = new Padding(3, 4, 3, 4);
-            groupBox2.Size = new Size(839, 125);
+            groupBox2.Size = new Size(734, 94);
             groupBox2.TabIndex = 12;
             groupBox2.TabStop = false;
             groupBox2.Text = "Thống Kê Độc Giả";
             // 
             // dtpBaocao
             // 
-            dtpBaocao.Location = new Point(603, 72);
-            dtpBaocao.Margin = new Padding(3, 4, 3, 4);
+            dtpBaocao.CustomFormat = "MM/yyyy";
+            dtpBaocao.Enabled = false;
+            dtpBaocao.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpBaocao.Format = DateTimePickerFormat.Custom;
+            dtpBaocao.Location = new Point(528, 56);
             dtpBaocao.Name = "dtpBaocao";
-            dtpBaocao.Size = new Size(228, 27);
-            dtpBaocao.TabIndex = 11;
+            dtpBaocao.ShowUpDown = true;
+            dtpBaocao.Size = new Size(100, 22);
+            dtpBaocao.TabIndex = 2;
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(481, 75);
+            label8.Location = new Point(421, 56);
             label8.Name = "label8";
-            label8.Size = new Size(108, 20);
+            label8.Size = new Size(85, 15);
             label8.TabIndex = 10;
             label8.Text = "Tháng báo cáo";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(482, 30);
+            label9.Location = new Point(422, 22);
             label9.Name = "label9";
-            label9.Size = new Size(107, 20);
+            label9.Size = new Size(85, 15);
             label9.TabIndex = 9;
             label9.Text = "SL ĐG Vi Phạm";
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(42, 75);
+            label11.Location = new Point(37, 56);
             label11.Name = "label11";
-            label11.Size = new Size(115, 20);
+            label11.Size = new Size(90, 15);
             label11.TabIndex = 7;
             label11.Text = "SL ĐG Đã Mượn";
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(76, 30);
+            label12.Location = new Point(66, 22);
             label12.Name = "label12";
-            label12.Size = new Size(81, 20);
+            label12.Size = new Size(63, 15);
             label12.TabIndex = 6;
             label12.Text = "SL Độc Giả";
             // 
@@ -277,11 +271,10 @@
             txtSLDGQuaHan.BackColor = SystemColors.Window;
             txtSLDGQuaHan.BorderStyle = BorderStyle.FixedSingle;
             txtSLDGQuaHan.Enabled = false;
-            txtSLDGQuaHan.Location = new Point(603, 27);
-            txtSLDGQuaHan.Margin = new Padding(3, 4, 3, 4);
+            txtSLDGQuaHan.Location = new Point(528, 20);
             txtSLDGQuaHan.Name = "txtSLDGQuaHan";
             txtSLDGQuaHan.ReadOnly = true;
-            txtSLDGQuaHan.Size = new Size(114, 27);
+            txtSLDGQuaHan.Size = new Size(100, 23);
             txtSLDGQuaHan.TabIndex = 3;
             // 
             // txtSLDGMuon
@@ -289,11 +282,10 @@
             txtSLDGMuon.BackColor = SystemColors.Window;
             txtSLDGMuon.BorderStyle = BorderStyle.FixedSingle;
             txtSLDGMuon.Enabled = false;
-            txtSLDGMuon.Location = new Point(163, 72);
-            txtSLDGMuon.Margin = new Padding(3, 4, 3, 4);
+            txtSLDGMuon.Location = new Point(143, 54);
             txtSLDGMuon.Name = "txtSLDGMuon";
             txtSLDGMuon.ReadOnly = true;
-            txtSLDGMuon.Size = new Size(114, 27);
+            txtSLDGMuon.Size = new Size(100, 23);
             txtSLDGMuon.TabIndex = 1;
             // 
             // txtSLDocGia
@@ -301,19 +293,17 @@
             txtSLDocGia.BackColor = SystemColors.Window;
             txtSLDocGia.BorderStyle = BorderStyle.FixedSingle;
             txtSLDocGia.Enabled = false;
-            txtSLDocGia.Location = new Point(163, 27);
-            txtSLDocGia.Margin = new Padding(3, 4, 3, 4);
+            txtSLDocGia.Location = new Point(143, 20);
             txtSLDocGia.Name = "txtSLDocGia";
             txtSLDocGia.ReadOnly = true;
-            txtSLDocGia.Size = new Size(114, 27);
+            txtSLDocGia.Size = new Size(100, 23);
             txtSLDocGia.TabIndex = 0;
             // 
             // btnHome
             // 
-            btnHome.Location = new Point(102, 328);
-            btnHome.Margin = new Padding(3, 4, 3, 4);
+            btnHome.Location = new Point(89, 246);
             btnHome.Name = "btnHome";
-            btnHome.Size = new Size(113, 45);
+            btnHome.Size = new Size(99, 34);
             btnHome.TabIndex = 12;
             btnHome.Text = "Home";
             btnHome.UseVisualStyleBackColor = true;
@@ -321,10 +311,9 @@
             // 
             // btnBaocao
             // 
-            btnBaocao.Location = new Point(261, 328);
-            btnBaocao.Margin = new Padding(3, 4, 3, 4);
+            btnBaocao.Location = new Point(228, 246);
             btnBaocao.Name = "btnBaocao";
-            btnBaocao.Size = new Size(126, 45);
+            btnBaocao.Size = new Size(110, 34);
             btnBaocao.TabIndex = 13;
             btnBaocao.Text = "Báo Cáo";
             btnBaocao.UseVisualStyleBackColor = true;
@@ -332,10 +321,9 @@
             // 
             // btnXemSLSachQuaHan
             // 
-            btnXemSLSachQuaHan.Location = new Point(432, 328);
-            btnXemSLSachQuaHan.Margin = new Padding(3, 4, 3, 4);
+            btnXemSLSachQuaHan.Location = new Point(378, 246);
             btnXemSLSachQuaHan.Name = "btnXemSLSachQuaHan";
-            btnXemSLSachQuaHan.Size = new Size(177, 45);
+            btnXemSLSachQuaHan.Size = new Size(155, 34);
             btnXemSLSachQuaHan.TabIndex = 14;
             btnXemSLSachQuaHan.Text = "DS Sách Mượn Quá Hạn";
             btnXemSLSachQuaHan.UseVisualStyleBackColor = true;
@@ -343,10 +331,9 @@
             // 
             // btnSLDGQuaHan
             // 
-            btnSLDGQuaHan.Location = new Point(648, 328);
-            btnSLDGQuaHan.Margin = new Padding(3, 4, 3, 4);
+            btnSLDGQuaHan.Location = new Point(567, 246);
             btnSLDGQuaHan.Name = "btnSLDGQuaHan";
-            btnSLDGQuaHan.Size = new Size(160, 45);
+            btnSLDGQuaHan.Size = new Size(140, 34);
             btnSLDGQuaHan.TabIndex = 15;
             btnSLDGQuaHan.Text = "DS Độc Giả Vi Phạm";
             btnSLDGQuaHan.UseVisualStyleBackColor = true;
@@ -355,19 +342,18 @@
             // dataGridViewDSDGQuaHan
             // 
             dataGridViewDSDGQuaHan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewDSDGQuaHan.Location = new Point(12, 381);
-            dataGridViewDSDGQuaHan.Margin = new Padding(3, 4, 3, 4);
+            dataGridViewDSDGQuaHan.Location = new Point(10, 286);
             dataGridViewDSDGQuaHan.Name = "dataGridViewDSDGQuaHan";
             dataGridViewDSDGQuaHan.RowHeadersWidth = 51;
-            dataGridViewDSDGQuaHan.Size = new Size(890, 371);
+            dataGridViewDSDGQuaHan.Size = new Size(779, 278);
             dataGridViewDSDGQuaHan.TabIndex = 16;
             // 
             // frmBaoCaoThongKe
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(914, 765);
+            ClientSize = new Size(800, 574);
             Controls.Add(dataGridViewDSDGQuaHan);
             Controls.Add(btnSLDGQuaHan);
             Controls.Add(btnXemSLSachQuaHan);
@@ -375,7 +361,6 @@
             Controls.Add(btnHome);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmBaoCaoThongKe";
             Text = "Báo cáo thống kê";
             groupBox1.ResumeLayout(false);
@@ -402,7 +387,6 @@
         private TextBox txtSLMuon;
         private TextBox txtSLCuon;
         private GroupBox groupBox2;
-        private DateTimePicker dtpBaocao;
         private Label label8;
         private Label label9;
         private Label label11;
@@ -415,5 +399,6 @@
         private Button btnXemSLSachQuaHan;
         private Button btnSLDGQuaHan;
         private DataGridView dataGridViewDSDGQuaHan;
+        private DateTimePicker dtpBaocao;
     }
 }
