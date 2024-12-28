@@ -697,17 +697,11 @@ namespace qltv
 
         private void traSach()
         {
-            string strlaydulieu = "select * from tblSach where MaSach='" + txtMaSach1.Text + "'";
             myConnection = new SqlConnection(strKetNoi);
             myConnection.Open();
-            string thuchiencaulenh = strlaydulieu;
-            myCommand = new SqlCommand(thuchiencaulenh, myConnection);
-            myDataReaderSach = myCommand.ExecuteReader();
-            while (myDataReaderSach.Read())
-            {
-                luuSLConTabMuon = myDataReaderSach.GetInt32(6).ToString();
-            }
-
+            myCommand = new SqlCommand(("select SLNhap from tblSach where MaSach='" + txtMaSach1.Text + "';"), myConnection);
+            int luuSLConTabMuon = Convert.ToInt32(myCommand.ExecuteScalar());
+            myConnection.Close();
             luuSLSauTra = Convert.ToInt32(luuSLTra1) + Convert.ToInt32(luuSLConTabMuon);
             DialogResult dlr;
             dlr = MessageBox.Show("Bạn chắc chắn muốn trả sách.", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
