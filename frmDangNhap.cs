@@ -73,7 +73,7 @@ namespace qltv
                 DateTime NgayLapThe  = Convert.ToDateTime(myCommand.ExecuteScalar());
                 if (NgayLapThe.AddMonths(6).CompareTo(DateTime.Now) < 0)
                 {
-                    MessageBox.Show("Thẻ đã quá hạn.", "Lỗi");
+                    MessageBox.Show("Thẻ đã quá hạn", "Lỗi");
                     x2 = 0;
                 }
             }
@@ -91,7 +91,7 @@ namespace qltv
                         xacThucTKTT();
                         if (x1 == 1)
                         {
-                            MessageBox.Show("Đăng Nhập thành công.", "Thông Báo");
+                            MessageBox.Show("Đăng nhập thành công", "Thông Báo");
                             frmGiaoDienChinh GiaoDienChinh = new frmGiaoDienChinh();
                             GiaoDienChinh.FormClosed += new FormClosedEventHandler(DongForm);
                             this.Hide();
@@ -99,7 +99,7 @@ namespace qltv
                         }
                         else
                         {
-                            MessageBox.Show("Sai Tên Đăng Nhập hoặc Mật Khẩu.\nVui lòng nhập lại.", "Thông Báo");
+                            MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu\nVui lòng thử lại", "Thông Báo");
                             txtTenDangNhap.Clear();
                             txtMatKhau.Clear();
                             txtTenDangNhap.Focus();
@@ -117,7 +117,7 @@ namespace qltv
                         xacThucTKDG();
                         if (x2 == 1)
                         {
-                            MessageBox.Show("Đăng Nhập thành công.", "Thông Báo");
+                            MessageBox.Show("Đăng nhập thành công", "Thông Báo");
                             frmDocGia DG = new frmDocGia(txtTenDangNhap.Text);
                             DG.FormClosed += new FormClosedEventHandler(DongForm);
                             this.Hide();
@@ -125,7 +125,7 @@ namespace qltv
                         }
                         else
                         {
-                            MessageBox.Show("Sai Tên Đăng Nhập hoặc Mật Khẩu.\nVui lòng nhập lại.", "Thông Báo");
+                            MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu\nVui lòng thử lại", "Thông Báo");
                             txtTenDangNhap.Clear();
                             txtMatKhau.Clear();
                             txtTenDangNhap.Focus();
@@ -139,7 +139,7 @@ namespace qltv
 
             }
             else
-                MessageBox.Show("Vui lòng nhập Tài Khoản và Mật Khẩu.", "Thông Báo");
+                MessageBox.Show("Vui lòng nhập tài khoản và mật khẩu", "Thông Báo");
         }
 
         private void btnDangKy_Click(object sender, EventArgs e)
