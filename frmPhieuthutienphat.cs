@@ -48,10 +48,17 @@ namespace qltv
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(txtSotienthu.Text) < Convert.ToInt32(txtTongno.Text))
-            {
-                MessageBox.Show("Tiền thu nhỏ hơn tiền nợ!");
-                return;
+            if (Convert.ToInt32(txtSotienthu.Text) != Convert.ToInt32(txtTongno.Text) ){
+                if (Convert.ToInt32(txtSotienthu.Text) < Convert.ToInt32(txtTongno.Text))
+                {
+                    MessageBox.Show("Tiền thu nhỏ hơn tiền nợ!");
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Tiền thu lớn hơn tiền nợ!");
+                    return;
+                }
             }
             this.Print_PhieuThu();
         }
