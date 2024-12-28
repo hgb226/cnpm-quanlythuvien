@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Collections;
 
 namespace qltv
 {
@@ -64,6 +65,18 @@ namespace qltv
             myCommand.Parameters.Add(new SqlParameter("@acc", txtTenDangNhap.Text));
             myCommand.Parameters.Add(new SqlParameter("@pass", txtMatKhau.Text));
             x2 = (int)myCommand.ExecuteScalar();
+            if(x2 == 1)
+            {
+                query = "set dateformat dmy;select NgLapThe from tblDocGia where TenTaiKhoanDG=@acc";
+                myCommand = new SqlCommand(query, myConnection);
+                myCommand.Parameters.Add(new SqlParameter("@acc", txtTenDangNhap.Text));
+                DateTime NgayLapThe  = Convert.ToDateTime(myCommand.ExecuteScalar());
+                if (NgayLapThe.AddMonths(6).CompareTo(DateTime.Now) < 0)
+                {
+                    MessageBox.Show("Thẻ đã quá hạn.", "Lỗi");
+                    x2 = 0;
+                }
+            }
             myConnection.Close();
         }
         private void btnDangNhap_Click(object sender, EventArgs e)
