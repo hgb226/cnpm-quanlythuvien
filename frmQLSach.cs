@@ -34,7 +34,7 @@ namespace qltv
         {
             dtmNgNhapSach.Enabled = edit;
             txtTenSach.Enabled = edit;
-            txtTheLoai.Enabled = edit;
+            cboTheLoai.Enabled = edit;
             txtTacGia.Enabled = edit;
             txtNXB.Enabled = edit;
             txtNamXB.Enabled = edit;
@@ -70,8 +70,8 @@ namespace qltv
                 maSach = txtMaSach.Text;
                 txtTenSach.Text = myTable.Rows[row]["TenSach"].ToString();
                 tenSach = txtTenSach.Text;
-                txtTheLoai.Text = myTable.Rows[row]["TheLoai"].ToString();
-                TheLoai = txtTheLoai.Text;
+                cboTheLoai.Text = myTable.Rows[row]["TheLoai"].ToString();
+                TheLoai = cboTheLoai.Text;
                 txtTacGia.Text = myTable.Rows[row]["TacGia"].ToString();
                 tacGia = txtTacGia.Text;
                 txtNXB.Text = myTable.Rows[row]["NXB"].ToString();
@@ -100,7 +100,7 @@ namespace qltv
 
             txtMaSach.Text = tangMaTuDong();
             txtTenSach.Text = "";
-            txtTheLoai.Text = "";
+            cboTheLoai.Text = "";
             txtTacGia.Text = "";
             txtNXB.Text = "";
             txtSLNhap.Text = "";
@@ -167,7 +167,7 @@ namespace qltv
         {
             try
             {
-                string query = "set dateformat dmy; insert into tblSach values ('" + txtMaSach.Text + "','" + dtmNgNhapSach.Text + "', N'" + txtTenSach.Text + "',N'" + txtTheLoai.Text + "',N'" + txtTacGia.Text + "',N'" + txtNXB.Text + "','" + txtNamXB.Text + "','" + txtSLNhap.Text + "','" + txtTriGia.Text + "',N'" + cboTinhTrang.Text + "',N'" + txtGhiChu.Text + "')";
+                string query = "set dateformat dmy; insert into tblSach values ('" + txtMaSach.Text + "','" + dtmNgNhapSach.Text + "', N'" + txtTenSach.Text + "',N'" + cboTheLoai.Text + "',N'" + txtTacGia.Text + "',N'" + txtNXB.Text + "','" + txtNamXB.Text + "','" + txtSLNhap.Text + "','" + txtTriGia.Text + "',N'" + cboTinhTrang.Text + "',N'" + txtGhiChu.Text + "')";
                 ketnoi(query);
                 MessageBox.Show("Thêm thành công.", "Thông Báo");
                 myConnection.Close();
@@ -183,7 +183,7 @@ namespace qltv
             txtMaSach.Text = dataGridViewDSSach.CurrentRow.Cells[0].Value.ToString();
             dtmNgNhapSach.Text = dataGridViewDSSach.CurrentRow.Cells[1].Value.ToString();
             txtTenSach.Text = dataGridViewDSSach.CurrentRow.Cells[2].Value.ToString();
-            txtTheLoai.Text = dataGridViewDSSach.CurrentRow.Cells[3].Value.ToString();
+            cboTheLoai.Text = dataGridViewDSSach.CurrentRow.Cells[3].Value.ToString();
             txtTacGia.Text = dataGridViewDSSach.CurrentRow.Cells[4].Value.ToString();
             txtNXB.Text = dataGridViewDSSach.CurrentRow.Cells[5].Value.ToString();
             txtNamXB.Text = dataGridViewDSSach.CurrentRow.Cells[6].Value.ToString();
@@ -198,7 +198,7 @@ namespace qltv
             try
             {
                 string capnhatdong;
-                capnhatdong = "update tblSach set TenSach=N'" + txtTenSach.Text + "',TheLoai=N'" + txtTheLoai.Text + "',TacGia=N'" + txtTacGia.Text + "',NXB=N'" + txtNXB.Text + "',NamXB='" + txtNamXB.Text + "',SLNhap='" + txtSLNhap.Text + "',TriGia='" + txtTriGia.Text + "',TinhTrang=N'" + cboTinhTrang.Text + "',GhiChu=N'" + txtGhiChu.Text + "' where MaSach='" + txtMaSach.Text + "'";
+                capnhatdong = "update tblSach set TenSach=N'" + txtTenSach.Text + "',TheLoai=N'" + cboTheLoai.Text + "',TacGia=N'" + txtTacGia.Text + "',NXB=N'" + txtNXB.Text + "',NamXB='" + txtNamXB.Text + "',SLNhap='" + txtSLNhap.Text + "',TriGia='" + txtTriGia.Text + "',TinhTrang=N'" + cboTinhTrang.Text + "',GhiChu=N'" + txtGhiChu.Text + "' where MaSach='" + txtMaSach.Text + "'";
                 ketnoi(capnhatdong);
                 myCommand.ExecuteNonQuery();
 
@@ -219,9 +219,9 @@ namespace qltv
             {
                 errTenSach.Clear();
             }
-            if (txtTheLoai.Text == "")
+            if (cboTheLoai.Text == "")
             {
-                errCD.SetError(txtTheLoai, "Vui lòng nhập Chủ Đề");
+                errCD.SetError(cboTheLoai, "Vui lòng nhập Chủ Đề");
             }
             else
             {
@@ -302,7 +302,7 @@ namespace qltv
             {
                 MessageBox.Show("Vui lòng nhập số trong các ô:\nSL Nhập.\nNăm XB.\nĐơn Giá.", "Thông Báo");
             }
-            if (dtmNgNhapSach.Text.Length > 0 && txtTenSach.Text.Length > 0 && txtTacGia.Text.Length > 0 && txtNXB.Text.Length > 0 && txtTheLoai.Text.Length > 0 && isNumberSLNhap == true && isNumberTriGia == true && cboTinhTrang.Text.Length > 0 && isNumberNamXB == true)
+            if (dtmNgNhapSach.Text.Length > 0 && txtTenSach.Text.Length > 0 && txtTacGia.Text.Length > 0 && txtNXB.Text.Length > 0 && cboTheLoai.Text.Length > 0 && isNumberSLNhap == true && isNumberTriGia == true && cboTinhTrang.Text.Length > 0 && isNumberNamXB == true)
             {
                 if (xuly == 0)
                 {
@@ -339,8 +339,8 @@ namespace qltv
                 MessageBox.Show("Vui lòng nhập đủ thông tin.", "Thông Báo");
                 if (txtTenSach.Text.Length == 0)
                     txtTenSach.Focus();
-                else if (txtTheLoai.Text.Length == 0)
-                    txtTheLoai.Focus();
+                else if (cboTheLoai.Text.Length == 0)
+                    cboTheLoai.Focus();
                 else if (txtTacGia.Text.Length == 0)
                     txtTacGia.Focus();
                 else if (txtNXB.Text.Length == 0)
@@ -371,7 +371,7 @@ namespace qltv
             }
             txtMaSach.Text = maSach;
             txtTenSach.Text = tenSach;
-            txtTheLoai.Text = TheLoai;
+            cboTheLoai.Text = TheLoai;
             txtTacGia.Text = tacGia;
             txtNXB.Text = nXB;
             txtSLNhap.Text = slNhap;
@@ -496,5 +496,12 @@ namespace qltv
             return maTuDong;
         }
 
+        private void cboTheLoai_DropDown(object sender, EventArgs e)
+        {
+            cboTheLoai.Items.Clear();
+            cboTheLoai.Items.Add("A");
+            cboTheLoai.Items.Add("B");
+            cboTheLoai.Items.Add("C");
+        }
     }
 }
