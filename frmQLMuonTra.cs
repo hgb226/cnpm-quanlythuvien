@@ -517,7 +517,11 @@ namespace qltv
 
         private void giaHanSach()
         {
-            if (kq == 1)
+            if (dtmNgayTra0.Value.CompareTo(dtmNgayMuon0.Value) < 0)
+            {
+                MessageBox.Show("Vui lòng chọn ngày trả lớn hơn ngày mượn.", "Thông Báo");
+            }
+            else if (kq == 1)
             {
                 string strCapNhatSLCon = "set dateformat dmy; update tblHSPhieuMuon set NgayMuon='" + dtmNgayMuon0.Text + " ', NgayTra='" + dtmNgayTra0.Text + "' where MaPhieu='" + txtMaPhieu0.Text + "'";
                 ketnoi(strCapNhatSLCon);
@@ -539,10 +543,10 @@ namespace qltv
 
                 dataGridViewDSMuon0.Enabled = true;
             }
-            else
+            /*else
             {
                 MessageBox.Show("Vui lòng chọn ngày trả lớn hơn ngày mượn.", "Thông Báo");
-            }
+            }*/
 
         }
         private void btnChoMuon0_Click(object sender, EventArgs e)
@@ -586,6 +590,8 @@ namespace qltv
             btnChoMuon0.Enabled = true;
             btnGiaHan.Enabled = false;
             btnHuy0.Enabled = true;
+            dtmNgayMuon0.Enabled = false;
+            cboTinhTrang0.Enabled = false;
             xuly = 1;
         }
 
