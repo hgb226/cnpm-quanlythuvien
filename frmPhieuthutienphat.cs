@@ -93,7 +93,6 @@ namespace qltv
                 txtTongno.Text = "";
                 return;
             }
-            int cnt = 0;
             int tongngay = 0;
             foreach (DataRow row in temp.Rows)
             {
@@ -101,7 +100,6 @@ namespace qltv
                 if (dif.Days > 0)
                 {
                     tongngay += dif.Days;
-                    cnt += (int)row[5];
                 }
             }
 
@@ -111,8 +109,9 @@ namespace qltv
             query = "select GiaTri from thamso where TenTS = 'TienPhat'";
             ketnoi(query);
             int tp = (int)myCommand.ExecuteScalar();
-            txtTongno.Text = (cnt * tongngay * tp).ToString();
+            txtTongno.Text = (tongngay * tp).ToString();
         }
+
 
         private void txtSotienthu_TextChanged_1(object sender, EventArgs e)
         {
