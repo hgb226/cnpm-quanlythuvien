@@ -84,6 +84,11 @@ namespace qltv
 
         private void kTraDK()
         {
+            
+            
+        }
+        private void btnThem_Click(object sender, EventArgs e)
+        {
             if (txtTenDG.Text == "")
             {
                 errTenDG.SetError(txtTenDG, "Vui lòng nhập tên độc giả");
@@ -162,35 +167,30 @@ namespace qltv
                     mk1 = txtMK.Text;
                     mk2 = txtNhapLaiMK.Text;
                     kq = mk1.CompareTo(mk2);
-                }
-            }
-            
-        }
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            kTraDK();
-            if (txtMaDG.Text.Length > 0 && txtTenDG.Text.Length > 0 && txtDiaChi.Text.Length > 0 && dtmNgaySinh.Text.Length > 0 && cboGioiTinh.Text.Length > 0 && txtTenTK.Text.Length > 0 && txtMK.Text.Length > 0 && txtEmail.Text.Length > 0 && cbLoaiDG.Text.Length > 0)
-            {
-                if (kq == 0)
-                {
-                    try
+                    if (txtMaDG.Text.Length > 0 && txtTenDG.Text.Length > 0 && txtDiaChi.Text.Length > 0 && dtmNgaySinh.Text.Length > 0 && cboGioiTinh.Text.Length > 0 && txtTenTK.Text.Length > 0 && txtMK.Text.Length > 0 && txtEmail.Text.Length > 0 && cbLoaiDG.Text.Length > 0)
                     {
-                        string themdongsql = "set dateformat dmy; insert into tblDocGia values ('" + txtMaDG.Text + "',N'" + txtTenDG.Text + "',N'" + cboGioiTinh.Text + "','" + dtmNgaySinh.Text + "','" + txtEmail.Text + "',N'" + txtDiaChi.Text + "','" + cbLoaiDG.Text + "',N'" + txtGhiChu.Text + "','" + txtTenTK.Text + "','" + txtMK.Text + "', '" + dtmNgayLapThe.Text + "')";
-                        ketnoi(themdongsql);
-                        MessageBox.Show("Đăng ký thành công", "Thông Báo");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
+                        if (kq == 0)
+                        {
+                            try
+                            {
+                                string themdongsql = "set dateformat dmy; insert into tblDocGia values ('" + txtMaDG.Text + "',N'" + txtTenDG.Text + "',N'" + cboGioiTinh.Text + "','" + dtmNgaySinh.Text + "','" + txtEmail.Text + "',N'" + txtDiaChi.Text + "','" + cbLoaiDG.Text + "',N'" + txtGhiChu.Text + "','" + txtTenTK.Text + "','" + txtMK.Text + "', '" + dtmNgayLapThe.Text + "')";
+                                ketnoi(themdongsql);
+                                MessageBox.Show("Đăng ký thành công", "Thông Báo");
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message);
+                            }
 
-                    this.Close();
+                            this.Close();
+                        }
+                        else
+                            MessageBox.Show("Vui lòng nhập lại mật khẩu", "Thông Báo");
+                    }
+                    else
+                        MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông Báo");
                 }
-                else
-                    MessageBox.Show("Vui lòng nhập lại mật khẩu", "Thông Báo");
             }
-            else
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông Báo");
         }
     }
 }
