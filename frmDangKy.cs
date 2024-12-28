@@ -80,7 +80,7 @@ namespace qltv
             this.Close();
         }
         // Phương thức kiểm tra Đk
-        private int kq;
+        private int kq = 1;
 
         private void kTraDK()
         {
@@ -137,12 +137,34 @@ namespace qltv
             {
                 errorLoaiDG.Clear();
             }
-
-
-            string mk1, mk2;
-            mk1 = txtMK.Text;
-            mk2 = txtNhapLaiMK.Text;
-            kq = mk1.CompareTo(mk2);
+            string query = "select GiaTri from thamso where TenTS = 'SoTuoiDGMin'";
+            ketnoi(query);
+            int SoTuoiDGMin = Convert.ToInt32(myCommand.ExecuteScalar()); // Lấy giá trị tuổi độc giả MIN
+            query = "select GiaTri from thamso where TenTS = 'SoTuoiDGMax'";
+            ketnoi(query);
+            int SoTuoiDGMax = Convert.ToInt32(myCommand.ExecuteScalar()); // Lấy giá trị tuổi độc giả MAX
+            if (dtmNgaySinh.Text == "")
+            {
+                MessageBox.Show("Ngày tháng năm sinh không hợp lệ");
+                return;
+            }
+            else
+            {
+                int TuoiDocGia = DateTime.Now.Year - dtmNgaySinh.Value.Year; // Lấy giá trị tuổi độc giả
+                if (SoTuoiDGMin > TuoiDocGia || SoTuoiDGMax < TuoiDocGia)
+                {
+                    MessageBox.Show("Tuổi độc giả không phù hợp để tạo tài khoản!");
+                    return;
+                }
+                else
+                {
+                    string mk1, mk2;
+                    mk1 = txtMK.Text;
+                    mk2 = txtNhapLaiMK.Text;
+                    kq = mk1.CompareTo(mk2);
+                }
+            }
+            
         }
         private void btnThem_Click(object sender, EventArgs e)
         {

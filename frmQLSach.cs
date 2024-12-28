@@ -133,14 +133,6 @@ namespace qltv
             dataGridViewDSSach.Enabled = false;
             txtTenSach.Focus();
             xuly = 1;
-            //lblNhapCD.Text = "";
-            //lblNhapTriGia.Text = "";
-            //lblNhapSLCon.Text = "";
-            //lblNhapSLNhap.Text = "";
-            //lblNhapTenNXB.Text = "";
-            //lblNhapTenSach.Text = "";
-            //lblNhapTenTG.Text = "";
-            //lblNhapTinhTrang.Text = "";
         }
 
         private void xoaSach()
@@ -207,7 +199,6 @@ namespace qltv
             {
                 string capnhatdong;
                 capnhatdong = "update tblSach set TenSach=N'" + txtTenSach.Text + "',TheLoai=N'" + txtTheLoai.Text + "',TacGia=N'" + txtTacGia.Text + "',NXB=N'" + txtNXB.Text + "',NamXB='" + txtNamXB.Text + "',SLNhap='" + txtSLNhap.Text + "',TriGia='" + txtTriGia.Text + "',TinhTrang=N'" + cboTinhTrang.Text + "',GhiChu=N'" + txtGhiChu.Text + "' where MaSach='" + txtMaSach.Text + "'";
-                //capnhatdong = "update tblSach set TenSach=N'" + txtTenSach.Text + "',TheLoai=N'" + txtTheLoai.Text + "',TacGia=N'" + txtTacGia.Text + "',NXB=N'" + txtNXB.Text + "',NamXB='" + txtNamXB.Text + "',SLNhap='" + txtSLNhap.Text + "',TriGia='" + txtTriGia.Text + "',TinhTrang=N'" + cboTinhTrang.Text + "' where MaSach='" + txtMaSach.Text + "' ";
                 ketnoi(capnhatdong);
                 myCommand.ExecuteNonQuery();
 
@@ -288,7 +279,7 @@ namespace qltv
 
             string query = "select GiaTri from thamso where TenTS = 'ThoiGianXB'";
             ketnoi(query);
-            int tgXB = Convert.ToInt32(myCommand.ExecuteScalar());
+            int tgXB = Convert.ToInt32(myCommand.ExecuteScalar()); //Lay gia tri thoi gian xuat ban
             if (txtNamXB.Text == "")
             {
                 MessageBox.Show("Năm xuất bản không hợp lệ!");
@@ -378,7 +369,6 @@ namespace qltv
             {
                 MessageBox.Show($"Invalid date format: {ex.Message}");
             }
-            //dtmNgNhapSach.Text = NgNhapSach;
             txtMaSach.Text = maSach;
             txtTenSach.Text = tenSach;
             txtTheLoai.Text = TheLoai;
