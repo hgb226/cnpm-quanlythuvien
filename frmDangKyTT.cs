@@ -86,7 +86,7 @@ namespace qltv
         {
             if (txtTenTT.Text == "")
             {
-                errTenDG.SetError(txtTenTT, "Vui lòng nhập Tên TT");
+                errTenDG.SetError(txtTenTT, "Vui lòng nhập tên thủ thư");
             }
             else
             {
@@ -95,7 +95,7 @@ namespace qltv
 
             if (txtEmail.Text == "")
             {
-                errEmail.SetError(txtEmail, "Vui lòng nhập Email");
+                errEmail.SetError(txtEmail, "Vui lòng nhập email");
             }
             else
             {
@@ -104,7 +104,7 @@ namespace qltv
 
             if (txtDiaChi.Text == "")
             {
-                errDC.SetError(txtDiaChi, "Vui lòng nhập Địa chỉ");
+                errDC.SetError(txtDiaChi, "Vui lòng nhập địa chỉ");
             }
             else
             {
@@ -113,7 +113,7 @@ namespace qltv
 
             if (txtMK.Text == "")
             {
-                errMK.SetError(txtMK, "Vui lòng nhập MK");
+                errMK.SetError(txtMK, "Vui lòng nhập mật khẩu");
             }
             else
             {
@@ -122,7 +122,7 @@ namespace qltv
 
             if (cboGioiTinh.Text == "")
             {
-                errGT.SetError(cboGioiTinh, "Vui lòng chọn Giới Tính");
+                errGT.SetError(cboGioiTinh, "Vui lòng chọn giới tính");
             }
             else
             {
@@ -146,7 +146,7 @@ namespace qltv
                     {
                         string themdongsql = "set dateformat dmy; insert into tblThuThu values ('" + txtMaTT.Text + "',N'" + txtTenTT.Text + "',N'" + cboGioiTinh.Text + "','" + dtmNgaySinh.Text + "','" + txtEmail.Text + "',N'" + txtDiaChi.Text + "',N'" + txtGhiChu.Text + "','" + txtTenTK.Text + "','" + txtMK.Text + "')";
                         ketnoi(themdongsql);
-                        MessageBox.Show("Đăng ký thành công.", "Thông Báo");
+                        MessageBox.Show("Đăng ký thành công", "Thông Báo");
                     }
                     catch (Exception ex)
                     {
@@ -156,10 +156,10 @@ namespace qltv
                     this.Close();
                 }
                 else
-                    MessageBox.Show("Vui lòng nhập lại Mật khẩu.", "Thông Báo");
+                    MessageBox.Show("Vui lòng nhập lại mật khẩu", "Thông Báo");
             }
             else
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Thông Báo");
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông Báo");
         }
     }
 }
