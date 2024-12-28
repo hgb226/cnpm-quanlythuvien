@@ -103,7 +103,6 @@ namespace qltv
                 return;
             }
 
-
             // Lấy tên độc giả từ bảng tblDocGia
             string query = "select TenDG from tblDocGia where MaDG = '" + txtMaDG.Text + "'";
             ketnoi(query);
@@ -161,6 +160,32 @@ namespace qltv
                 txtSotienthu.Text = "";
                 txtConlai.Text = "";
             }
+        }
+
+
+        private void btnXuatTongNo_Click(object sender, EventArgs e)
+        {
+            CapNhatTongNo(txtMaDG.Text);
+            if (txtMaDG.Text == "")
+            {
+                txtHotenDG.Text = "";
+                txtTongno.Text = "";
+                return;
+            }
+          
+
+            // Lấy tổng nợ từ bảng tblDocGia
+            string query = "select TongNo from tblDocGia where MaDG = '" + txtMaDG.Text + "'";
+            DataTable dtTongNo = ketnoi(query);
+            if (dtTongNo.Rows.Count > 0)
+            {
+                txtTongno.Text = dtTongNo.Rows[0]["TongNo"].ToString();
+            }
+            else
+            {
+                txtTongno.Text = "0";
+            }
+
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -225,9 +250,7 @@ namespace qltv
             // Gọi hàm in phiếu thu (giả sử hàm này đã được định nghĩa)
 
         }
-        private void txtTongno_TextChanged(object sender, EventArgs e)
-        {
 
-        }
+   
     }
 }

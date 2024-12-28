@@ -30,13 +30,11 @@
         {
             txtSLDauSach = new TextBox();
             groupBox1 = new GroupBox();
-            label6 = new Label();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            txtSLSachQuaHan = new TextBox();
             txtTongGiaTriSach = new TextBox();
             txtSLCon = new TextBox();
             txtSLMuon = new TextBox();
@@ -53,7 +51,6 @@
             btnHome = new Button();
             btnBaocao = new Button();
             btnXemSLSachQuaHan = new Button();
-            btnSLDGQuaHan = new Button();
             dataGridViewDSDGQuaHan = new DataGridView();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -73,13 +70,11 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(label6);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(txtSLSachQuaHan);
             groupBox1.Controls.Add(txtTongGiaTriSach);
             groupBox1.Controls.Add(txtSLCon);
             groupBox1.Controls.Add(txtSLMuon);
@@ -91,15 +86,6 @@
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Thống Kê Sách";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(485, 86);
-            label6.Name = "label6";
-            label6.Size = new Size(69, 15);
-            label6.TabIndex = 11;
-            label6.Text = "SL Quá Hạn";
             // 
             // label5
             // 
@@ -145,17 +131,6 @@
             label1.Size = new Size(71, 15);
             label1.TabIndex = 6;
             label1.Text = "SL Đầu Sách";
-            // 
-            // txtSLSachQuaHan
-            // 
-            txtSLSachQuaHan.BackColor = SystemColors.Window;
-            txtSLSachQuaHan.BorderStyle = BorderStyle.FixedSingle;
-            txtSLSachQuaHan.Enabled = false;
-            txtSLSachQuaHan.Location = new Point(565, 80);
-            txtSLSachQuaHan.Name = "txtSLSachQuaHan";
-            txtSLSachQuaHan.ReadOnly = true;
-            txtSLSachQuaHan.Size = new Size(100, 23);
-            txtSLSachQuaHan.TabIndex = 5;
             // 
             // txtTongGiaTriSach
             // 
@@ -233,16 +208,16 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(421, 56);
+            label8.Location = new Point(421, 62);
             label8.Name = "label8";
-            label8.Size = new Size(85, 15);
+            label8.Size = new Size(101, 15);
             label8.TabIndex = 10;
-            label8.Text = "Tháng báo cáo";
+            label8.Text = "Thời gian báo cáo";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(422, 22);
+            label9.Location = new Point(422, 28);
             label9.Name = "label9";
             label9.Size = new Size(85, 15);
             label9.TabIndex = 9;
@@ -251,7 +226,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(37, 56);
+            label11.Location = new Point(39, 63);
             label11.Name = "label11";
             label11.Size = new Size(90, 15);
             label11.TabIndex = 7;
@@ -260,7 +235,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(66, 22);
+            label12.Location = new Point(66, 28);
             label12.Name = "label12";
             label12.Size = new Size(63, 15);
             label12.TabIndex = 6;
@@ -301,7 +276,7 @@
             // 
             // btnHome
             // 
-            btnHome.Location = new Point(89, 246);
+            btnHome.Location = new Point(592, 246);
             btnHome.Name = "btnHome";
             btnHome.Size = new Size(99, 34);
             btnHome.TabIndex = 12;
@@ -311,33 +286,23 @@
             // 
             // btnBaocao
             // 
-            btnBaocao.Location = new Point(228, 246);
+            btnBaocao.Location = new Point(105, 246);
             btnBaocao.Name = "btnBaocao";
             btnBaocao.Size = new Size(110, 34);
             btnBaocao.TabIndex = 13;
-            btnBaocao.Text = "Báo Cáo";
+            btnBaocao.Text = "Báo Cáo (THÁNG)";
             btnBaocao.UseVisualStyleBackColor = true;
             btnBaocao.Click += btnBaocao_Click;
             // 
             // btnXemSLSachQuaHan
             // 
-            btnXemSLSachQuaHan.Location = new Point(378, 246);
+            btnXemSLSachQuaHan.Location = new Point(321, 246);
             btnXemSLSachQuaHan.Name = "btnXemSLSachQuaHan";
             btnXemSLSachQuaHan.Size = new Size(155, 34);
             btnXemSLSachQuaHan.TabIndex = 14;
             btnXemSLSachQuaHan.Text = "DS Sách Mượn Quá Hạn";
             btnXemSLSachQuaHan.UseVisualStyleBackColor = true;
             btnXemSLSachQuaHan.Click += btnXemSLSachQuaHan_Click;
-            // 
-            // btnSLDGQuaHan
-            // 
-            btnSLDGQuaHan.Location = new Point(567, 246);
-            btnSLDGQuaHan.Name = "btnSLDGQuaHan";
-            btnSLDGQuaHan.Size = new Size(140, 34);
-            btnSLDGQuaHan.TabIndex = 15;
-            btnSLDGQuaHan.Text = "DS Độc Giả Vi Phạm";
-            btnSLDGQuaHan.UseVisualStyleBackColor = true;
-            btnSLDGQuaHan.Click += btnSLDGQuaHan_Click;
             // 
             // dataGridViewDSDGQuaHan
             // 
@@ -355,7 +320,6 @@
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(800, 574);
             Controls.Add(dataGridViewDSDGQuaHan);
-            Controls.Add(btnSLDGQuaHan);
             Controls.Add(btnXemSLSachQuaHan);
             Controls.Add(btnBaocao);
             Controls.Add(btnHome);
@@ -375,13 +339,11 @@
 
         private TextBox txtSLDauSach;
         private GroupBox groupBox1;
-        private Label label6;
         private Label label5;
         private Label label4;
         private Label label3;
         private Label label2;
         private Label label1;
-        private TextBox txtSLSachQuaHan;
         private TextBox txtTongGiaTriSach;
         private TextBox txtSLCon;
         private TextBox txtSLMuon;
@@ -397,7 +359,6 @@
         private Button btnHome;
         private Button btnBaocao;
         private Button btnXemSLSachQuaHan;
-        private Button btnSLDGQuaHan;
         private DataGridView dataGridViewDSDGQuaHan;
         private DateTimePicker dtpBaocao;
     }
