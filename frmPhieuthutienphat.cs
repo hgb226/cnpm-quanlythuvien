@@ -46,22 +46,7 @@ namespace qltv
         private readonly object printPreviewDialog1;
 
 
-        private void btnPrint_Click(object sender, EventArgs e)
-        {
-            if (Convert.ToInt32(txtSotienthu.Text) != Convert.ToInt32(txtTongno.Text) ){
-                if (Convert.ToInt32(txtSotienthu.Text) < Convert.ToInt32(txtTongno.Text))
-                {
-                    MessageBox.Show("Tiền thu nhỏ hơn tiền nợ!");
-                    return;
-                }
-                else
-                {
-                    MessageBox.Show("Tiền thu lớn hơn tiền nợ!");
-                    return;
-                }
-            }
-            this.Print_PhieuThu();
-        }
+
         private void Print_PhieuThu()
         {
             // Khởi tạo PrintDocument
@@ -83,6 +68,31 @@ namespace qltv
                 printDocument1.Print();
             }
         }
+        private void CapNhatTongNo(string maDG)
+        {
+            // Lấy dữ liệu phiếu mượn từ bảng tblHSPhieuMuon
+            string query = "set dateformat dmy; select * from tblHSPhieuMuon where MaDG = '" + maDG + "'";
+            DataTable temp = ketnoi(query);
+
+            int tongno = 0;
+
+            foreach (DataRow row in temp.Rows)
+            {
+                DateTime ngayMuon = Convert.ToDateTime(row["NgayMuon"]);
+                DateTime ngayTra = Convert.ToDateTime(row["NgayTra"]);
+                int soNgayMuon = (ngayTra - ngayMuon).Days;
+
+                if (soNgayMuon > 4) // Nếu mượn sách quá 4 ngày
+                {
+                    int soNgayNo = soNgayMuon - 4; // Số ngày nợ bắt đầu từ ngày thứ 5
+                    tongno += soNgayNo * 1000; // Mỗi ngày nợ 1.000 đồng
+                }
+            }
+
+            // Cập nhật tổng nợ vào bảng tblDocGia
+            query = "UPDATE tblDocGia SET TongNo = " + tongno + " WHERE MaDG = '" + maDG + "'";
+            ketnoi(query);
+        }
 
         private void txtMaDG_TextChanged_1(object sender, EventArgs e)
         {
@@ -92,43 +102,65 @@ namespace qltv
                 txtTongno.Text = "";
                 return;
             }
-            string query = "set dateformat dmy; select * from tblHSPhieuMuon where MaDG = '" + txtMaDG.Text + "'";
-            DataTable temp = ketnoi(query);
-            if (temp.Rows.Count == 0)
+
+
+            // Lấy tên độc giả từ bảng tblDocGia
+            string query = "select TenDG from tblDocGia where MaDG = '" + txtMaDG.Text + "'";
+            ketnoi(query);
+            var result = myCommand.ExecuteScalar();
+
+            if (result != null)
             {
-                txtHotenDG.Text = "";
-                txtTongno.Text = "";
-                return;
+                txtHotenDG.Text = result.ToString();
             }
-            int tongngay = 0;
-            foreach (DataRow row in temp.Rows)
+            else
             {
-                TimeSpan dif = DateTime.Now - Convert.ToDateTime(row["NgayTra"].ToString());
-                if (dif.Days > 0)
-                {
-                    tongngay += dif.Days;
-                }
+                txtHotenDG.Text = "Không tìm thấy độc giả";
             }
 
-            query = "select TenDG from tblDocGia where MaDG = '" + txtMaDG.Text + "'";
-            ketnoi(query);
-            txtHotenDG.Text = myCommand.ExecuteScalar().ToString();
-            query = "select GiaTri from thamso where TenTS = 'TienPhat'";
-            ketnoi(query);
-            int tp = (int)myCommand.ExecuteScalar();
-            txtTongno.Text = (tongngay * tp).ToString();
+            // Lấy tổng nợ từ bảng tblDocGia
+            query = "select TongNo from tblDocGia where MaDG = '" + txtMaDG.Text + "'";
+            DataTable dtTongNo = ketnoi(query);
+            if (dtTongNo.Rows.Count > 0)
+            {
+                txtTongno.Text = dtTongNo.Rows[0]["TongNo"].ToString();
+            }
+            else
+            {
+                txtTongno.Text = "0";
+            }
         }
-
 
         private void txtSotienthu_TextChanged_1(object sender, EventArgs e)
         {
-            if (txtSotienthu.Text == "")
+            if (string.IsNullOrEmpty(txtSotienthu.Text))
             {
                 txtConlai.Text = "";
                 return;
             }
-            int tienthu = Convert.ToInt32(txtSotienthu.Text);
-            txtConlai.Text = (tienthu - Convert.ToInt32(txtTongno.Text)).ToString();
+
+            try
+            {
+                int tienthu = Convert.ToInt32(txtSotienthu.Text);
+                int tongno = Convert.ToInt32(txtTongno.Text);
+
+                if (tienthu > tongno)
+                {
+                    MessageBox.Show("Số tiền thu không được lớn hơn số tiền nợ!", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtSotienthu.Text = tongno.ToString(); // Đặt lại giá trị hợp lệ
+                    txtSotienthu.SelectAll(); // Chọn toàn bộ văn bản để người dùng có thể chỉnh sửa dễ dàng
+                }
+                else
+                {
+                    txtConlai.Text = (tongno - tienthu).ToString();
+                }
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Vui lòng nhập đúng định dạng số!", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtSotienthu.Text = "";
+                txtConlai.Text = "";
+            }
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -142,7 +174,60 @@ namespace qltv
             e.Graphics.DrawString("Tiền thu: " + this.txtSotienthu.Text, new Font("Times New Roman", 14, FontStyle.Regular), Brushes.Black, new Point(533, 124));
             e.Graphics.DrawString("Còn lại: " + txtConlai.Text, new Font("Times New Roman", 14, FontStyle.Regular), Brushes.Black, new Point(533, 170));
         }
+        private void CapNhatTongNoSauKhiThuTien(string maDG, int tienthu)
+        {
+            // Lấy tổng nợ hiện tại từ cơ sở dữ liệu
+            string query = "select TongNo from tblDocGia where MaDG = '" + maDG + "'";
+            DataTable dtTongNo = ketnoi(query);
+            int tongno = 0;
 
+            if (dtTongNo.Rows.Count > 0)
+            {
+                tongno = Convert.ToInt32(dtTongNo.Rows[0]["TongNo"]);
+            }
 
+            // Tính số tiền còn lại
+            int conlai = tongno - tienthu;
+
+            // Cập nhật lại tổng nợ vào cơ sở dữ liệu
+            query = "UPDATE tblDocGia SET TongNo = " + conlai + " WHERE MaDG = '" + maDG + "'";
+            ketnoi(query);
+
+            // Cập nhật lại giao diện người dùng
+            txtTongno.Text = conlai.ToString();
+            txtSotienthu.Text = " ";
+            txtConlai.Text = " "; // Số tiền còn lại sau khi thu đã được hiển thị ở `txtTongno`
+        }
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra nếu người dùng nhập số tiền thu hợp lệ
+            if (string.IsNullOrEmpty(txtSotienthu.Text) || string.IsNullOrEmpty(txtMaDG.Text))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                // Lấy số tiền thu và cập nhật tổng nợ
+                int tienthu = Convert.ToInt32(txtSotienthu.Text);
+
+                // Tiến hành in phiếu thu
+                this.Print_PhieuThu();
+
+                // Cập nhật tổng nợ vào cơ sở dữ liệu
+                CapNhatTongNoSauKhiThuTien(txtMaDG.Text, tienthu);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Vui lòng nhập đúng định dạng số!", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            // Gọi hàm in phiếu thu (giả sử hàm này đã được định nghĩa)
+
+        }
+        private void txtTongno_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
