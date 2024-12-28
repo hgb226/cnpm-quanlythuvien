@@ -251,13 +251,15 @@ namespace qltv
             dtpBaocao.Enabled = true;
 
             // Truy vấn để lấy dữ liệu
-            string query = "select S.TheLoai as [Thể loại], sum(MT.SLMuon) as [Số lượng mượn] " +
-                           "from tblSach S, tblHSPhieuMuon MT " +
-                           "where S.MaSach = MT.MaSach " +
-                           "and day(MT.NgayMuon) = " + dtpBaocao.Value.Day +
-                           " and month(MT.NgayMuon) = " + dtpBaocao.Value.Month +
-                           " and year(MT.NgayMuon) = " + dtpBaocao.Value.Year +
-                           " group by S.TheLoai";
+            string query = "select S.TheLoai as [Thể loại], " +
+               "       sum(MT.SLMuon) as [Số lượng mượn], " +
+               "       FORMAT(sum(MT.SLMuon) * 1.0 / sum(S.SLNhap), '0.###') as [Tỷ lệ] " +
+               "from tblSach S, tblHSPhieuMuon MT " +
+               "where S.MaSach = MT.MaSach " +
+               "and day(MT.NgayMuon) = " + dtpBaocao.Value.Day +
+               " and month(MT.NgayMuon) = " + dtpBaocao.Value.Month +
+               " and year(MT.NgayMuon) = " + dtpBaocao.Value.Year +
+               " group by S.TheLoai";
 
             // Thiết lập DataSource cho DataGridView
             dataGridViewDSDGQuaHan.DataSource = ketnoi(query);
@@ -283,6 +285,6 @@ namespace qltv
             this.Close();
         }
 
-        
+
     }
 }
