@@ -55,5 +55,10 @@ namespace qltv
             frmDangKyTT frmDangKyTT = new frmDangKyTT();
             frmDangKyTT.Show();
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
