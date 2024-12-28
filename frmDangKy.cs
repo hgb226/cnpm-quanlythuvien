@@ -86,7 +86,7 @@ namespace qltv
         {
             if (txtTenDG.Text == "")
             {
-                errTenDG.SetError(txtTenDG, "Vui lòng nhập Tên DG");
+                errTenDG.SetError(txtTenDG, "Vui lòng nhập tên độc giả");
             }
             else
             {
@@ -95,7 +95,7 @@ namespace qltv
 
             if (txtEmail.Text == "")
             {
-                errEmail.SetError(txtEmail, "Vui lòng nhập Email");
+                errEmail.SetError(txtEmail, "Vui lòng nhập email");
             }
             else
             {
@@ -104,7 +104,7 @@ namespace qltv
 
             if (txtDiaChi.Text == "")
             {
-                errDC.SetError(txtDiaChi, "Vui lòng nhập Địa chỉ");
+                errDC.SetError(txtDiaChi, "Vui lòng nhập địa chỉ");
             }
             else
             {
@@ -113,7 +113,7 @@ namespace qltv
 
             if (txtMK.Text == "")
             {
-                errMK.SetError(txtMK, "Vui lòng nhập MK");
+                errMK.SetError(txtMK, "Vui lòng nhập mật khẩu");
             }
             else
             {
@@ -122,7 +122,7 @@ namespace qltv
 
             if (cboGioiTinh.Text == "")
             {
-                errGT.SetError(cboGioiTinh, "Vui lòng chọn Giới Tính");
+                errGT.SetError(cboGioiTinh, "Vui lòng chọn giới tính");
             }
             else
             {
@@ -131,7 +131,7 @@ namespace qltv
 
             if (cbLoaiDG.Text == "")
             {
-                errorLoaiDG.SetError(cbLoaiDG, "Vui lòng chọn Loại Độc Giả");
+                errorLoaiDG.SetError(cbLoaiDG, "Vui lòng chọn loại độc giả");
             }
             else
             {
@@ -153,7 +153,7 @@ namespace qltv
                 int TuoiDocGia = DateTime.Now.Year - dtmNgaySinh.Value.Year; // Lấy giá trị tuổi độc giả
                 if (SoTuoiDGMin > TuoiDocGia || SoTuoiDGMax < TuoiDocGia)
                 {
-                    MessageBox.Show("Tuổi độc giả không phù hợp để tạo tài khoản!");
+                    MessageBox.Show("Tuổi độc giả không phù hợp để tạo tài khoản");
                     return;
                 }
                 else
@@ -177,7 +177,7 @@ namespace qltv
                     {
                         string themdongsql = "set dateformat dmy; insert into tblDocGia values ('" + txtMaDG.Text + "',N'" + txtTenDG.Text + "',N'" + cboGioiTinh.Text + "','" + dtmNgaySinh.Text + "','" + txtEmail.Text + "',N'" + txtDiaChi.Text + "','" + cbLoaiDG.Text + "',N'" + txtGhiChu.Text + "','" + txtTenTK.Text + "','" + txtMK.Text + "', '" + dtmNgayLapThe.Text + "')";
                         ketnoi(themdongsql);
-                        MessageBox.Show("Đăng ký thành công.", "Thông Báo");
+                        MessageBox.Show("Đăng ký thành công", "Thông Báo");
                     }
                     catch (Exception ex)
                     {
@@ -187,10 +187,10 @@ namespace qltv
                     this.Close();
                 }
                 else
-                    MessageBox.Show("Vui lòng nhập lại Mật khẩu.", "Thông Báo");
+                    MessageBox.Show("Vui lòng nhập lại mật khẩu", "Thông Báo");
             }
             else
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Thông Báo");
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông Báo");
         }
     }
 }
