@@ -38,6 +38,7 @@
             đổiMậtKhẩuToolStripMenuItem = new ToolStripMenuItem();
             đăngKýThủThưToolStripMenuItem = new ToolStripMenuItem();
             thoátToolStripMenuItem = new ToolStripMenuItem();
+            toolStripMenuItem1 = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -45,10 +46,10 @@
             // 
             menuStrip1.BackColor = Color.PowderBlue;
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { quảnLýToolStripMenuItem, phiếuThuTiềnPhạtToolStripMenuItem, báoCáoThốngKêToolStripMenuItem, đổiMậtKhẩuToolStripMenuItem, đăngKýThủThưToolStripMenuItem, thoátToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { quảnLýToolStripMenuItem, phiếuThuTiềnPhạtToolStripMenuItem, báoCáoThốngKêToolStripMenuItem, đổiMậtKhẩuToolStripMenuItem, đăngKýThủThưToolStripMenuItem, toolStripMenuItem1, thoátToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(670, 28);
+            menuStrip1.Size = new Size(806, 28);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -115,11 +116,18 @@
             thoátToolStripMenuItem.Text = "Thoát";
             thoátToolStripMenuItem.Click += thoátToolStripMenuItem_Click;
             // 
+            // toolStripMenuItem1
+            // 
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(137, 24);
+            toolStripMenuItem1.Text = "Thay đổi tham số";
+            toolStripMenuItem1.Click += toolStripMenuItem1_Click;
+            // 
             // frmGiaoDienChinh
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(670, 169);
+            ClientSize = new Size(806, 169);
             Controls.Add(menuStrip1);
             Name = "frmGiaoDienChinh";
             Text = "Giao diện chính";
@@ -141,5 +149,7 @@
         private ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
         private ToolStripMenuItem thoátToolStripMenuItem;
         private ToolStripMenuItem đăngKýThủThưToolStripMenuItem;
+        private ToolStripMenuItem thayĐổiThamSốToolStripMenuItem;
+        private ToolStripMenuItem toolStripMenuItem1;
     }
 }
