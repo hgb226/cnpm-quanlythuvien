@@ -402,7 +402,18 @@ namespace qltv
             {
                 if (luuSLMuon <= luuSLCon)
                 {
-                    if ((luuSLSachDGDaMuon + luuSLMuon) <= 5 && (luuSLSachDGDaMuon + luuSLMuon) > 0)
+                    string querySach = "select GiaTri from thamso where TenTS = 'SoSachMuonToiDa'";
+                    ketnoi(querySach);
+                    int SoSachMuonToiDa = Convert.ToInt32(myCommand.ExecuteScalar());
+                    string queryPhieuQuaHan = "SELECT COUNT(*) AS SoPhieuQuaHan FROM tblHSPhieuMuon WHERE DATEDIFF(DAY, NgayTra, GETDATE()) > 0;";
+                    ketnoi(queryPhieuQuaHan);
+                    int SoPhieuQuaHan = Convert.ToInt32(myCommand.ExecuteScalar());
+                    if (SoPhieuQuaHan > 0)
+                    {
+                        MessageBox.Show("Thẻ có sách quá hạn", "Thông báo");
+                    }
+
+                    else if ((luuSLSachDGDaMuon + luuSLMuon) <= SoSachMuonToiDa && (luuSLSachDGDaMuon + luuSLMuon) > 0)
                     {
                         if (kq == 1)
                         {
@@ -431,7 +442,6 @@ namespace qltv
                                     myCommand.ExecuteNonQuery();
                                     myConnection.Close();
                                     MessageBox.Show("Đã cập nhật SL Sách vào trong kho.", "Thông Báo");
-
                                     string query = "set dateformat dmy; select count(*) from chitietpm where month(NgayThang) = " + dtmNgayMuon0.Value.Month + " and year(NgayThang) = " + dtmNgayMuon0.Value.Year + " and MaSach = '" + cboMaSach0.Text + "'";
                                     ketnoi(query);
                                     int cnt = (int)myCommand.ExecuteScalar();
@@ -441,7 +451,6 @@ namespace qltv
                                         dataGridViewDSMuon0.DataSource = ketnoi(query);
                                         dataGridViewDSMuon0.AutoGenerateColumns = false;
                                         myConnection.Close();
-
                                         string maTuDong = "";
                                         if (myTable.Rows.Count <= 0)
                                         {
