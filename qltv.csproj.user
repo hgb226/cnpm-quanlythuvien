@@ -40,6 +40,9 @@
     <Compile Update="frmQLSach.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmThayDoiThamSo.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="frmDoiMatKhau.resx">
