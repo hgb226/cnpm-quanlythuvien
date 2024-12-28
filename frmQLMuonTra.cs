@@ -403,11 +403,17 @@ namespace qltv
                 if (luuSLMuon <= luuSLCon)
                 {
                     string querySach = "select GiaTri from thamso where TenTS = 'SoSachMuonToiDa'";
-                    ketnoi(querySach);
+                    myConnection = new SqlConnection(strKetNoi);
+                    myConnection.Open();
+                    myCommand = new SqlCommand(querySach, myConnection);
                     int SoSachMuonToiDa = Convert.ToInt32(myCommand.ExecuteScalar());
-                    string queryPhieuQuaHan = "SELECT COUNT(*) AS SoPhieuQuaHan FROM tblHSPhieuMuon WHERE DATEDIFF(DAY, NgayTra, GETDATE()) > 0;";
-                    ketnoi(queryPhieuQuaHan);
+                    myConnection.Close();
+                    string queryPhieuQuaHan = "SELECT COUNT(*) AS SoPhieuQuaHan FROM tblHSPhieuMuon WHERE DATEDIFF(DAY, NgayTra, GETDATE()) > 0 AND MaDG = '" + cboMaDG0.Text + "';";
+                    myConnection = new SqlConnection(strKetNoi);
+                    myConnection.Open();
+                    myCommand = new SqlCommand(queryPhieuQuaHan, myConnection);
                     int SoPhieuQuaHan = Convert.ToInt32(myCommand.ExecuteScalar());
+                    myConnection.Close();
                     if (SoPhieuQuaHan > 0)
                     {
                         MessageBox.Show("Thẻ có sách quá hạn", "Thông báo");
@@ -568,11 +574,17 @@ namespace qltv
         private void btnChoMuon0_Click(object sender, EventArgs e)
         {
             string query = "Select GiaTri from ThamSo Where TenTS='GiaTriThe'";
-            ketnoi(query);
+            myConnection = new SqlConnection(strKetNoi);
+            myConnection.Open();
+            myCommand = new SqlCommand(query, myConnection);
             int GiaTriThe = Convert.ToInt32(myCommand.ExecuteScalar());
+            myConnection.Close();
             query = "set dateformat dmy; Select NgLapThe from tblDocGia Where MaDG='" + cboMaDG0.Text + "'";
-            ketnoi(query);
+            myConnection = new SqlConnection(strKetNoi);
+            myConnection.Open();
+            myCommand = new SqlCommand(query, myConnection);
             DateTime ngaylap = Convert.ToDateTime(myCommand.ExecuteScalar());
+            myConnection.Close();
             TimeSpan han = DateTime.Now - ngaylap;
             if (han.Days > GiaTriThe * 31)
             {
