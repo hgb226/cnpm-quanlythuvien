@@ -53,7 +53,6 @@
             label10 = new Label();
             label4 = new Label();
             label3 = new Label();
-            txtTheLoai = new TextBox();
             txtNamXB = new TextBox();
             txtNXB = new TextBox();
             txtTacGia = new TextBox();
@@ -97,6 +96,7 @@
             errSLNhap = new ErrorProvider(components);
             errTriGia = new ErrorProvider(components);
             errTinhTrang = new ErrorProvider(components);
+            cboTheLoai = new ComboBox();
             grpTTSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewDSSach).BeginInit();
             groupBox2.SuspendLayout();
@@ -115,6 +115,7 @@
             // 
             // grpTTSach
             // 
+            grpTTSach.Controls.Add(cboTheLoai);
             grpTTSach.Controls.Add(lblNhapNgaySinh);
             grpTTSach.Controls.Add(dtmNgNhapSach);
             grpTTSach.Controls.Add(label11);
@@ -138,7 +139,6 @@
             grpTTSach.Controls.Add(label10);
             grpTTSach.Controls.Add(label4);
             grpTTSach.Controls.Add(label3);
-            grpTTSach.Controls.Add(txtTheLoai);
             grpTTSach.Controls.Add(txtNamXB);
             grpTTSach.Controls.Add(txtNXB);
             grpTTSach.Controls.Add(txtTacGia);
@@ -246,6 +246,7 @@
             // 
             // cboTinhTrang
             // 
+            cboTinhTrang.AllowDrop = true;
             cboTinhTrang.FormattingEnabled = true;
             cboTinhTrang.Items.AddRange(new object[] { "Mới", "Cũ" });
             cboTinhTrang.Location = new Point(489, 145);
@@ -348,14 +349,6 @@
             label3.Size = new Size(66, 19);
             label3.TabIndex = 0;
             label3.Text = "Tác Giả:";
-            // 
-            // txtTheLoai
-            // 
-            txtTheLoai.BorderStyle = BorderStyle.FixedSingle;
-            txtTheLoai.Location = new Point(489, 55);
-            txtTheLoai.Name = "txtTheLoai";
-            txtTheLoai.Size = new Size(198, 27);
-            txtTheLoai.TabIndex = 1;
             // 
             // txtNamXB
             // 
@@ -749,6 +742,16 @@
             // 
             errTinhTrang.ContainerControl = this;
             // 
+            // cboTheLoai
+            // 
+            cboTheLoai.FormattingEnabled = true;
+            cboTheLoai.Items.AddRange(new object[] { "Mới", "Cũ" });
+            cboTheLoai.Location = new Point(489, 55);
+            cboTheLoai.Name = "cboTheLoai";
+            cboTheLoai.Size = new Size(198, 27);
+            cboTheLoai.TabIndex = 14;
+            cboTheLoai.DropDown += cboTheLoai_DropDown;
+            // 
             // frmQLSach
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
@@ -836,7 +839,6 @@
         private System.Windows.Forms.TextBox txtGhiChu;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtTheLoai;
         private System.Windows.Forms.TextBox txtNamXB;
         private System.Windows.Forms.TextBox txtNXB;
         private System.Windows.Forms.TextBox txtTacGia;
@@ -862,5 +864,6 @@
         private DataGridViewTextBoxColumn colTriGia;
         private DataGridViewTextBoxColumn colTinhTrang;
         private DataGridViewTextBoxColumn colGhiChu;
+        private ComboBox cboTheLoai;
     }
 }
