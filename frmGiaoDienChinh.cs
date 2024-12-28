@@ -58,7 +58,8 @@ namespace qltv
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            frmThayDoiThamSo frmThayDoiThamSo = new frmThayDoiThamSo();
+            frmThayDoiThamSo.Show();
         }
     }
 }
