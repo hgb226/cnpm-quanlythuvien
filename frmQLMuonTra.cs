@@ -165,37 +165,44 @@ namespace qltv
                     txtTTSLCon.Text = myDataReaderSach.GetInt32(7).ToString();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void txtNDTimKiem_TextChanged(object sender, EventArgs e)
         {
-            setControlsMuon(false);
-            btnNhap.Enabled = false;
-            btnChoMuon0.Enabled = false;
-            btnHuy0.Enabled = false;
+            try
+            {
+                setControlsMuon(false);
+                //btnNhap.Enabled = false;
+                btnChoMuon0.Enabled = false;
+                btnHuy0.Enabled = false;
+                
 
-            if (radMaDG.Checked)
-            {
-                string timkiemMaDG = "select * from tblHSPhieuMuon where MaDG like '%" + txtNDTimKiem.Text + "%'";
-                ketnoi(timkiemMaDG);
-                myCommand.ExecuteNonQuery();
-                dataGridViewDSMuon0.DataSource = ketnoi(timkiemMaDG);
-                dataGridViewDSMuon0.AutoGenerateColumns = false;
-                myConnection.Close();
+                if (radMaDG.Checked)
+                {
+                    string timkiemMaDG = "select * from tblHSPhieuMuon where MaDG like '%" + txtNDTimKiem.Text + "%'";
+                    ketnoi(timkiemMaDG);
+                    myCommand.ExecuteNonQuery();
+                    dataGridViewDSMuon0.DataSource = ketnoi(timkiemMaDG);
+                    dataGridViewDSMuon0.AutoGenerateColumns = false;
+                    myConnection.Close();
+                }
+                else if (radMaSach.Checked)
+                {
+                    string timkiemMS = "select * from tblHSPhieuMuon where MaSach like '%" + txtNDTimKiem.Text + "%'";
+                    ketnoi(timkiemMS);
+                    myCommand.ExecuteNonQuery();
+                    dataGridViewDSMuon0.DataSource = ketnoi(timkiemMS);
+                    dataGridViewDSMuon0.AutoGenerateColumns = false;
+                    myConnection.Close();
+                }
             }
-            else if (radMaSach.Checked)
-            {
-                string timkiemMS = "select * from tblHSPhieuMuon where MaSach like '%" + txtNDTimKiem.Text + "%'";
-                ketnoi(timkiemMS);
-                myCommand.ExecuteNonQuery();
-                dataGridViewDSMuon0.DataSource = ketnoi(timkiemMS);
-                dataGridViewDSMuon0.AutoGenerateColumns = false;
-                myConnection.Close();
-            }
+            catch (Exception ex) {
+                //MessageBox.Show(ex.Message);
+            }   
         }
 
 
@@ -251,7 +258,7 @@ namespace qltv
         {
             layMaDGMuon();
             layMaSachMuon();
-
+            txtNDTimKiem.Enabled = false;
             btnChoMuon0.Text = "Cho Mượn";
             btnChoMuon0.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             setControlsMuon(true);
@@ -517,7 +524,11 @@ namespace qltv
 
         private void giaHanSach()
         {
-            if (kq == 1)
+            if (dtmNgayTra0.Value.CompareTo(dtmNgayMuon0.Value) < 0)
+            {
+                MessageBox.Show("Vui lòng chọn ngày trả lớn hơn ngày mượn.", "Thông Báo");
+            }
+            else if (kq == 1)
             {
                 string strCapNhatSLCon = "set dateformat dmy; update tblHSPhieuMuon set NgayMuon='" + dtmNgayMuon0.Text + " ', NgayTra='" + dtmNgayTra0.Text + "' where MaPhieu='" + txtMaPhieu0.Text + "'";
                 ketnoi(strCapNhatSLCon);
@@ -539,10 +550,10 @@ namespace qltv
 
                 dataGridViewDSMuon0.Enabled = true;
             }
-            else
+            /*else
             {
                 MessageBox.Show("Vui lòng chọn ngày trả lớn hơn ngày mượn.", "Thông Báo");
-            }
+            }*/
 
         }
         private void btnChoMuon0_Click(object sender, EventArgs e)
@@ -586,6 +597,8 @@ namespace qltv
             btnChoMuon0.Enabled = true;
             btnGiaHan.Enabled = false;
             btnHuy0.Enabled = true;
+            dtmNgayMuon0.Enabled = false;
+            cboTinhTrang0.Enabled = false;
             xuly = 1;
         }
 
@@ -598,12 +611,12 @@ namespace qltv
             dtmNgayMuon0.Value = DateTime.Now;
             dtmNgayTra0.Value = DateTime.Now.AddDays(5);
             txtGhiChu0.Text = "";
-
+            txtNDTimKiem.Enabled = true;
             btnChoMuon0.Text = "Cho Mượn";
             btnChoMuon0.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-
-            btnNhap.Enabled = true;
             btnChoMuon0.Enabled = false;
+            btnNhap.Enabled = true;
+            //btnChoMuon0.Enabled = true;
             btnGiaHan.Enabled = true;
             btnHuy0.Enabled = false;
             setControlsMuon(false);

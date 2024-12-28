@@ -138,6 +138,8 @@ insert into ThamSo values ('SoTuoiDGMax', 55)
 insert into ThamSo values ('GiaTriThe', 6)
 insert into ThamSo values ('ThoiGianXB', 8)
 insert into ThamSo values ('TienPhat', 1000)
+insert into ThamSo values ('SoSachMuonToiDa', 5)
+insert into ThamSo values ('SoNgayMuonToiDa', 4)
 go
 
 
