@@ -38,15 +38,15 @@
             label4 = new Label();
             label5 = new Label();
             btnPrint = new Button();
+            btnXuatTongNo = new Button();
             SuspendLayout();
             // 
             // txtMaDG
             // 
             txtMaDG.BorderStyle = BorderStyle.FixedSingle;
-            txtMaDG.Location = new Point(150, 13);
-            txtMaDG.Margin = new Padding(3, 4, 3, 4);
+            txtMaDG.Location = new Point(131, 10);
             txtMaDG.Name = "txtMaDG";
-            txtMaDG.Size = new Size(339, 27);
+            txtMaDG.Size = new Size(297, 23);
             txtMaDG.TabIndex = 0;
             txtMaDG.TextChanged += txtMaDG_TextChanged_1;
             // 
@@ -54,29 +54,26 @@
             // 
             txtHotenDG.BorderStyle = BorderStyle.FixedSingle;
             txtHotenDG.Enabled = false;
-            txtHotenDG.Location = new Point(150, 51);
-            txtHotenDG.Margin = new Padding(3, 4, 3, 4);
+            txtHotenDG.Location = new Point(131, 38);
             txtHotenDG.Name = "txtHotenDG";
-            txtHotenDG.Size = new Size(339, 27);
+            txtHotenDG.Size = new Size(297, 23);
             txtHotenDG.TabIndex = 1;
             // 
             // txtTongno
             // 
             txtTongno.BorderStyle = BorderStyle.FixedSingle;
             txtTongno.Enabled = false;
-            txtTongno.Location = new Point(150, 89);
-            txtTongno.Margin = new Padding(3, 4, 3, 4);
+            txtTongno.Location = new Point(131, 67);
             txtTongno.Name = "txtTongno";
-            txtTongno.Size = new Size(339, 27);
+            txtTongno.Size = new Size(297, 23);
             txtTongno.TabIndex = 2;
             // 
             // txtSotienthu
             // 
             txtSotienthu.BorderStyle = BorderStyle.FixedSingle;
-            txtSotienthu.Location = new Point(150, 127);
-            txtSotienthu.Margin = new Padding(3, 4, 3, 4);
+            txtSotienthu.Location = new Point(131, 95);
             txtSotienthu.Name = "txtSotienthu";
-            txtSotienthu.Size = new Size(339, 27);
+            txtSotienthu.Size = new Size(297, 23);
             txtSotienthu.TabIndex = 3;
             txtSotienthu.TextChanged += txtSotienthu_TextChanged_1;
             // 
@@ -84,74 +81,83 @@
             // 
             txtConlai.BorderStyle = BorderStyle.FixedSingle;
             txtConlai.Enabled = false;
-            txtConlai.Location = new Point(150, 165);
-            txtConlai.Margin = new Padding(3, 4, 3, 4);
+            txtConlai.Location = new Point(131, 124);
             txtConlai.Name = "txtConlai";
-            txtConlai.Size = new Size(339, 27);
+            txtConlai.Size = new Size(297, 23);
             txtConlai.TabIndex = 4;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(57, 20);
+            label1.Location = new Point(50, 15);
             label1.Name = "label1";
-            label1.Size = new Size(87, 20);
+            label1.Size = new Size(68, 15);
             label1.TabIndex = 5;
             label1.Text = "Mã Độc Giả";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 58);
+            label2.Location = new Point(10, 44);
             label2.Name = "label2";
-            label2.Size = new Size(132, 20);
+            label2.Size = new Size(103, 15);
             label2.TabIndex = 6;
             label2.Text = "Họ và Tên Độc Giả";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(80, 96);
+            label3.Location = new Point(70, 72);
             label3.Name = "label3";
-            label3.Size = new Size(64, 20);
+            label3.Size = new Size(51, 15);
             label3.TabIndex = 7;
             label3.Text = "Tổng nợ";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(64, 134);
+            label4.Location = new Point(56, 100);
             label4.Name = "label4";
-            label4.Size = new Size(80, 20);
+            label4.Size = new Size(64, 15);
             label4.TabIndex = 8;
             label4.Text = "Số tiền thu";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(89, 172);
+            label5.Location = new Point(78, 129);
             label5.Name = "label5";
-            label5.Size = new Size(55, 20);
+            label5.Size = new Size(44, 15);
             label5.TabIndex = 9;
             label5.Text = "Còn lại";
             // 
             // btnPrint
             // 
-            btnPrint.Location = new Point(495, 13);
-            btnPrint.Margin = new Padding(3, 4, 3, 4);
+            btnPrint.Location = new Point(526, 102);
             btnPrint.Name = "btnPrint";
-            btnPrint.Size = new Size(100, 100);
+            btnPrint.Size = new Size(88, 42);
             btnPrint.TabIndex = 10;
             btnPrint.Text = "Print";
             btnPrint.UseVisualStyleBackColor = true;
             btnPrint.Click += btnPrint_Click;
             // 
+            // btnXuatTongNo
+            // 
+            btnXuatTongNo.Location = new Point(450, 10);
+            btnXuatTongNo.Name = "btnXuatTongNo";
+            btnXuatTongNo.Size = new Size(164, 81);
+            btnXuatTongNo.TabIndex = 11;
+            btnXuatTongNo.Text = "Xuất tổng nợ";
+            btnXuatTongNo.UseVisualStyleBackColor = true;
+            btnXuatTongNo.Click += btnXuatTongNo_Click;
+            // 
             // frmPhieuthutienphat
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(716, 207);
+            ClientSize = new Size(626, 155);
+            Controls.Add(btnXuatTongNo);
             Controls.Add(btnPrint);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -163,7 +169,6 @@
             Controls.Add(txtTongno);
             Controls.Add(txtHotenDG);
             Controls.Add(txtMaDG);
-            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             Name = "frmPhieuthutienphat";
             Text = "Phiếu thu tiền phạt";
@@ -184,5 +189,6 @@
         private Label label4;
         private Label label5;
         private Button btnPrint;
+        private Button btnXuatTongNo;
     }
 }

@@ -160,6 +160,8 @@ insert into tblThuThu values ('TT002',N'Lê Trung Kiên',N'Nam','16/07/2003','le
 
 
 
+ALTER TABLE tblDocGia
+ADD TongNo INT ;
 
 
 -- có ngày hẹn trả

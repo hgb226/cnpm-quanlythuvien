@@ -40,8 +40,11 @@ namespace qltv
             myCommand = new SqlCommand(thuchiencaulenh, myConnection);
             myDataAdapter = new SqlDataAdapter(myCommand);
             myTable = new DataTable();
-            myDataAdapter.Fill(myTable);
-            dataGridViewDSMuon0.DataSource = myTable;
+            try {
+                myDataAdapter.Fill(myTable);
+                dataGridViewDSMuon0.DataSource = myTable;
+            } catch (Exception ex) { }
+            
             return myTable;
         }
 
@@ -54,8 +57,12 @@ namespace qltv
             myCommand = new SqlCommand(thuchiencaulenh, myConnection);
             myDataAdapter = new SqlDataAdapter(myCommand);
             myTableSach = new DataTable();
-            myDataAdapter.Fill(myTableSach);
-            return myTableSach;
+            try
+            {
+                myDataAdapter.Fill(myTableSach);
+            }
+            catch (Exception ex) { }
+                return myTableSach;
         }
 
         // Lấy mã sách lên cboMasach0
@@ -444,18 +451,29 @@ namespace qltv
                                 {
                                     string strluuSLSauChoMuon = luuSLSauChoMuon.ToString();
                                     string strCapNhatSLCon = "update tblSach set SLNhap='" + strluuSLSauChoMuon + " ' where MaSach='" + cboMaSach0.Text + "'";
-                                    ketnoi(strCapNhatSLCon);
+                         
+                                    myConnection = new SqlConnection(strKetNoi);
+                                    myConnection.Open();
+                                    myCommand = new SqlCommand(strCapNhatSLCon, myConnection);
                                     myCommand.ExecuteNonQuery();
                                     myConnection.Close();
                                     MessageBox.Show("Đã cập nhật SL Sách vào trong kho.", "Thông Báo");
                                     string query = "set dateformat dmy; select count(*) from chitietpm where month(NgayThang) = " + dtmNgayMuon0.Value.Month + " and year(NgayThang) = " + dtmNgayMuon0.Value.Year + " and MaSach = '" + cboMaSach0.Text + "'";
-                                    ketnoi(query);
+                                    myConnection = new SqlConnection(strKetNoi);
+                                    myConnection.Open();
+                                    myCommand = new SqlCommand(query, myConnection);
+   
                                     int cnt = (int)myCommand.ExecuteScalar();
                                     if (cnt == 0)
                                     {
-                                        query = "select * from ChiTietPM";
-                                        dataGridViewDSMuon0.DataSource = ketnoi(query);
-                                        dataGridViewDSMuon0.AutoGenerateColumns = false;
+                                        try
+                                        {
+                                            query = "SELECT MaCTPT AS MaPhieu, * FROM ChiTietPM";
+                                            dataGridViewDSMuon0.DataSource = ketnoi(query);
+                                            dataGridViewDSMuon0.AutoGenerateColumns = false;
+                                        }
+                                        catch (Exception) { }
+                                        
                                         myConnection.Close();
                                         string maTuDong = "";
                                         if (myTable.Rows.Count <= 0)
@@ -697,17 +715,11 @@ namespace qltv
 
         private void traSach()
         {
-            string strlaydulieu = "select * from tblSach where MaSach='" + txtMaSach1.Text + "'";
             myConnection = new SqlConnection(strKetNoi);
             myConnection.Open();
-            string thuchiencaulenh = strlaydulieu;
-            myCommand = new SqlCommand(thuchiencaulenh, myConnection);
-            myDataReaderSach = myCommand.ExecuteReader();
-            while (myDataReaderSach.Read())
-            {
-                luuSLConTabMuon = myDataReaderSach.GetInt32(6).ToString();
-            }
-
+            myCommand = new SqlCommand(("select SLNhap from tblSach where MaSach='" + txtMaSach1.Text + "';"), myConnection);
+            int luuSLConTabMuon = Convert.ToInt32(myCommand.ExecuteScalar());
+            myConnection.Close();
             luuSLSauTra = Convert.ToInt32(luuSLTra1) + Convert.ToInt32(luuSLConTabMuon);
             DialogResult dlr;
             dlr = MessageBox.Show("Bạn chắc chắn muốn trả sách.", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
