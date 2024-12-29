@@ -466,23 +466,29 @@ namespace qltv
                                     int cnt = (int)myCommand.ExecuteScalar();
                                     if (cnt == 0)
                                     {
-                                        try
+                                        string queryChiTiet = "SELECT * FROM ChiTietPM"; // Ensure this query is valid for your context
+                                        using (SqlConnection myConnection = new SqlConnection(strKetNoi))
                                         {
-                                            query = "SELECT * FROM ChiTietPM";
-                                            myConnection = new SqlConnection(strKetNoi);
-                                            myConnection.Open();
-                                            myCommand = new SqlCommand(query, myConnection);
-                                            if(myCommand.ExecuteScalar().ToString() != "")
+                                            try
                                             {
-                                                dataGridViewDSMuon0.DataSource = (int)myCommand.ExecuteScalar();
-                                                dataGridViewDSMuon0.AutoGenerateColumns = false;
+                                                myConnection.Open();
+                                                using (SqlCommand myCommand = new SqlCommand(queryChiTiet, myConnection))
+                                                {
+                                                    using (SqlDataAdapter adapter = new SqlDataAdapter(myCommand))
+                                                    {
+                                                        DataTable dataTable = new DataTable();
+                                                        adapter.Fill(dataTable);
+                                                        dataGridViewDSMuon0.DataSource = dataTable; // Assign the DataTable to DataGridView
+                                                        dataGridViewDSMuon0.AutoGenerateColumns = false;
+                                                    }
+                                                }
                                             }
-                                            
-                                            myConnection.Close();
+                                            catch (Exception ex)
+                                            {
+                                                MessageBox.Show("An error occurred: " + ex.Message);
+                                            }
                                         }
-                                        catch (Exception) { }
-                                        
-                                        
+
                                         string maTuDong = "";
                                         if (myTable.Rows.Count <= 0)
                                         {
@@ -740,7 +746,7 @@ namespace qltv
                     myCommand = new SqlCommand(("select MaDG from tblHSPhieuMuon where MaPhieu='" + txtMaPhieu1.Text + "'"), myConnection);
                     string MaDG = myCommand.ExecuteScalar().ToString();
                     myConnection.Close();
-                    CapNhatTongNo(MaDG);
+                    CapNhatTongNo(MaDG, maPhieu1);
                     string xoadongsql;
                     xoadongsql = "delete from tblHSPhieuMuon where MaPhieu='" + txtMaPhieu1.Text + "'";
                     ketnoi(xoadongsql);
@@ -829,10 +835,10 @@ namespace qltv
         {
 
         }
-        private void CapNhatTongNo(string maDG)
+        private void CapNhatTongNo(string maDG, string MaPhieu)
         {
             // Lấy dữ liệu phiếu mượn từ bảng tblHSPhieuMuon
-            string query = "set dateformat dmy; select * from tblHSPhieuMuon where MaDG = '" + maDG + "'";
+            string query = "set dateformat dmy; select * from tblHSPhieuMuon where MaPhieu = '" + MaPhieu + "'";
             DataTable temp = ketnoi(query);
 
             int tongno = 0;
