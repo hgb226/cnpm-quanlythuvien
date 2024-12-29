@@ -731,6 +731,12 @@ namespace qltv
             {
                 try
                 {
+                    myConnection = new SqlConnection(strKetNoi);
+                    myConnection.Open();
+                    myCommand = new SqlCommand(("select MaDG from tblHSPhieuMuon where MaPhieu='" + txtMaPhieu1.Text + "'"), myConnection);
+                    string MaDG = myCommand.ExecuteScalar().ToString();
+                    myConnection.Close();
+                    CapNhatTongNo(MaDG);
                     string xoadongsql;
                     xoadongsql = "delete from tblHSPhieuMuon where MaPhieu='" + txtMaPhieu1.Text + "'";
                     ketnoi(xoadongsql);
@@ -819,5 +825,31 @@ namespace qltv
         {
 
         }
+        private void CapNhatTongNo(string maDG)
+        {
+            // Lấy dữ liệu phiếu mượn từ bảng tblHSPhieuMuon
+            string query = "set dateformat dmy; select * from tblHSPhieuMuon where MaDG = '" + maDG + "'";
+            DataTable temp = ketnoi(query);
+
+            int tongno = 0;
+
+            foreach (DataRow row in temp.Rows)
+            {
+                DateTime ngayMuon = Convert.ToDateTime(row["NgayMuon"]);
+                DateTime ngayTra = Convert.ToDateTime(row["NgayTra"]);
+                int soNgayMuon = (ngayTra - ngayMuon).Days;
+
+                if (soNgayMuon > 4) // Nếu mượn sách quá 4 ngày
+                {
+                    int soNgayNo = soNgayMuon - 4; // Số ngày nợ bắt đầu từ ngày thứ 5
+                    tongno += soNgayNo * 1000; // Mỗi ngày nợ 1.000 đồng
+                }
+            }
+
+            // Cập nhật tổng nợ vào bảng tblDocGia
+            query = "UPDATE tblDocGia SET TongNo = " + tongno + " WHERE MaDG = '" + maDG + "'";
+            ketnoi(query);
+        }
     }
+
 }
