@@ -599,6 +599,7 @@
             dtmNgayTra0.ShowUpDown = true;
             dtmNgayTra0.Size = new Size(148, 27);
             dtmNgayTra0.TabIndex = 5;
+            dtmNgayTra0.ValueChanged += dtmNgayTra0_ValueChanged;
             // 
             // label9
             // 
@@ -688,10 +689,10 @@
             tabPage2.Controls.Add(btnThoat1);
             tabPage2.Controls.Add(groupBox4);
             tabPage2.Controls.Add(btnTraSach1);
-            tabPage2.Location = new Point(4, 28);
+            tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1157, 880);
+            tabPage2.Size = new Size(1157, 879);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Quản lý Trả Sách";
             tabPage2.Click += tabPage2_Click;
