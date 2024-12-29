@@ -5,10 +5,12 @@ namespace qltv
 {
     public partial class frmDoiMKDG : Form
     {
-        public frmDoiMKDG()
+        public frmDoiMKDG(string TenDangNhap)
         {
             InitializeComponent();
+            TenDangNhapString = TenDangNhap;
         }
+        public string TenDangNhapString = "";
 
         string chuoiKetNoi = ConfigurationManager.ConnectionStrings["strConn"].ConnectionString;
 
@@ -133,5 +135,11 @@ namespace qltv
         }
 
         private void btnThoat_Click(object sender, EventArgs e) => Close();
+
+        private void frmDoiMKDG_Load(object sender, EventArgs e)
+        {
+            txtTenTaiKhoan.Text = TenDangNhapString;
+            txtTenTaiKhoan.Enabled = false;
+        }
     }
 }

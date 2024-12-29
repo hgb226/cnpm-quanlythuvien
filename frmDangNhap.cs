@@ -91,8 +91,9 @@ namespace qltv
                         xacThucTKTT();
                         if (x1 == 1)
                         {
+                            string TenDangNhap = txtTenDangNhap.Text;
                             MessageBox.Show("Đăng nhập thành công", "Thông Báo");
-                            frmGiaoDienChinh GiaoDienChinh = new frmGiaoDienChinh();
+                            frmGiaoDienChinh GiaoDienChinh = new frmGiaoDienChinh(TenDangNhap);
                             GiaoDienChinh.FormClosed += new FormClosedEventHandler(DongForm);
                             this.Hide();
                             GiaoDienChinh.Show();
@@ -117,8 +118,9 @@ namespace qltv
                         xacThucTKDG();
                         if (x2 == 1)
                         {
+                            string TenDangNhap = txtTenDangNhap.Text;
                             MessageBox.Show("Đăng nhập thành công", "Thông Báo");
-                            frmDocGia DG = new frmDocGia(txtTenDangNhap.Text);
+                            frmDocGia DG = new frmDocGia(TenDangNhap);
                             DG.FormClosed += new FormClosedEventHandler(DongForm);
                             this.Hide();
                             DG.Show();

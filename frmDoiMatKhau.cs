@@ -5,11 +5,12 @@ namespace qltv
 {
     public partial class frmDoiMatKhau : Form
     {
-        public frmDoiMatKhau()
+        public frmDoiMatKhau(string TenDangNhap)
         {
             InitializeComponent();
+            TenDangNhapString = TenDangNhap;
         }
-
+        public string TenDangNhapString = "";
         string chuoiKetNoi = ConfigurationManager.ConnectionStrings["strConn"].ConnectionString;
 
         private void btnDoiMatKhau_Click(object sender, EventArgs e)
@@ -134,7 +135,8 @@ namespace qltv
 
         private void frmDoiMatKhau_Load(object sender, EventArgs e)
         {
-
+            txtTenTaiKhoan.Text = TenDangNhapString;
+            txtTenTaiKhoan.Enabled = false;
         }
     }
 }

@@ -4,11 +4,12 @@ namespace qltv
 {
     public partial class frmGiaoDienChinh : Form
     {
-        public frmGiaoDienChinh()
+        public frmGiaoDienChinh(string TenDangNhap)
         {
             InitializeComponent();
+            TenDangNhapString = TenDangNhap;
         }
-
+        public string TenDangNhapString = "";
         private void quảnLýSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmQLSach QLSach = new frmQLSach();
@@ -41,7 +42,7 @@ namespace qltv
 
         private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmDoiMatKhau MatKhau = new frmDoiMatKhau();
+            frmDoiMatKhau MatKhau = new frmDoiMatKhau(TenDangNhapString);
             MatKhau.Show();
         }
 

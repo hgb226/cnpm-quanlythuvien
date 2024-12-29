@@ -15,7 +15,7 @@ namespace qltv
 {
     public partial class frmDocGia : Form
     {
-        public string tKDG;
+        public string tKDG = "";
         public frmDocGia(string tkDG)
         {
             InitializeComponent();
@@ -93,7 +93,7 @@ namespace qltv
 
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmDoiMKDG MKDG = new frmDoiMKDG();
+            frmDoiMKDG MKDG = new frmDoiMKDG(tKDG);
             MKDG.Show();
         }
 

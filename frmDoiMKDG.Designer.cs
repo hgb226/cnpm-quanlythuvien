@@ -187,6 +187,7 @@
             Controls.Add(label1);
             Name = "frmDoiMKDG";
             Text = "frmDoiMKDG";
+            Load += frmDoiMKDG_Load;
             ResumeLayout(false);
             PerformLayout();
         }
