@@ -469,12 +469,16 @@ namespace qltv
                                         try
                                         {
                                             query = "SELECT MaCTPT AS MaPhieu, * FROM ChiTietPM";
-                                            dataGridViewDSMuon0.DataSource = ketnoi(query);
+                                            myConnection = new SqlConnection(strKetNoi);
+                                            myConnection.Open();
+                                            myCommand = new SqlCommand(query, myConnection);
+                                            dataGridViewDSMuon0.DataSource = (int)myCommand.ExecuteScalar();
                                             dataGridViewDSMuon0.AutoGenerateColumns = false;
+                                            myConnection.Close();
                                         }
                                         catch (Exception) { }
                                         
-                                        myConnection.Close();
+                                        
                                         string maTuDong = "";
                                         if (myTable.Rows.Count <= 0)
                                         {
