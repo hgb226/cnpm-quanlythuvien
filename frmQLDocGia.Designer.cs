@@ -78,6 +78,7 @@
             errGT = new ErrorProvider(components);
             errLoaiDG = new ErrorProvider(components);
             dataGridViewDSDocGia = new DataGridView();
+            groupBox2 = new GroupBox();
             colMaDG = new DataGridViewTextBoxColumn();
             colTenDG = new DataGridViewTextBoxColumn();
             colGioiTinh = new DataGridViewTextBoxColumn();
@@ -89,7 +90,7 @@
             colTaiKhoan = new DataGridViewTextBoxColumn();
             colMatKhau = new DataGridViewTextBoxColumn();
             colNgayLapThe = new DataGridViewTextBoxColumn();
-            groupBox2 = new GroupBox();
+            colTongNo = new DataGridViewTextBoxColumn();
             groupBox1.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox5.SuspendLayout();
@@ -585,7 +586,7 @@
             dataGridViewDSDocGia.AllowUserToResizeRows = false;
             dataGridViewDSDocGia.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewDSDocGia.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewDSDocGia.Columns.AddRange(new DataGridViewColumn[] { colMaDG, colTenDG, colGioiTinh, colNgaySinh, colEmail, colDiaChi, colLoaiDG, colGhiChu, colTaiKhoan, colMatKhau, colNgayLapThe });
+            dataGridViewDSDocGia.Columns.AddRange(new DataGridViewColumn[] { colMaDG, colTenDG, colGioiTinh, colNgaySinh, colEmail, colDiaChi, colLoaiDG, colGhiChu, colTaiKhoan, colMatKhau, colNgayLapThe, colTongNo });
             dataGridViewDSDocGia.Location = new Point(6, 26);
             dataGridViewDSDocGia.Name = "dataGridViewDSDocGia";
             dataGridViewDSDocGia.ReadOnly = true;
@@ -595,6 +596,16 @@
             dataGridViewDSDocGia.TabIndex = 2;
             dataGridViewDSDocGia.CellClick += dataGridViewDSDocGia_CellClick;
             dataGridViewDSDocGia.RowEnter += dataGridViewDSDocGia_RowEnter;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(dataGridViewDSDocGia);
+            groupBox2.Location = new Point(14, 413);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(1034, 474);
+            groupBox2.TabIndex = 8;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Danh sách Độc Giả";
             // 
             // colMaDG
             // 
@@ -684,15 +695,13 @@
             colNgayLapThe.Name = "colNgayLapThe";
             colNgayLapThe.ReadOnly = true;
             // 
-            // groupBox2
+            // colTongNo
             // 
-            groupBox2.Controls.Add(dataGridViewDSDocGia);
-            groupBox2.Location = new Point(14, 413);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(1034, 474);
-            groupBox2.TabIndex = 8;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Danh sách Độc Giả";
+            colTongNo.DataPropertyName = "TongNo";
+            colTongNo.HeaderText = "Tổng nợ";
+            colTongNo.MinimumWidth = 6;
+            colTongNo.Name = "colTongNo";
+            colTongNo.ReadOnly = true;
             // 
             // frmQLDocGia
             // 
@@ -800,5 +809,6 @@
         private DataGridViewTextBoxColumn colTaiKhoan;
         private DataGridViewTextBoxColumn colMatKhau;
         private DataGridViewTextBoxColumn colNgayLapThe;
+        private DataGridViewTextBoxColumn colTongNo;
     }
 }
