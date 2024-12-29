@@ -28,24 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDangNhap));
             lblTenDangNhap = new Label();
             txtTenDangNhap = new TextBox();
             lblMatKhau = new Label();
             txtMatKhau = new TextBox();
             btnDangNhap = new Button();
             btnDangKy = new Button();
-            picLockDangNhap = new PictureBox();
             chkQuanTri = new RadioButton();
             chkDocGia = new RadioButton();
-            ((System.ComponentModel.ISupportInitialize)picLockDangNhap).BeginInit();
             SuspendLayout();
             // 
             // lblTenDangNhap
             // 
             lblTenDangNhap.AutoSize = true;
             lblTenDangNhap.Font = new Font("Times New Roman", 10F);
-            lblTenDangNhap.Location = new Point(170, 17);
+            lblTenDangNhap.Location = new Point(12, 9);
             lblTenDangNhap.Name = "lblTenDangNhap";
             lblTenDangNhap.Size = new Size(110, 19);
             lblTenDangNhap.TabIndex = 1;
@@ -54,16 +51,16 @@
             // txtTenDangNhap
             // 
             txtTenDangNhap.BorderStyle = BorderStyle.FixedSingle;
-            txtTenDangNhap.Location = new Point(174, 35);
+            txtTenDangNhap.Location = new Point(12, 36);
             txtTenDangNhap.Name = "txtTenDangNhap";
-            txtTenDangNhap.Size = new Size(191, 27);
+            txtTenDangNhap.Size = new Size(306, 27);
             txtTenDangNhap.TabIndex = 0;
             // 
             // lblMatKhau
             // 
             lblMatKhau.AutoSize = true;
             lblMatKhau.Font = new Font("Times New Roman", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblMatKhau.Location = new Point(170, 75);
+            lblMatKhau.Location = new Point(12, 71);
             lblMatKhau.Name = "lblMatKhau";
             lblMatKhau.Size = new Size(76, 19);
             lblMatKhau.TabIndex = 1;
@@ -72,18 +69,19 @@
             // txtMatKhau
             // 
             txtMatKhau.BorderStyle = BorderStyle.FixedSingle;
-            txtMatKhau.Location = new Point(174, 93);
+            txtMatKhau.Location = new Point(12, 98);
             txtMatKhau.Name = "txtMatKhau";
-            txtMatKhau.Size = new Size(191, 27);
+            txtMatKhau.Size = new Size(306, 27);
             txtMatKhau.TabIndex = 1;
             txtMatKhau.UseSystemPasswordChar = true;
             // 
             // btnDangNhap
             // 
             btnDangNhap.BackColor = Color.CornflowerBlue;
-            btnDangNhap.Location = new Point(173, 160);
+            btnDangNhap.ForeColor = Color.Transparent;
+            btnDangNhap.Location = new Point(12, 164);
             btnDangNhap.Name = "btnDangNhap";
-            btnDangNhap.Size = new Size(87, 27);
+            btnDangNhap.Size = new Size(110, 53);
             btnDangNhap.TabIndex = 3;
             btnDangNhap.Text = "Đăng nhập";
             btnDangNhap.UseVisualStyleBackColor = false;
@@ -93,46 +91,36 @@
             // 
             btnDangKy.BackColor = Color.CornflowerBlue;
             btnDangKy.DialogResult = DialogResult.Cancel;
-            btnDangKy.Location = new Point(278, 160);
+            btnDangKy.ForeColor = Color.Transparent;
+            btnDangKy.Location = new Point(216, 164);
             btnDangKy.Name = "btnDangKy";
-            btnDangKy.Size = new Size(87, 27);
+            btnDangKy.Size = new Size(102, 53);
             btnDangKy.TabIndex = 4;
             btnDangKy.Text = "Đăng ký";
             btnDangKy.UseVisualStyleBackColor = false;
             btnDangKy.Click += btnDangKy_Click;
             // 
-            // picLockDangNhap
-            // 
-            picLockDangNhap.BorderStyle = BorderStyle.FixedSingle;
-            picLockDangNhap.Image = (Image)resources.GetObject("picLockDangNhap.Image");
-            picLockDangNhap.Location = new Point(12, 17);
-            picLockDangNhap.Name = "picLockDangNhap";
-            picLockDangNhap.Size = new Size(147, 170);
-            picLockDangNhap.SizeMode = PictureBoxSizeMode.Zoom;
-            picLockDangNhap.TabIndex = 0;
-            picLockDangNhap.TabStop = false;
-            // 
             // chkQuanTri
             // 
             chkQuanTri.AutoSize = true;
-            chkQuanTri.Location = new Point(188, 127);
+            chkQuanTri.Location = new Point(12, 133);
             chkQuanTri.Name = "chkQuanTri";
-            chkQuanTri.Size = new Size(85, 23);
+            chkQuanTri.Size = new Size(81, 23);
             chkQuanTri.TabIndex = 8;
             chkQuanTri.TabStop = true;
-            chkQuanTri.Text = "Thủ Thư";
+            chkQuanTri.Text = "Thủ thư";
             chkQuanTri.UseVisualStyleBackColor = true;
             chkQuanTri.CheckedChanged += chkQuanTri_CheckedChanged;
             // 
             // chkDocGia
             // 
             chkDocGia.AutoSize = true;
-            chkDocGia.Location = new Point(280, 127);
+            chkDocGia.Location = new Point(116, 133);
             chkDocGia.Name = "chkDocGia";
-            chkDocGia.Size = new Size(87, 23);
+            chkDocGia.Size = new Size(83, 23);
             chkDocGia.TabIndex = 8;
             chkDocGia.TabStop = true;
-            chkDocGia.Text = "Độc Giả";
+            chkDocGia.Text = "Độc giả";
             chkDocGia.UseVisualStyleBackColor = true;
             chkDocGia.CheckedChanged += chkDocGia_CheckedChanged;
             // 
@@ -143,7 +131,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             CancelButton = btnDangKy;
-            ClientSize = new Size(390, 204);
+            ClientSize = new Size(330, 229);
             Controls.Add(chkDocGia);
             Controls.Add(chkQuanTri);
             Controls.Add(btnDangKy);
@@ -152,23 +140,19 @@
             Controls.Add(txtTenDangNhap);
             Controls.Add(lblMatKhau);
             Controls.Add(lblTenDangNhap);
-            Controls.Add(picLockDangNhap);
             Font = new Font("Times New Roman", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "frmDangNhap";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Đăng Nhập";
+            Text = "Đăng nhập tài khoản";
             Load += frmDangNhap_Load;
-            ((System.ComponentModel.ISupportInitialize)picLockDangNhap).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox picLockDangNhap;
         private System.Windows.Forms.Label lblTenDangNhap;
         private System.Windows.Forms.TextBox txtTenDangNhap;
         private System.Windows.Forms.Label lblMatKhau;

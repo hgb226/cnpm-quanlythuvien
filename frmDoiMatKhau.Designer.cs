@@ -46,78 +46,78 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(79, 41);
+            label1.Location = new Point(12, 19);
             label1.Name = "label1";
-            label1.Size = new Size(97, 20);
+            label1.Size = new Size(100, 20);
             label1.TabIndex = 0;
-            label1.Text = "Tên tài khoản";
+            label1.Text = "Tên tài khoản:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(106, 80);
+            label2.Location = new Point(12, 78);
             label2.Name = "label2";
-            label2.Size = new Size(70, 20);
+            label2.Size = new Size(73, 20);
             label2.TabIndex = 1;
-            label2.Text = "Mật khẩu";
+            label2.Text = "Mật khẩu:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(76, 125);
+            label3.Location = new Point(12, 167);
             label3.Name = "label3";
-            label3.Size = new Size(100, 20);
+            label3.Size = new Size(103, 20);
             label3.TabIndex = 2;
-            label3.Text = "Mật khẩu mới";
+            label3.Text = "Mật khẩu mới:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(12, 172);
+            label4.Location = new Point(12, 256);
             label4.Name = "label4";
-            label4.Size = new Size(164, 20);
+            label4.Size = new Size(167, 20);
             label4.TabIndex = 3;
-            label4.Text = "Xác nhận mật khẩu mới";
+            label4.Text = "Xác nhận mật khẩu mới:";
             // 
             // txtTenTaiKhoan
             // 
             txtTenTaiKhoan.BorderStyle = BorderStyle.FixedSingle;
-            txtTenTaiKhoan.Location = new Point(191, 34);
+            txtTenTaiKhoan.Location = new Point(12, 45);
             txtTenTaiKhoan.Name = "txtTenTaiKhoan";
-            txtTenTaiKhoan.Size = new Size(189, 27);
+            txtTenTaiKhoan.Size = new Size(375, 27);
             txtTenTaiKhoan.TabIndex = 4;
             // 
             // txtMatKhau
             // 
             txtMatKhau.BorderStyle = BorderStyle.FixedSingle;
-            txtMatKhau.Location = new Point(191, 73);
+            txtMatKhau.Location = new Point(12, 104);
             txtMatKhau.Name = "txtMatKhau";
             txtMatKhau.PasswordChar = '*';
-            txtMatKhau.Size = new Size(189, 27);
+            txtMatKhau.Size = new Size(375, 27);
             txtMatKhau.TabIndex = 5;
             // 
             // txtMatKhauMoi
             // 
             txtMatKhauMoi.BorderStyle = BorderStyle.FixedSingle;
-            txtMatKhauMoi.Location = new Point(191, 118);
+            txtMatKhauMoi.Location = new Point(12, 193);
             txtMatKhauMoi.Name = "txtMatKhauMoi";
             txtMatKhauMoi.PasswordChar = '*';
-            txtMatKhauMoi.Size = new Size(189, 27);
+            txtMatKhauMoi.Size = new Size(375, 27);
             txtMatKhauMoi.TabIndex = 6;
             // 
             // txtNhapLaiMKMoi
             // 
             txtNhapLaiMKMoi.BorderStyle = BorderStyle.FixedSingle;
-            txtNhapLaiMKMoi.Location = new Point(191, 165);
+            txtNhapLaiMKMoi.Location = new Point(12, 282);
             txtNhapLaiMKMoi.Name = "txtNhapLaiMKMoi";
             txtNhapLaiMKMoi.PasswordChar = '*';
-            txtNhapLaiMKMoi.Size = new Size(189, 27);
+            txtNhapLaiMKMoi.Size = new Size(375, 27);
             txtNhapLaiMKMoi.TabIndex = 7;
             // 
             // chkMatKhauCu
             // 
             chkMatKhauCu.AutoSize = true;
-            chkMatKhauCu.Location = new Point(386, 76);
+            chkMatKhauCu.Location = new Point(12, 137);
             chkMatKhauCu.Name = "chkMatKhauCu";
             chkMatKhauCu.Size = new Size(62, 24);
             chkMatKhauCu.TabIndex = 8;
@@ -128,7 +128,7 @@
             // chkMatKhauMoi
             // 
             chkMatKhauMoi.AutoSize = true;
-            chkMatKhauMoi.Location = new Point(386, 121);
+            chkMatKhauMoi.Location = new Point(12, 226);
             chkMatKhauMoi.Name = "chkMatKhauMoi";
             chkMatKhauMoi.Size = new Size(62, 24);
             chkMatKhauMoi.TabIndex = 9;
@@ -139,7 +139,7 @@
             // chkNhapLaiMatKhau
             // 
             chkNhapLaiMatKhau.AutoSize = true;
-            chkNhapLaiMatKhau.Location = new Point(386, 167);
+            chkNhapLaiMatKhau.Location = new Point(12, 315);
             chkNhapLaiMatKhau.Name = "chkNhapLaiMatKhau";
             chkNhapLaiMatKhau.Size = new Size(62, 24);
             chkNhapLaiMatKhau.TabIndex = 10;
@@ -149,7 +149,7 @@
             // 
             // btnDoiMatKhau
             // 
-            btnDoiMatKhau.Location = new Point(96, 211);
+            btnDoiMatKhau.Location = new Point(12, 345);
             btnDoiMatKhau.Name = "btnDoiMatKhau";
             btnDoiMatKhau.Size = new Size(94, 29);
             btnDoiMatKhau.TabIndex = 11;
@@ -159,7 +159,7 @@
             // 
             // btnThoat
             // 
-            btnThoat.Location = new Point(267, 211);
+            btnThoat.Location = new Point(107, 345);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(94, 29);
             btnThoat.TabIndex = 12;
@@ -171,7 +171,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(457, 252);
+            ClientSize = new Size(399, 411);
             Controls.Add(btnThoat);
             Controls.Add(btnDoiMatKhau);
             Controls.Add(chkNhapLaiMatKhau);

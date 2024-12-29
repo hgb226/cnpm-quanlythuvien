@@ -37,6 +37,10 @@
             radTenSach = new RadioButton();
             radMaSach = new RadioButton();
             dataGridViewDSSach0 = new DataGridView();
+            groupBox1 = new GroupBox();
+            menuStrip1 = new MenuStrip();
+            changePasswordToolStripMenuItem = new ToolStripMenuItem();
+            exitToolStripMenuItem = new ToolStripMenuItem();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             colTenSach = new DataGridViewTextBoxColumn();
             colTenLoai = new DataGridViewTextBoxColumn();
@@ -47,10 +51,6 @@
             colTriGia = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            groupBox1 = new GroupBox();
-            menuStrip1 = new MenuStrip();
-            changePasswordToolStripMenuItem = new ToolStripMenuItem();
-            exitToolStripMenuItem = new ToolStripMenuItem();
             groupBox3.SuspendLayout();
             grpTimKiem.SuspendLayout();
             groupBox4.SuspendLayout();
@@ -63,29 +63,29 @@
             // 
             groupBox3.Controls.Add(grpTimKiem);
             groupBox3.Controls.Add(groupBox4);
-            groupBox3.Location = new Point(33, 45);
+            groupBox3.Location = new Point(12, 45);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(701, 96);
+            groupBox3.Size = new Size(978, 96);
             groupBox3.TabIndex = 5;
             groupBox3.TabStop = false;
-            groupBox3.Text = "Tìm kiếm Sách";
+            groupBox3.Text = "Tìm kiếm sách";
             // 
             // grpTimKiem
             // 
             grpTimKiem.Controls.Add(txtNDTimKiem);
             grpTimKiem.Location = new Point(435, 19);
             grpTimKiem.Name = "grpTimKiem";
-            grpTimKiem.Size = new Size(243, 60);
+            grpTimKiem.Size = new Size(537, 60);
             grpTimKiem.TabIndex = 1;
             grpTimKiem.TabStop = false;
-            grpTimKiem.Text = "Nhập thông tin cần Tìm Kiếm";
+            grpTimKiem.Text = "Nhập thông tin cần tìm kiếm";
             // 
             // txtNDTimKiem
             // 
             txtNDTimKiem.BorderStyle = BorderStyle.FixedSingle;
             txtNDTimKiem.Location = new Point(11, 24);
             txtNDTimKiem.Name = "txtNDTimKiem";
-            txtNDTimKiem.Size = new Size(218, 27);
+            txtNDTimKiem.Size = new Size(520, 27);
             txtNDTimKiem.TabIndex = 0;
             txtNDTimKiem.TextChanged += txtNDTimKiem_TextChanged;
             // 
@@ -100,39 +100,39 @@
             groupBox4.Size = new Size(387, 60);
             groupBox4.TabIndex = 0;
             groupBox4.TabStop = false;
-            groupBox4.Text = "Tìm Theo";
+            groupBox4.Text = "Tìm theo";
             // 
             // radTenCD
             // 
             radTenCD.AutoSize = true;
-            radTenCD.Location = new Point(296, 24);
+            radTenCD.Location = new Point(294, 24);
             radTenCD.Name = "radTenCD";
-            radTenCD.Size = new Size(82, 23);
+            radTenCD.Size = new Size(78, 23);
             radTenCD.TabIndex = 3;
             radTenCD.TabStop = true;
-            radTenCD.Text = "Tên CD";
+            radTenCD.Text = "Chủ đề";
             radTenCD.UseVisualStyleBackColor = true;
             // 
             // radTenTG
             // 
             radTenTG.AutoSize = true;
-            radTenTG.Location = new Point(208, 24);
+            radTenTG.Location = new Point(197, 24);
             radTenTG.Name = "radTenTG";
-            radTenTG.Size = new Size(80, 23);
+            radTenTG.Size = new Size(78, 23);
             radTenTG.TabIndex = 2;
             radTenTG.TabStop = true;
-            radTenTG.Text = "Tên TG";
+            radTenTG.Text = "Tác giả";
             radTenTG.UseVisualStyleBackColor = true;
             // 
             // radTenSach
             // 
             radTenSach.AutoSize = true;
-            radTenSach.Location = new Point(111, 24);
+            radTenSach.Location = new Point(123, 24);
             radTenSach.Name = "radTenSach";
-            radTenSach.Size = new Size(91, 23);
+            radTenSach.Size = new Size(55, 23);
             radTenSach.TabIndex = 1;
             radTenSach.TabStop = true;
-            radTenSach.Text = "Tên Sách";
+            radTenSach.Text = "Tên";
             radTenSach.UseVisualStyleBackColor = true;
             // 
             // radMaSach
@@ -140,10 +140,10 @@
             radMaSach.AutoSize = true;
             radMaSach.Location = new Point(18, 24);
             radMaSach.Name = "radMaSach";
-            radMaSach.Size = new Size(88, 23);
+            radMaSach.Size = new Size(86, 23);
             radMaSach.TabIndex = 0;
             radMaSach.TabStop = true;
-            radMaSach.Text = "Mã Sách";
+            radMaSach.Text = "Mã sách";
             radMaSach.UseVisualStyleBackColor = true;
             // 
             // dataGridViewDSSach0
@@ -157,13 +157,48 @@
             dataGridViewDSSach0.Name = "dataGridViewDSSach0";
             dataGridViewDSSach0.RowHeadersWidth = 51;
             dataGridViewDSSach0.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewDSSach0.Size = new Size(707, 176);
+            dataGridViewDSSach0.Size = new Size(956, 498);
             dataGridViewDSSach0.TabIndex = 6;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(dataGridViewDSSach0);
+            groupBox1.Location = new Point(12, 162);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(978, 531);
+            groupBox1.TabIndex = 6;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Thông tin Sách";
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.BackColor = Color.PowderBlue;
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { changePasswordToolStripMenuItem, exitToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(1002, 28);
+            menuStrip1.TabIndex = 7;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // changePasswordToolStripMenuItem
+            // 
+            changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            changePasswordToolStripMenuItem.Size = new Size(112, 24);
+            changePasswordToolStripMenuItem.Text = "Đổi mật khẩu";
+            changePasswordToolStripMenuItem.Click += changePasswordToolStripMenuItem_Click;
+            // 
+            // exitToolStripMenuItem
+            // 
+            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            exitToolStripMenuItem.Size = new Size(61, 24);
+            exitToolStripMenuItem.Text = "Thoát";
+            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
             // dataGridViewTextBoxColumn1
             // 
             dataGridViewTextBoxColumn1.DataPropertyName = "MaSach";
-            dataGridViewTextBoxColumn1.HeaderText = "Mã Sách";
+            dataGridViewTextBoxColumn1.HeaderText = "Mã sách";
             dataGridViewTextBoxColumn1.MinimumWidth = 6;
             dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             dataGridViewTextBoxColumn1.ReadOnly = true;
@@ -172,7 +207,7 @@
             // colTenSach
             // 
             colTenSach.DataPropertyName = "TenSach";
-            colTenSach.HeaderText = "Tên Sách";
+            colTenSach.HeaderText = "Tên";
             colTenSach.MinimumWidth = 6;
             colTenSach.Name = "colTenSach";
             colTenSach.ReadOnly = true;
@@ -181,7 +216,7 @@
             // colTenLoai
             // 
             colTenLoai.DataPropertyName = "TheLoai";
-            colTenLoai.HeaderText = "Chủ Đề";
+            colTenLoai.HeaderText = "Chủ đề";
             colTenLoai.MinimumWidth = 6;
             colTenLoai.Name = "colTenLoai";
             colTenLoai.ReadOnly = true;
@@ -190,7 +225,7 @@
             // colTenTG
             // 
             colTenTG.DataPropertyName = "TacGia";
-            colTenTG.HeaderText = "Tác Giả";
+            colTenTG.HeaderText = "Tác giả";
             colTenTG.MinimumWidth = 6;
             colTenTG.Name = "colTenTG";
             colTenTG.ReadOnly = true;
@@ -208,7 +243,7 @@
             // colNamXB
             // 
             colNamXB.DataPropertyName = "NamXB";
-            colNamXB.HeaderText = "Năm XB";
+            colNamXB.HeaderText = "Năm xuất bản";
             colNamXB.MinimumWidth = 6;
             colNamXB.Name = "colNamXB";
             colNamXB.Width = 125;
@@ -216,7 +251,7 @@
             // colSoLuong
             // 
             colSoLuong.DataPropertyName = "SLNhap";
-            colSoLuong.HeaderText = "SL Nhập";
+            colSoLuong.HeaderText = "Số lượng";
             colSoLuong.MinimumWidth = 6;
             colSoLuong.Name = "colSoLuong";
             colSoLuong.ReadOnly = true;
@@ -225,7 +260,7 @@
             // colTriGia
             // 
             colTriGia.DataPropertyName = "TriGia";
-            colTriGia.HeaderText = "Đơn Giá";
+            colTriGia.HeaderText = "Đơn giá";
             colTriGia.MinimumWidth = 6;
             colTriGia.Name = "colTriGia";
             colTriGia.ReadOnly = true;
@@ -234,7 +269,7 @@
             // dataGridViewTextBoxColumn2
             // 
             dataGridViewTextBoxColumn2.DataPropertyName = "TinhTrang";
-            dataGridViewTextBoxColumn2.HeaderText = "Tình Trạng";
+            dataGridViewTextBoxColumn2.HeaderText = "Tình trạng";
             dataGridViewTextBoxColumn2.MinimumWidth = 6;
             dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             dataGridViewTextBoxColumn2.ReadOnly = true;
@@ -243,52 +278,17 @@
             // dataGridViewTextBoxColumn3
             // 
             dataGridViewTextBoxColumn3.DataPropertyName = "GhiChu";
-            dataGridViewTextBoxColumn3.HeaderText = "Ghi Chú";
+            dataGridViewTextBoxColumn3.HeaderText = "Ghi chú";
             dataGridViewTextBoxColumn3.MinimumWidth = 6;
             dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             dataGridViewTextBoxColumn3.Width = 125;
-            // 
-            // groupBox1
-            // 
-            groupBox1.Controls.Add(dataGridViewDSSach0);
-            groupBox1.Location = new Point(12, 162);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(739, 209);
-            groupBox1.TabIndex = 6;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Thông tin Sách";
-            // 
-            // menuStrip1
-            // 
-            menuStrip1.BackColor = Color.PowderBlue;
-            menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { changePasswordToolStripMenuItem, exitToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(767, 28);
-            menuStrip1.TabIndex = 7;
-            menuStrip1.Text = "menuStrip1";
-            // 
-            // changePasswordToolStripMenuItem
-            // 
-            changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            changePasswordToolStripMenuItem.Size = new Size(114, 24);
-            changePasswordToolStripMenuItem.Text = "Đổi Mật Khẩu";
-            changePasswordToolStripMenuItem.Click += changePasswordToolStripMenuItem_Click;
-            // 
-            // exitToolStripMenuItem
-            // 
-            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(61, 24);
-            exitToolStripMenuItem.Text = "Thoát";
-            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
             // frmDocGia
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(767, 385);
+            ClientSize = new Size(1002, 705);
             Controls.Add(groupBox1);
             Controls.Add(groupBox3);
             Controls.Add(menuStrip1);
@@ -320,19 +320,19 @@
         private System.Windows.Forms.RadioButton radTenSach;
         private System.Windows.Forms.RadioButton radMaSach;
         private System.Windows.Forms.DataGridView dataGridViewDSSach0;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTenSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTenLoai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTenTG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMaNXB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNamXB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colSoLuong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTriGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn colTenSach;
+        private DataGridViewTextBoxColumn colTenLoai;
+        private DataGridViewTextBoxColumn colTenTG;
+        private DataGridViewTextBoxColumn colMaNXB;
+        private DataGridViewTextBoxColumn colNamXB;
+        private DataGridViewTextBoxColumn colSoLuong;
+        private DataGridViewTextBoxColumn colTriGia;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }
