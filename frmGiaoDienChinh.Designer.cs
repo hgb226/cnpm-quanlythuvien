@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGiaoDienChinh));
             menuStrip1 = new MenuStrip();
             quảnLýToolStripMenuItem = new ToolStripMenuItem();
             quảnLýSáchToolStripMenuItem = new ToolStripMenuItem();
@@ -37,8 +38,8 @@
             báoCáoThốngKêToolStripMenuItem = new ToolStripMenuItem();
             đổiMậtKhẩuToolStripMenuItem = new ToolStripMenuItem();
             đăngKýThủThưToolStripMenuItem = new ToolStripMenuItem();
-            thoátToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripMenuItem();
+            thoátToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -109,13 +110,6 @@
             đăngKýThủThưToolStripMenuItem.Text = "Đăng ký thủ thư";
             đăngKýThủThưToolStripMenuItem.Click += đăngKýThủThưToolStripMenuItem_Click;
             // 
-            // thoátToolStripMenuItem
-            // 
-            thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            thoátToolStripMenuItem.Size = new Size(61, 24);
-            thoátToolStripMenuItem.Text = "Thoát";
-            thoátToolStripMenuItem.Click += thoátToolStripMenuItem_Click;
-            // 
             // toolStripMenuItem1
             // 
             toolStripMenuItem1.Name = "toolStripMenuItem1";
@@ -123,12 +117,21 @@
             toolStripMenuItem1.Text = "Thay đổi tham số";
             toolStripMenuItem1.Click += toolStripMenuItem1_Click;
             // 
+            // thoátToolStripMenuItem
+            // 
+            thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
+            thoátToolStripMenuItem.Size = new Size(61, 24);
+            thoátToolStripMenuItem.Text = "Thoát";
+            thoátToolStripMenuItem.Click += thoátToolStripMenuItem_Click;
+            // 
             // frmGiaoDienChinh
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(806, 169);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(806, 355);
             Controls.Add(menuStrip1);
+            MaximizeBox = false;
             Name = "frmGiaoDienChinh";
             Text = "Giao diện chính";
             menuStrip1.ResumeLayout(false);
