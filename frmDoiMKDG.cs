@@ -119,22 +119,17 @@ namespace qltv
 
         private void chkMatKhauCu_CheckedChanged(object sender, EventArgs e)
         {
-            HienThiMatKhau(chkMatKhauCu, txtMatKhau);
+            txtMatKhau.PasswordChar = chkMatKhauCu.Checked ? '\0' : '*';
         }
 
         private void chkMatKhauMoi_CheckedChanged(object sender, EventArgs e)
         {
-            HienThiMatKhau(chkMatKhauMoi, txtMatKhauMoi);
+            txtMatKhauMoi.PasswordChar = chkMatKhauMoi.Checked ? '\0' : '*';
         }
 
         private void chkNhapLaiMatKhau_CheckedChanged(object sender, EventArgs e)
         {
-            HienThiMatKhau(chkNhapLaiMatKhau, txtNhapLaiMKMoi);
-        }
-
-        private void HienThiMatKhau(CheckBox checkBox, TextBox textBox)
-        {
-            textBox.UseSystemPasswordChar = !checkBox.Checked;
+            txtNhapLaiMKMoi.PasswordChar = chkNhapLaiMatKhau.Checked ? '\0' : '*';
         }
 
         private void btnThoat_Click(object sender, EventArgs e) => Close();

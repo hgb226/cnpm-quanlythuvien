@@ -40,8 +40,11 @@ namespace qltv
             myCommand = new SqlCommand(thuchiencaulenh, myConnection);
             myDataAdapter = new SqlDataAdapter(myCommand);
             myTable = new DataTable();
-            myDataAdapter.Fill(myTable);
-            dataGridViewDSMuon0.DataSource = myTable;
+            try {
+                myDataAdapter.Fill(myTable);
+                dataGridViewDSMuon0.DataSource = myTable;
+            } catch (Exception ex) { }
+            
             return myTable;
         }
 
@@ -54,8 +57,12 @@ namespace qltv
             myCommand = new SqlCommand(thuchiencaulenh, myConnection);
             myDataAdapter = new SqlDataAdapter(myCommand);
             myTableSach = new DataTable();
-            myDataAdapter.Fill(myTableSach);
-            return myTableSach;
+            try
+            {
+                myDataAdapter.Fill(myTableSach);
+            }
+            catch (Exception ex) { }
+                return myTableSach;
         }
 
         // Lấy mã sách lên cboMasach0
@@ -402,7 +409,24 @@ namespace qltv
             {
                 if (luuSLMuon <= luuSLCon)
                 {
-                    if ((luuSLSachDGDaMuon + luuSLMuon) <= 5 && (luuSLSachDGDaMuon + luuSLMuon) > 0)
+                    string querySach = "select GiaTri from thamso where TenTS = 'SoSachMuonToiDa'";
+                    myConnection = new SqlConnection(strKetNoi);
+                    myConnection.Open();
+                    myCommand = new SqlCommand(querySach, myConnection);
+                    int SoSachMuonToiDa = Convert.ToInt32(myCommand.ExecuteScalar());
+                    myConnection.Close();
+                    string queryPhieuQuaHan = "SELECT COUNT(*) AS SoPhieuQuaHan FROM tblHSPhieuMuon WHERE DATEDIFF(DAY, NgayTra, GETDATE()) > 0 AND MaDG = '" + cboMaDG0.Text + "';";
+                    myConnection = new SqlConnection(strKetNoi);
+                    myConnection.Open();
+                    myCommand = new SqlCommand(queryPhieuQuaHan, myConnection);
+                    int SoPhieuQuaHan = Convert.ToInt32(myCommand.ExecuteScalar());
+                    myConnection.Close();
+                    if (SoPhieuQuaHan > 0)
+                    {
+                        MessageBox.Show("Thẻ có sách quá hạn", "Thông báo");
+                    }
+
+                    else if ((luuSLSachDGDaMuon + luuSLMuon) <= SoSachMuonToiDa && (luuSLSachDGDaMuon + luuSLMuon) > 0)
                     {
                         if (kq == 1)
                         {
@@ -427,21 +451,34 @@ namespace qltv
                                 {
                                     string strluuSLSauChoMuon = luuSLSauChoMuon.ToString();
                                     string strCapNhatSLCon = "update tblSach set SLNhap='" + strluuSLSauChoMuon + " ' where MaSach='" + cboMaSach0.Text + "'";
-                                    ketnoi(strCapNhatSLCon);
+                         
+                                    myConnection = new SqlConnection(strKetNoi);
+                                    myConnection.Open();
+                                    myCommand = new SqlCommand(strCapNhatSLCon, myConnection);
                                     myCommand.ExecuteNonQuery();
                                     myConnection.Close();
                                     MessageBox.Show("Đã cập nhật SL Sách vào trong kho.", "Thông Báo");
-
                                     string query = "set dateformat dmy; select count(*) from chitietpm where month(NgayThang) = " + dtmNgayMuon0.Value.Month + " and year(NgayThang) = " + dtmNgayMuon0.Value.Year + " and MaSach = '" + cboMaSach0.Text + "'";
-                                    ketnoi(query);
+                                    myConnection = new SqlConnection(strKetNoi);
+                                    myConnection.Open();
+                                    myCommand = new SqlCommand(query, myConnection);
+   
                                     int cnt = (int)myCommand.ExecuteScalar();
                                     if (cnt == 0)
                                     {
-                                        query = "select * from ChiTietPM";
-                                        dataGridViewDSMuon0.DataSource = ketnoi(query);
-                                        dataGridViewDSMuon0.AutoGenerateColumns = false;
-                                        myConnection.Close();
-
+                                        try
+                                        {
+                                            query = "SELECT MaCTPT AS MaPhieu, * FROM ChiTietPM";
+                                            myConnection = new SqlConnection(strKetNoi);
+                                            myConnection.Open();
+                                            myCommand = new SqlCommand(query, myConnection);
+                                            dataGridViewDSMuon0.DataSource = (int)myCommand.ExecuteScalar();
+                                            dataGridViewDSMuon0.AutoGenerateColumns = false;
+                                            myConnection.Close();
+                                        }
+                                        catch (Exception) { }
+                                        
+                                        
                                         string maTuDong = "";
                                         if (myTable.Rows.Count <= 0)
                                         {
@@ -501,7 +538,7 @@ namespace qltv
                     }
                     else
                     {
-                        MessageBox.Show("Không thể mượn.\nSố sách bạn mượn quá 5 cuốn", "Thông Báo");
+                        MessageBox.Show("Không thể mượn.\nSố sách bạn mượn quá số lượng cho phép", "Thông Báo");
                         txtSLMuon0.Text = "";
                         txtSLMuon0.Focus();
                     }
@@ -559,11 +596,17 @@ namespace qltv
         private void btnChoMuon0_Click(object sender, EventArgs e)
         {
             string query = "Select GiaTri from ThamSo Where TenTS='GiaTriThe'";
-            ketnoi(query);
+            myConnection = new SqlConnection(strKetNoi);
+            myConnection.Open();
+            myCommand = new SqlCommand(query, myConnection);
             int GiaTriThe = Convert.ToInt32(myCommand.ExecuteScalar());
+            myConnection.Close();
             query = "set dateformat dmy; Select NgLapThe from tblDocGia Where MaDG='" + cboMaDG0.Text + "'";
-            ketnoi(query);
+            myConnection = new SqlConnection(strKetNoi);
+            myConnection.Open();
+            myCommand = new SqlCommand(query, myConnection);
             DateTime ngaylap = Convert.ToDateTime(myCommand.ExecuteScalar());
+            myConnection.Close();
             TimeSpan han = DateTime.Now - ngaylap;
             if (han.Days > GiaTriThe * 31)
             {
@@ -676,17 +719,11 @@ namespace qltv
 
         private void traSach()
         {
-            string strlaydulieu = "select * from tblSach where MaSach='" + txtMaSach1.Text + "'";
             myConnection = new SqlConnection(strKetNoi);
             myConnection.Open();
-            string thuchiencaulenh = strlaydulieu;
-            myCommand = new SqlCommand(thuchiencaulenh, myConnection);
-            myDataReaderSach = myCommand.ExecuteReader();
-            while (myDataReaderSach.Read())
-            {
-                luuSLConTabMuon = myDataReaderSach.GetInt32(6).ToString();
-            }
-
+            myCommand = new SqlCommand(("select SLNhap from tblSach where MaSach='" + txtMaSach1.Text + "';"), myConnection);
+            int luuSLConTabMuon = Convert.ToInt32(myCommand.ExecuteScalar());
+            myConnection.Close();
             luuSLSauTra = Convert.ToInt32(luuSLTra1) + Convert.ToInt32(luuSLConTabMuon);
             DialogResult dlr;
             dlr = MessageBox.Show("Bạn chắc chắn muốn trả sách.", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

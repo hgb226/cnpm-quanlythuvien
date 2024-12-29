@@ -30,6 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             grpTTSach = new GroupBox();
+            cboTheLoai = new ComboBox();
             lblNhapNgaySinh = new Label();
             dtmNgNhapSach = new DateTimePicker();
             label11 = new Label();
@@ -96,7 +97,9 @@
             errSLNhap = new ErrorProvider(components);
             errTriGia = new ErrorProvider(components);
             errTinhTrang = new ErrorProvider(components);
-            cboTheLoai = new ComboBox();
+            btnThemTheLoai = new Button();
+            txtThemTheLoai = new TextBox();
+            button1 = new Button();
             grpTTSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewDSSach).BeginInit();
             groupBox2.SuspendLayout();
@@ -152,6 +155,15 @@
             grpTTSach.TabIndex = 2;
             grpTTSach.TabStop = false;
             grpTTSach.Text = "Thông tin Sách";
+            // 
+            // cboTheLoai
+            // 
+            cboTheLoai.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboTheLoai.FormattingEnabled = true;
+            cboTheLoai.Location = new Point(489, 55);
+            cboTheLoai.Name = "cboTheLoai";
+            cboTheLoai.Size = new Size(198, 27);
+            cboTheLoai.TabIndex = 14;
             // 
             // lblNhapNgaySinh
             // 
@@ -247,6 +259,7 @@
             // cboTinhTrang
             // 
             cboTinhTrang.AllowDrop = true;
+            cboTinhTrang.DropDownStyle = ComboBoxStyle.DropDownList;
             cboTinhTrang.FormattingEnabled = true;
             cboTinhTrang.Items.AddRange(new object[] { "Mới", "Cũ" });
             cboTinhTrang.Location = new Point(489, 145);
@@ -623,7 +636,7 @@
             btnThoat.BackColor = Color.AliceBlue;
             btnThoat.Image = Properties.Resources.home;
             btnThoat.ImageAlign = ContentAlignment.MiddleLeft;
-            btnThoat.Location = new Point(272, 114);
+            btnThoat.Location = new Point(188, 115);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(87, 39);
             btnThoat.TabIndex = 8;
@@ -701,7 +714,7 @@
             // 
             btnLoadDS.Image = Properties.Resources.load;
             btnLoadDS.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLoadDS.Location = new Point(365, 114);
+            btnLoadDS.Location = new Point(281, 115);
             btnLoadDS.Name = "btnLoadDS";
             btnLoadDS.Size = new Size(155, 39);
             btnLoadDS.TabIndex = 1;
@@ -742,15 +755,39 @@
             // 
             errTinhTrang.ContainerControl = this;
             // 
-            // cboTheLoai
+            // btnThemTheLoai
             // 
-            cboTheLoai.FormattingEnabled = true;
-            cboTheLoai.Items.AddRange(new object[] { "Mới", "Cũ" });
-            cboTheLoai.Location = new Point(489, 55);
-            cboTheLoai.Name = "cboTheLoai";
-            cboTheLoai.Size = new Size(198, 27);
-            cboTheLoai.TabIndex = 14;
-            cboTheLoai.DropDown += cboTheLoai_DropDown;
+            btnThemTheLoai.Image = Properties.Resources.add;
+            btnThemTheLoai.ImageAlign = ContentAlignment.MiddleLeft;
+            btnThemTheLoai.Location = new Point(738, 23);
+            btnThemTheLoai.Name = "btnThemTheLoai";
+            btnThemTheLoai.Size = new Size(153, 39);
+            btnThemTheLoai.TabIndex = 10;
+            btnThemTheLoai.Text = "Thêm Thể Loại";
+            btnThemTheLoai.TextAlign = ContentAlignment.MiddleRight;
+            btnThemTheLoai.UseVisualStyleBackColor = true;
+            btnThemTheLoai.Click += btnThemTheLoai_Click;
+            // 
+            // txtThemTheLoai
+            // 
+            txtThemTheLoai.BorderStyle = BorderStyle.FixedSingle;
+            txtThemTheLoai.Location = new Point(910, 51);
+            txtThemTheLoai.Name = "txtThemTheLoai";
+            txtThemTheLoai.Size = new Size(119, 27);
+            txtThemTheLoai.TabIndex = 11;
+            // 
+            // button1
+            // 
+            button1.Image = Properties.Resources.delete;
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(738, 70);
+            button1.Name = "button1";
+            button1.Size = new Size(153, 39);
+            button1.TabIndex = 12;
+            button1.Text = "Xóa Thể Loại";
+            button1.TextAlign = ContentAlignment.MiddleRight;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // frmQLSach
             // 
@@ -758,6 +795,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(1060, 899);
+            Controls.Add(button1);
+            Controls.Add(txtThemTheLoai);
+            Controls.Add(btnThemTheLoai);
             Controls.Add(btnLoadDS);
             Controls.Add(groupBox3);
             Controls.Add(btnThoat);
@@ -793,6 +833,7 @@
             ((System.ComponentModel.ISupportInitialize)errTriGia).EndInit();
             ((System.ComponentModel.ISupportInitialize)errTinhTrang).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -865,5 +906,8 @@
         private DataGridViewTextBoxColumn colTinhTrang;
         private DataGridViewTextBoxColumn colGhiChu;
         private ComboBox cboTheLoai;
+        private Button btnThemTheLoai;
+        private TextBox txtThemTheLoai;
+        private Button button1;
     }
 }

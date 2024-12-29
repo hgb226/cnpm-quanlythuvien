@@ -137,34 +137,47 @@ namespace qltv
         }
 
         //SL sách quá hạn
-        public string luuSLSQuaHan;
-        private void slSachQuaHan()
-        {
-            string strTinhSLSachQuaHan = "SELECT count(SLMuon) as TongSLQuaHan from tblHSPhieuMuon where CONVERT (datetime, NgayTra, 103) < getdate()";
-            myConnection = new SqlConnection(strKetNoi);
-            myConnection.Open();
-            myCommand = new SqlCommand(strTinhSLSachQuaHan, myConnection);
-            myDataReaderSLSQuaHan = myCommand.ExecuteReader();
-            while (myDataReaderSLSQuaHan.Read())
-            {
-                luuSLSQuaHan = myDataReaderSLSQuaHan.GetInt32(0).ToString();
-            }
+        //public string luuSLSQuaHan;
+        //private void slSachQuaHan()
+        //{
+        //    string strTinhSLSachQuaHan = "SELECT count(SLMuon) as TongSLQuaHan from tblHSPhieuMuon where CONVERT (datetime, NgayTra, 103) < getdate()";
+        //    myConnection = new SqlConnection(strKetNoi);
+        //    myConnection.Open();
+        //    myCommand = new SqlCommand(strTinhSLSachQuaHan, myConnection);
+        //    myDataReaderSLSQuaHan = myCommand.ExecuteReader();
+        //    while (myDataReaderSLSQuaHan.Read())
+        //    {
+        //        luuSLSQuaHan = myDataReaderSLSQuaHan.GetInt32(0).ToString();
+        //    }
 
-        }
+        //}
 
         // SL Độc Giả quá hạn
         public string luuSLDGQuaHan;
         private void slDGQuaHan()
         {
-            string strTinhSLDGQuaHan = "SELECT count(distinct(MaDG)) as TongSLQuaHan from tblHSPhieuMuon where CONVERT (datetime, NgayTra, 103) < getdate()";
+            // Điều chỉnh câu lệnh SQL để kiểm tra số ngày mượn sách
+            string strTinhSLDGQuaHan = @"
+        SELECT COUNT(DISTINCT MaDG) AS TongSLQuaHan
+        FROM tblHSPhieuMuon
+        WHERE DATEDIFF(DAY, CONVERT(DATETIME, NgayMuon, 103), CONVERT(DATETIME, NgayTra, 103)) > 4";
+
+            // Kết nối cơ sở dữ liệu
             myConnection = new SqlConnection(strKetNoi);
             myConnection.Open();
+
             myCommand = new SqlCommand(strTinhSLDGQuaHan, myConnection);
             myDataReaderSLDGQuaHan = myCommand.ExecuteReader();
+
             while (myDataReaderSLDGQuaHan.Read())
             {
+                // Lưu lại số lượng độc giả vi phạm
                 luuSLDGQuaHan = myDataReaderSLDGQuaHan.GetInt32(0).ToString();
             }
+
+            // Đóng kết nối và DataReader
+            myDataReaderSLDGQuaHan.Close();
+            myConnection.Close();
 
         }
 
@@ -175,7 +188,7 @@ namespace qltv
             txtSLCon.ReadOnly = true;
             txtSLMuon.ReadOnly = true;
             txtTongGiaTriSach.ReadOnly = true;
-            txtSLSachQuaHan.ReadOnly = true;
+            //txtSLSachQuaHan.ReadOnly = true;
             txtSLDGQuaHan.ReadOnly = true;
             txtSLDocGia.ReadOnly = true;
             txtSLDGMuon.ReadOnly = true;
@@ -205,8 +218,8 @@ namespace qltv
 
 
             // SL Sách quá hạn
-            slSachQuaHan();
-            txtSLSachQuaHan.Text = luuSLSQuaHan;
+            //slSachQuaHan();
+            //txtSLSachQuaHan.Text = luuSLSQuaHan;
 
             //SL DG quá hạn
             slDGQuaHan();
@@ -250,39 +263,39 @@ namespace qltv
         {
             dtpBaocao.Enabled = true;
 
-            // Truy vấn để lấy dữ liệu
-            string query = "select S.TheLoai as [Thể loại], sum(MT.SLMuon) as [Số lượng mượn] " +
-                           "from tblSach S, tblHSPhieuMuon MT " +
-                           "where S.MaSach = MT.MaSach " +
-                           "and day(MT.NgayMuon) = " + dtpBaocao.Value.Day +
-                           " and month(MT.NgayMuon) = " + dtpBaocao.Value.Month +
-                           " and year(MT.NgayMuon) = " + dtpBaocao.Value.Year +
-                           " group by S.TheLoai";
+            // Truy vấn để lấy dữ liệu thống kê theo tháng
+            string query = @"
+            SELECT S.TheLoai AS [Thể loại],
+               SUM(MT.SLMuon) AS [Số lượng mượn],
+               FORMAT(SUM(MT.SLMuon) * 1.0 / SUM(S.SLNhap), '0.###') AS [Tỷ lệ]
+            FROM tblSach S
+            JOIN tblHSPhieuMuon MT ON S.MaSach = MT.MaSach
+            WHERE MONTH(MT.NgayMuon) = " + dtpBaocao.Value.Month + @"
+             AND YEAR(MT.NgayMuon) = " + dtpBaocao.Value.Year + @"
+            GROUP BY S.TheLoai";
 
             // Thiết lập DataSource cho DataGridView
             dataGridViewDSDGQuaHan.DataSource = ketnoi(query);
             dataGridViewDSDGQuaHan.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewDSDGQuaHan.Show();
-
-
         }
 
 
-        private void btnSLDGQuaHan_Click(object sender, EventArgs e)
-        {
-            dtpBaocao.Enabled = false;
-            string strTimSLDGQuaHan = @"SELECT MaDG as 'Mã DG', sum(SLMuon) as 'SL Sách Mượn' from tblHSPhieuMuon where CONVERT (datetime, NgayTra, 103) <= getdate() group by MaDG";
-            dataGridViewDSDGQuaHan.DataSource = ketnoi(strTimSLDGQuaHan);
-            dataGridViewDSDGQuaHan.Columns["SL Sách Mượn"].Width = 440;
-            dataGridViewDSDGQuaHan.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewDSDGQuaHan.Show();
-        }
+        //private void btnSLDGQuaHan_Click(object sender, EventArgs e)
+        //{
+        //    dtpBaocao.Enabled = false;
+        //    string strTimSLDGQuaHan = @"SELECT MaDG as 'Mã DG', sum(SLMuon) as 'SL Sách Mượn' from tblHSPhieuMuon where CONVERT (datetime, NgayTra, 103) <= getdate() group by MaDG";
+        //    dataGridViewDSDGQuaHan.DataSource = ketnoi(strTimSLDGQuaHan);
+        //    dataGridViewDSDGQuaHan.Columns["SL Sách Mượn"].Width = 440;
+        //    dataGridViewDSDGQuaHan.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        //    dataGridViewDSDGQuaHan.Show();
+        //}
 
         private void btnHome_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        
+
     }
 }

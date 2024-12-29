@@ -46,6 +46,12 @@ namespace qltv
 
         private void frmQLSach_Load(object sender, EventArgs e)
         {
+            string items = ConfigurationManager.AppSettings["ComboBoxItems"];
+            if (!string.IsNullOrEmpty(items))
+            {
+                string[] itemArray = items.Split(',');
+                cboTheLoai.Items.AddRange(itemArray);
+            }
             string cauTruyVan = "select * from tblSach";
             dataGridViewDSSach.DataSource = ketnoi(cauTruyVan);
             dataGridViewDSSach.AutoGenerateColumns = false;
@@ -496,12 +502,73 @@ namespace qltv
             return maTuDong;
         }
 
-        private void cboTheLoai_DropDown(object sender, EventArgs e)
+        private void btnThemTheLoai_Click(object sender, EventArgs e)
         {
-            cboTheLoai.Items.Clear();
-            cboTheLoai.Items.Add("A");
-            cboTheLoai.Items.Add("B");
-            cboTheLoai.Items.Add("C");
+            if (txtThemTheLoai.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập thể loại để thêm!", "Thông báo");
+            }
+            else
+            {
+                if (cboTheLoai.Items.Contains(txtThemTheLoai.Text))
+                {
+                    MessageBox.Show("Thể loại đã tồn tại!", "Thông báo");
+                    txtThemTheLoai.Text = "";
+                }
+                else
+                {
+                    cboTheLoai.Items.Add(txtThemTheLoai.Text);
+                    string existingItems = ConfigurationManager.AppSettings["ComboBoxItems"];
+                    existingItems = string.IsNullOrEmpty(existingItems) ? txtThemTheLoai.Text : existingItems + "," + txtThemTheLoai.Text;
+
+                    var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                    config.AppSettings.Settings["ComboBoxItems"].Value = existingItems;
+                    config.Save(ConfigurationSaveMode.Modified);
+                    ConfigurationManager.RefreshSection("appSettings");
+                    MessageBox.Show("Thêm thể loại thành công!", "Thông báo");
+                    txtThemTheLoai.Text = "";
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (txtThemTheLoai.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập thể loại để xóa!", "Thông báo");
+            }
+            else if (cboTheLoai.Items.Contains(txtThemTheLoai.Text))
+            {
+                cboTheLoai.Items.Remove(txtThemTheLoai.Text);
+
+                string items = ConfigurationManager.AppSettings["ComboBoxItems"];
+                if (!string.IsNullOrEmpty(items))
+                {
+                    var itemList = new List<string>(items.Split(','));
+
+                    if (itemList.Contains(txtThemTheLoai.Text))
+                    {
+                        // Loại bỏ mục đã chọn
+                        itemList.Remove(txtThemTheLoai.Text);
+                        string updatedItems = string.Join(",", itemList);
+
+                        var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                        config.AppSettings.Settings["ComboBoxItems"].Value = updatedItems;
+                        config.Save(ConfigurationSaveMode.Modified);
+                        ConfigurationManager.RefreshSection("appSettings");
+                        MessageBox.Show("Xóa thể loại thành công!", "Thông báo");
+                        txtThemTheLoai.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thể loại không tồn tại trong danh sách.", "Thông báo");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Thể loại không tồn tại trong danh sách.", "Thông báo");
+            }
         }
     }
 }
