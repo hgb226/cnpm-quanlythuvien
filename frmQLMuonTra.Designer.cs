@@ -108,11 +108,6 @@
             btnThoat1 = new Button();
             groupBox4 = new GroupBox();
             dataGridViewDSMuon1 = new DataGridView();
-            btnTraSach1 = new Button();
-            errMaDG0 = new ErrorProvider(components);
-            errMaSach0 = new ErrorProvider(components);
-            errSLMuon0 = new ErrorProvider(components);
-            errTinhTrang0 = new ErrorProvider(components);
             colMaPhieu1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
@@ -121,6 +116,11 @@
             dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
             colTinhTrang1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
+            btnTraSach1 = new Button();
+            errMaDG0 = new ErrorProvider(components);
+            errMaSach0 = new ErrorProvider(components);
+            errSLMuon0 = new ErrorProvider(components);
+            errTinhTrang0 = new ErrorProvider(components);
             tabQLMuonTraSach.SuspendLayout();
             tabPage1.SuspendLayout();
             groupBox8.SuspendLayout();
@@ -351,7 +351,7 @@
             // groupBox6
             // 
             groupBox6.Controls.Add(txtNDTimKiem);
-            groupBox6.Location = new Point(240, 19);
+            groupBox6.Location = new Point(280, 19);
             groupBox6.Name = "groupBox6";
             groupBox6.Size = new Size(310, 60);
             groupBox6.TabIndex = 1;
@@ -373,7 +373,7 @@
             groupBox7.Controls.Add(radMaDG);
             groupBox7.Location = new Point(21, 19);
             groupBox7.Name = "groupBox7";
-            groupBox7.Size = new Size(204, 60);
+            groupBox7.Size = new Size(253, 60);
             groupBox7.TabIndex = 0;
             groupBox7.TabStop = false;
             groupBox7.Text = "Tìm theo";
@@ -381,7 +381,7 @@
             // radMaSach
             // 
             radMaSach.AutoSize = true;
-            radMaSach.Location = new Point(104, 24);
+            radMaSach.Location = new Point(147, 24);
             radMaSach.Name = "radMaSach";
             radMaSach.Size = new Size(86, 23);
             radMaSach.TabIndex = 1;
@@ -689,10 +689,10 @@
             tabPage2.Controls.Add(btnThoat1);
             tabPage2.Controls.Add(groupBox4);
             tabPage2.Controls.Add(btnTraSach1);
-            tabPage2.Location = new Point(4, 28);
+            tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1157, 880);
+            tabPage2.Size = new Size(1157, 879);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Quản lý trả sách";
             tabPage2.Click += tabPage2_Click;
@@ -971,35 +971,6 @@
             dataGridViewDSMuon1.RowEnter += dataGridViewDSMuon1_RowEnter;
             dataGridViewDSMuon1.TabIndexChanged += dataGridViewDSMuon1_TabIndexChanged;
             // 
-            // btnTraSach1
-            // 
-            btnTraSach1.Image = Properties.Resources.check;
-            btnTraSach1.ImageAlign = ContentAlignment.MiddleLeft;
-            btnTraSach1.Location = new Point(985, 115);
-            btnTraSach1.Name = "btnTraSach1";
-            btnTraSach1.Size = new Size(98, 39);
-            btnTraSach1.TabIndex = 2;
-            btnTraSach1.Text = "Trả sách";
-            btnTraSach1.TextAlign = ContentAlignment.MiddleRight;
-            btnTraSach1.UseVisualStyleBackColor = true;
-            btnTraSach1.Click += btnTraSach1_Click;
-            // 
-            // errMaDG0
-            // 
-            errMaDG0.ContainerControl = this;
-            // 
-            // errMaSach0
-            // 
-            errMaSach0.ContainerControl = this;
-            // 
-            // errSLMuon0
-            // 
-            errSLMuon0.ContainerControl = this;
-            // 
-            // errTinhTrang0
-            // 
-            errTinhTrang0.ContainerControl = this;
-            // 
             // colMaPhieu1
             // 
             colMaPhieu1.DataPropertyName = "MaPhieu";
@@ -1071,6 +1042,35 @@
             dataGridViewTextBoxColumn6.MinimumWidth = 8;
             dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // btnTraSach1
+            // 
+            btnTraSach1.Image = Properties.Resources.check;
+            btnTraSach1.ImageAlign = ContentAlignment.MiddleLeft;
+            btnTraSach1.Location = new Point(985, 115);
+            btnTraSach1.Name = "btnTraSach1";
+            btnTraSach1.Size = new Size(98, 39);
+            btnTraSach1.TabIndex = 2;
+            btnTraSach1.Text = "Trả sách";
+            btnTraSach1.TextAlign = ContentAlignment.MiddleRight;
+            btnTraSach1.UseVisualStyleBackColor = true;
+            btnTraSach1.Click += btnTraSach1_Click;
+            // 
+            // errMaDG0
+            // 
+            errMaDG0.ContainerControl = this;
+            // 
+            // errMaSach0
+            // 
+            errMaSach0.ContainerControl = this;
+            // 
+            // errSLMuon0
+            // 
+            errSLMuon0.ContainerControl = this;
+            // 
+            // errTinhTrang0
+            // 
+            errTinhTrang0.ContainerControl = this;
             // 
             // frmQLMuonTra
             // 
