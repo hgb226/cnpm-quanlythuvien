@@ -107,6 +107,7 @@
             // 
             // cboGioiTinh
             // 
+            cboGioiTinh.DropDownStyle = ComboBoxStyle.DropDownList;
             cboGioiTinh.Enabled = false;
             cboGioiTinh.FormattingEnabled = true;
             cboGioiTinh.Items.AddRange(new object[] { "Nam", "Nữ" });
@@ -262,6 +263,7 @@
             // 
             // cboLoaiDG
             // 
+            cboLoaiDG.DropDownStyle = ComboBoxStyle.DropDownList;
             cboLoaiDG.Enabled = false;
             cboLoaiDG.FormattingEnabled = true;
             cboLoaiDG.Items.AddRange(new object[] { "X", "Y" });
