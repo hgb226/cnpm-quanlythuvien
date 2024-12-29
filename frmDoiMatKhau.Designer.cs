@@ -92,6 +92,7 @@
             txtMatKhau.BorderStyle = BorderStyle.FixedSingle;
             txtMatKhau.Location = new Point(191, 73);
             txtMatKhau.Name = "txtMatKhau";
+            txtMatKhau.PasswordChar = '*';
             txtMatKhau.Size = new Size(189, 27);
             txtMatKhau.TabIndex = 5;
             // 
@@ -100,6 +101,7 @@
             txtMatKhauMoi.BorderStyle = BorderStyle.FixedSingle;
             txtMatKhauMoi.Location = new Point(191, 118);
             txtMatKhauMoi.Name = "txtMatKhauMoi";
+            txtMatKhauMoi.PasswordChar = '*';
             txtMatKhauMoi.Size = new Size(189, 27);
             txtMatKhauMoi.TabIndex = 6;
             // 
@@ -108,6 +110,7 @@
             txtNhapLaiMKMoi.BorderStyle = BorderStyle.FixedSingle;
             txtNhapLaiMKMoi.Location = new Point(191, 165);
             txtNhapLaiMKMoi.Name = "txtNhapLaiMKMoi";
+            txtNhapLaiMKMoi.PasswordChar = '*';
             txtNhapLaiMKMoi.Size = new Size(189, 27);
             txtNhapLaiMKMoi.TabIndex = 7;
             // 
