@@ -156,11 +156,11 @@ namespace qltv
         public string luuSLDGQuaHan;
         private void slDGQuaHan()
         {
-            // Điều chỉnh câu lệnh SQL để kiểm tra số ngày mượn sách
+            // Điều chỉnh câu lệnh SQL để kiểm tra số ngày trả trễ
             string strTinhSLDGQuaHan = @"
-        SELECT COUNT(DISTINCT MaDG) AS TongSLQuaHan
-        FROM tblHSPhieuMuon
-        WHERE DATEDIFF(DAY, CONVERT(DATETIME, NgayMuon, 103), CONVERT(DATETIME, NgayTra, 103)) > 4";
+            SELECT COUNT(DISTINCT MaDG) AS TongSLQuaHan
+            FROM tblHSPhieuMuon
+            WHERE DATEDIFF(DAY, CONVERT(DATETIME, NgayTra, 103), GETDATE()) > 0";
 
             // Kết nối cơ sở dữ liệu
             myConnection = new SqlConnection(strKetNoi);
@@ -238,7 +238,7 @@ namespace qltv
             // Lấy giá trị ngày từ DateTimePicker
             DateTime selectedDate = dtpBaocao.Value.Date; // Chỉ lấy phần ngày, bỏ qua giờ
 
-            // Tạo chuỗi truy vấn với điều kiện Ngày Mượn trùng với ngày đã chọn và Số Ngày Trả Trễ > 0
+            // Tạo chuỗi truy vấn với điều kiện Ngày Mượn trùng với ngày đã chọn và Ngày hiện tại trừ ngày trả > 0
             string strTimSLSQuaHan = $@"
             SELECT 
             MaPhieu AS 'Mã Phiếu', 
@@ -246,10 +246,10 @@ namespace qltv
             MaSach AS 'Mã Sách', 
             NgayMuon AS 'Ngày Mượn', 
             NgayTra AS 'Ngày Trả', 
-            DATEDIFF(day, CONVERT(datetime, NgayMuon, 103), CONVERT(datetime, NgayTra, 103)) - 4 AS 'Số Ngày Trả Trễ'
+            DATEDIFF(day, CONVERT(datetime, NgayTra, 103), GETDATE()) AS 'Số Ngày Trả Trễ'
             FROM tblHSPhieuMuon
             WHERE CONVERT(datetime, NgayMuon, 103) = '{selectedDate:yyyy-MM-dd}'
-            AND DATEDIFF(day, CONVERT(datetime, NgayMuon, 103), CONVERT(datetime, NgayTra, 103)) - 4 > 0";
+            AND DATEDIFF(day, CONVERT(datetime, NgayTra, 103), GETDATE()) > 0";
 
             // Kết nối và hiển thị dữ liệu lên DataGridView
             dataGridViewDSDGQuaHan.DataSource = ketnoi(strTimSLSQuaHan);
