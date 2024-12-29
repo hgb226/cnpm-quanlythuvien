@@ -37,10 +37,6 @@
             radTenSach = new RadioButton();
             radMaSach = new RadioButton();
             dataGridViewDSSach0 = new DataGridView();
-            groupBox1 = new GroupBox();
-            menuStrip1 = new MenuStrip();
-            changePasswordToolStripMenuItem = new ToolStripMenuItem();
-            exitToolStripMenuItem = new ToolStripMenuItem();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             colTenSach = new DataGridViewTextBoxColumn();
             colTenLoai = new DataGridViewTextBoxColumn();
@@ -51,6 +47,10 @@
             colTriGia = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            groupBox1 = new GroupBox();
+            menuStrip1 = new MenuStrip();
+            changePasswordToolStripMenuItem = new ToolStripMenuItem();
+            exitToolStripMenuItem = new ToolStripMenuItem();
             groupBox3.SuspendLayout();
             grpTimKiem.SuspendLayout();
             groupBox4.SuspendLayout();
@@ -160,41 +160,6 @@
             dataGridViewDSSach0.Size = new Size(956, 498);
             dataGridViewDSSach0.TabIndex = 6;
             // 
-            // groupBox1
-            // 
-            groupBox1.Controls.Add(dataGridViewDSSach0);
-            groupBox1.Location = new Point(12, 162);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(978, 531);
-            groupBox1.TabIndex = 6;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Thông tin Sách";
-            // 
-            // menuStrip1
-            // 
-            menuStrip1.BackColor = Color.PowderBlue;
-            menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { changePasswordToolStripMenuItem, exitToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1002, 28);
-            menuStrip1.TabIndex = 7;
-            menuStrip1.Text = "menuStrip1";
-            // 
-            // changePasswordToolStripMenuItem
-            // 
-            changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            changePasswordToolStripMenuItem.Size = new Size(112, 24);
-            changePasswordToolStripMenuItem.Text = "Đổi mật khẩu";
-            changePasswordToolStripMenuItem.Click += changePasswordToolStripMenuItem_Click;
-            // 
-            // exitToolStripMenuItem
-            // 
-            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(61, 24);
-            exitToolStripMenuItem.Text = "Thoát";
-            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
-            // 
             // dataGridViewTextBoxColumn1
             // 
             dataGridViewTextBoxColumn1.DataPropertyName = "MaSach";
@@ -283,6 +248,41 @@
             dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             dataGridViewTextBoxColumn3.Width = 125;
             // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(dataGridViewDSSach0);
+            groupBox1.Location = new Point(12, 162);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(978, 531);
+            groupBox1.TabIndex = 6;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Thông tin Sách";
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.BackColor = Color.PowderBlue;
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { changePasswordToolStripMenuItem, exitToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(1002, 28);
+            menuStrip1.TabIndex = 7;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // changePasswordToolStripMenuItem
+            // 
+            changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            changePasswordToolStripMenuItem.Size = new Size(112, 24);
+            changePasswordToolStripMenuItem.Text = "Đổi mật khẩu";
+            changePasswordToolStripMenuItem.Click += changePasswordToolStripMenuItem_Click;
+            // 
+            // exitToolStripMenuItem
+            // 
+            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            exitToolStripMenuItem.Size = new Size(61, 24);
+            exitToolStripMenuItem.Text = "Thoát";
+            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
+            // 
             // frmDocGia
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
@@ -296,6 +296,7 @@
             MainMenuStrip = menuStrip1;
             Name = "frmDocGia";
             Text = "Độc Giả";
+            Load += frmDocGia_Load;
             groupBox3.ResumeLayout(false);
             grpTimKiem.ResumeLayout(false);
             grpTimKiem.PerformLayout();
