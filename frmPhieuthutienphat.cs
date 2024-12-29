@@ -68,31 +68,6 @@ namespace qltv
                 printDocument1.Print();
             }
         }
-        private void CapNhatTongNo(string maDG)
-        {
-            // Lấy dữ liệu phiếu mượn từ bảng tblHSPhieuMuon
-            string query = "set dateformat dmy; select * from tblHSPhieuMuon where MaDG = '" + maDG + "'";
-            DataTable temp = ketnoi(query);
-
-            int tongno = 0;
-
-            foreach (DataRow row in temp.Rows)
-            {
-                DateTime ngayMuon = Convert.ToDateTime(row["NgayMuon"]);
-                DateTime ngayTra = Convert.ToDateTime(row["NgayTra"]);
-                int soNgayMuon = (ngayTra - ngayMuon).Days;
-
-                if (soNgayMuon > 4) // Nếu mượn sách quá 4 ngày
-                {
-                    int soNgayNo = soNgayMuon - 4; // Số ngày nợ bắt đầu từ ngày thứ 5
-                    tongno += soNgayNo * 1000; // Mỗi ngày nợ 1.000 đồng
-                }
-            }
-
-            // Cập nhật tổng nợ vào bảng tblDocGia
-            query = "UPDATE tblDocGia SET TongNo = " + tongno + " WHERE MaDG = '" + maDG + "'";
-            ketnoi(query);
-        }
 
         private void txtMaDG_TextChanged_1(object sender, EventArgs e)
         {
@@ -100,6 +75,7 @@ namespace qltv
             {
                 txtHotenDG.Text = "";
                 txtTongno.Text = "";
+                txtSotienthu.Text = "";
                 return;
             }
 
@@ -128,65 +104,43 @@ namespace qltv
             {
                 txtTongno.Text = "0";
             }
-        }
 
-        private void txtSotienthu_TextChanged_1(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtSotienthu.Text))
+            if (int.TryParse(txtTongno.Text, out int tongno))
             {
-                txtConlai.Text = "";
-                return;
+                txtSotienthu.Text = tongno.ToString();
+                txtConlai.Text = "0"; // Số tiền còn lại luôn là 0
             }
-
-            try
+            else
             {
-                int tienthu = Convert.ToInt32(txtSotienthu.Text);
-                int tongno = Convert.ToInt32(txtTongno.Text);
-
-                if (tienthu > tongno)
-                {
-                    MessageBox.Show("Số tiền thu không được lớn hơn số tiền nợ!", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtSotienthu.Text = tongno.ToString(); // Đặt lại giá trị hợp lệ
-                    txtSotienthu.SelectAll(); // Chọn toàn bộ văn bản để người dùng có thể chỉnh sửa dễ dàng
-                }
-                else
-                {
-                    txtConlai.Text = (tongno - tienthu).ToString();
-                }
-            }
-            catch (FormatException)
-            {
-                MessageBox.Show("Vui lòng nhập đúng định dạng số!", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtTongno.Text = ""; // Xóa giá trị nếu nhập sai
                 txtSotienthu.Text = "";
                 txtConlai.Text = "";
             }
         }
 
+        //private void txtSotienthu_TextChanged_1(object sender, EventArgs e)
+        //{
+        ////    if (string.IsNullOrEmpty(txtTongno.Text))
+        ////    {
+        ////        txtSotienthu.Text = "";
+        ////        txtConlai.Text = "";
+        ////        return;
+        ////    }
 
-        private void btnXuatTongNo_Click(object sender, EventArgs e)
-        {
-            CapNhatTongNo(txtMaDG.Text);
-            if (txtMaDG.Text == "")
-            {
-                txtHotenDG.Text = "";
-                txtTongno.Text = "";
-                return;
-            }
-          
+        ////    // Chỉ gán giá trị nếu tổng nợ là số hợp lệ
+        ////    if (int.TryParse(txtTongno.Text, out int tongno))
+        ////    {
+        ////        txtSotienthu.Text = tongno.ToString();
+        ////        txtConlai.Text = "0"; // Số tiền còn lại luôn là 0
+        ////    }
+        ////    else
+        ////    {
+        ////        txtTongno.Text = ""; // Xóa giá trị nếu nhập sai
+        ////        txtSotienthu.Text = "";
+        ////        txtConlai.Text = "";
+        ////    }
+        //}
 
-            // Lấy tổng nợ từ bảng tblDocGia
-            string query = "select TongNo from tblDocGia where MaDG = '" + txtMaDG.Text + "'";
-            DataTable dtTongNo = ketnoi(query);
-            if (dtTongNo.Rows.Count > 0)
-            {
-                txtTongno.Text = dtTongNo.Rows[0]["TongNo"].ToString();
-            }
-            else
-            {
-                txtTongno.Text = "0";
-            }
-
-        }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
@@ -251,6 +205,6 @@ namespace qltv
 
         }
 
-   
+
     }
 }

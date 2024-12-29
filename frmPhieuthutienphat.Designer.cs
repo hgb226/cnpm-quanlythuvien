@@ -38,7 +38,6 @@
             label4 = new Label();
             label5 = new Label();
             btnPrint = new Button();
-            btnXuatTongNo = new Button();
             SuspendLayout();
             // 
             // txtMaDG
@@ -73,9 +72,9 @@
             txtSotienthu.BorderStyle = BorderStyle.FixedSingle;
             txtSotienthu.Location = new Point(131, 95);
             txtSotienthu.Name = "txtSotienthu";
+            txtSotienthu.ReadOnly = true;
             txtSotienthu.Size = new Size(297, 23);
             txtSotienthu.TabIndex = 3;
-            txtSotienthu.TextChanged += txtSotienthu_TextChanged_1;
             // 
             // txtConlai
             // 
@@ -133,23 +132,13 @@
             // 
             // btnPrint
             // 
-            btnPrint.Location = new Point(526, 102);
+            btnPrint.Location = new Point(483, 95);
             btnPrint.Name = "btnPrint";
-            btnPrint.Size = new Size(88, 42);
+            btnPrint.Size = new Size(88, 47);
             btnPrint.TabIndex = 10;
             btnPrint.Text = "Print";
             btnPrint.UseVisualStyleBackColor = true;
             btnPrint.Click += btnPrint_Click;
-            // 
-            // btnXuatTongNo
-            // 
-            btnXuatTongNo.Location = new Point(450, 10);
-            btnXuatTongNo.Name = "btnXuatTongNo";
-            btnXuatTongNo.Size = new Size(164, 81);
-            btnXuatTongNo.TabIndex = 11;
-            btnXuatTongNo.Text = "Xuất tổng nợ";
-            btnXuatTongNo.UseVisualStyleBackColor = true;
-            btnXuatTongNo.Click += btnXuatTongNo_Click;
             // 
             // frmPhieuthutienphat
             // 
@@ -157,7 +146,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(626, 155);
-            Controls.Add(btnXuatTongNo);
             Controls.Add(btnPrint);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -189,6 +177,5 @@
         private Label label4;
         private Label label5;
         private Button btnPrint;
-        private Button btnXuatTongNo;
     }
 }
