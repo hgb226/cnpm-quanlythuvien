@@ -208,6 +208,7 @@ namespace qltv
             btnLuu.Enabled = true;
             btnHuy.Enabled = true;
             btnThem.Enabled = false;
+            dtmNgLapThe.Enabled = false;
             txtTenDG.Focus();
             //dataGridViewDSDocGia.Enabled = false;
             //txtTenTK.Enabled = false;
