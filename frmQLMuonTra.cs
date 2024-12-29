@@ -468,12 +468,16 @@ namespace qltv
                                     {
                                         try
                                         {
-                                            query = "SELECT MaCTPT AS MaPhieu, * FROM ChiTietPM";
+                                            query = "SELECT * FROM ChiTietPM";
                                             myConnection = new SqlConnection(strKetNoi);
                                             myConnection.Open();
                                             myCommand = new SqlCommand(query, myConnection);
-                                            dataGridViewDSMuon0.DataSource = (int)myCommand.ExecuteScalar();
-                                            dataGridViewDSMuon0.AutoGenerateColumns = false;
+                                            if(myCommand.ExecuteScalar().ToString() != "")
+                                            {
+                                                dataGridViewDSMuon0.DataSource = (int)myCommand.ExecuteScalar();
+                                                dataGridViewDSMuon0.AutoGenerateColumns = false;
+                                            }
+                                            
                                             myConnection.Close();
                                         }
                                         catch (Exception) { }
@@ -835,15 +839,15 @@ namespace qltv
 
             foreach (DataRow row in temp.Rows)
             {
-                DateTime ngayMuon = Convert.ToDateTime(row["NgayMuon"]);
+                //DateTime ngayMuon = Convert.ToDateTime(row["NgayMuon"]);
                 DateTime ngayTra = Convert.ToDateTime(row["NgayTra"]);
-                int soNgayMuon = (ngayTra - ngayMuon).Days;
+                int soNgayMuon = (DateTime.Now - ngayTra).Days;
 
-                if (soNgayMuon > 4) // Nếu mượn sách quá 4 ngày
-                {
-                    int soNgayNo = soNgayMuon - 4; // Số ngày nợ bắt đầu từ ngày thứ 5
-                    tongno += soNgayNo * 1000; // Mỗi ngày nợ 1.000 đồng
-                }
+                //if (soNgayMuon > 4) // Nếu mượn sách quá 4 ngày
+                //{
+                    //int soNgayNo = soNgayMuon - 4; // Số ngày nợ bắt đầu từ ngày thứ 5
+                    tongno += soNgayMuon * 1000; // Mỗi ngày nợ 1.000 đồng
+                //}
             }
 
             // Cập nhật tổng nợ vào bảng tblDocGia
