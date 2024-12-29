@@ -289,13 +289,18 @@
             // 
             // btnHome
             // 
+            btnHome.BackColor = Color.CornflowerBlue;
+            btnHome.ForeColor = Color.White;
+            btnHome.Image = Properties.Resources.home;
+            btnHome.ImageAlign = ContentAlignment.MiddleLeft;
             btnHome.Location = new Point(755, 328);
             btnHome.Margin = new Padding(3, 4, 3, 4);
             btnHome.Name = "btnHome";
             btnHome.Size = new Size(113, 45);
             btnHome.TabIndex = 12;
             btnHome.Text = "Home";
-            btnHome.UseVisualStyleBackColor = true;
+            btnHome.TextAlign = ContentAlignment.MiddleRight;
+            btnHome.UseVisualStyleBackColor = false;
             btnHome.Click += btnHome_Click;
             // 
             // btnBaocao

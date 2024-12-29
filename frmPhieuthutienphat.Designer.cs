@@ -137,12 +137,15 @@
             // 
             // btnPrint
             // 
+            btnPrint.Image = Properties.Resources.printer;
+            btnPrint.ImageAlign = ContentAlignment.MiddleLeft;
             btnPrint.Location = new Point(458, 218);
             btnPrint.Margin = new Padding(3, 4, 3, 4);
             btnPrint.Name = "btnPrint";
             btnPrint.Size = new Size(101, 63);
             btnPrint.TabIndex = 10;
             btnPrint.Text = "Print";
+            btnPrint.TextAlign = ContentAlignment.MiddleRight;
             btnPrint.UseVisualStyleBackColor = true;
             btnPrint.Click += btnPrint_Click;
             // 

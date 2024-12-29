@@ -644,7 +644,8 @@
             // 
             // btnThoat
             // 
-            btnThoat.BackColor = Color.AliceBlue;
+            btnThoat.BackColor = Color.CornflowerBlue;
+            btnThoat.ForeColor = Color.White;
             btnThoat.Image = Properties.Resources.home;
             btnThoat.ImageAlign = ContentAlignment.MiddleLeft;
             btnThoat.Location = new Point(738, 168);
