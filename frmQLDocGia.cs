@@ -188,7 +188,7 @@ namespace qltv
 
             try
             {
-                string query = "set dateformat dmy; insert into tblDocGia values ('" + txtMaDG.Text + "','" + txtTenDG.Text + "', N'" + gioiTinhDG + "',N'" + dtmNgaySinh.Text + "',N'" + txtEmail.Text + "',N'" + txtDiaChi.Text + "','" + loaiDG + "','" + txtGhiChu.Text + "','" + txtTenTK.Text + "',N'" + txtMK.Text + "',N'" + dtmNgLapThe.Text + "')";
+                string query = "set dateformat dmy; insert into tblDocGia values ('" + txtMaDG.Text + "','" + txtTenDG.Text + "', N'" + gioiTinhDG + "',N'" + dtmNgaySinh.Text + "',N'" + txtEmail.Text + "',N'" + txtDiaChi.Text + "','" + loaiDG + "','" + txtGhiChu.Text + "','" + txtTenTK.Text + "',N'" + txtMK.Text + "',N'" + dtmNgLapThe.Text + "', 0)";
                 ketnoi(query);
                 MessageBox.Show("Thêm thành công.", "Thông Báo");
                 myConnection.Close();
@@ -341,11 +341,11 @@ namespace qltv
                 {
                     string query = " set dateformat dmy;"
                                    + " update tblDocGia set TenDG=N'" + txtTenDG.Text
-                                   + "',GioiTinhDG=N'" + gioiTinhDG
+                                   + "',GioiTinhDG=N'" + cboGioiTinh.Text
                                    + "',NgaySinhDG='" + dtmNgaySinh.Text
                                    + "',EmailDG='" + txtEmail.Text
                                    + "',DiaChiDG='" + txtDiaChi.Text
-                                   + "',LoaiDG='" + loaiDG
+                                   + "',LoaiDG='" + cboLoaiDG.Text
                                    + "',GhiChu=N'" + txtGhiChu.Text
                                    + "',MatKhauDG=N'" + txtMK.Text
                                    + "' where MaDG='" + txtMaDG.Text + "'";
