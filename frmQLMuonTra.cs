@@ -534,7 +534,7 @@ namespace qltv
                     }
                     else
                     {
-                        MessageBox.Show("Không thể mượn.\nSố sách bạn mượn quá 5 cuốn", "Thông Báo");
+                        MessageBox.Show("Không thể mượn.\nSố sách bạn mượn quá số lượng cho phép", "Thông Báo");
                         txtSLMuon0.Text = "";
                         txtSLMuon0.Focus();
                     }
