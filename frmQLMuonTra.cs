@@ -30,7 +30,7 @@ namespace qltv
         private DataTable myTableDG;
         private SqlDataReader myDataReaderSach;
         private SqlDataReader myDataReaderSLSachDaMuon;
-
+        public int SoNgayMuonToiDa;
         // Kết nối tới sql
         private DataTable ketnoi(string truyvan)
         {
@@ -40,11 +40,13 @@ namespace qltv
             myCommand = new SqlCommand(thuchiencaulenh, myConnection);
             myDataAdapter = new SqlDataAdapter(myCommand);
             myTable = new DataTable();
-            try {
+            try
+            {
                 myDataAdapter.Fill(myTable);
                 dataGridViewDSMuon0.DataSource = myTable;
-            } catch (Exception ex) { }
-            
+            }
+            catch (Exception ex) { }
+
             return myTable;
         }
 
@@ -62,7 +64,7 @@ namespace qltv
                 myDataAdapter.Fill(myTableSach);
             }
             catch (Exception ex) { }
-                return myTableSach;
+            return myTableSach;
         }
 
         // Lấy mã sách lên cboMasach0
@@ -111,6 +113,12 @@ namespace qltv
 
         private void frmQLMuonTra_Load(object sender, EventArgs e)
         {
+            string queryNgay = "select GiaTri from thamso where TenTS = 'SoNgayMuonToiDa'";
+            myConnection = new SqlConnection(strKetNoi);
+            myConnection.Open();
+            myCommand = new SqlCommand(queryNgay, myConnection);
+            SoNgayMuonToiDa = Convert.ToInt32(myCommand.ExecuteScalar());
+            myConnection.Close();
             string cauTruyVan = "select * from tblHSPhieuMuon";
             dataGridViewDSMuon0.DataSource = ketnoi(cauTruyVan);
             dataGridViewDSMuon0.AutoGenerateColumns = false;
@@ -186,7 +194,7 @@ namespace qltv
                 //btnNhap.Enabled = false;
                 btnChoMuon0.Enabled = false;
                 btnHuy0.Enabled = false;
-                
+
 
                 if (radMaDG.Checked)
                 {
@@ -207,14 +215,21 @@ namespace qltv
                     myConnection.Close();
                 }
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 //MessageBox.Show(ex.Message);
-            }   
+            }
         }
 
 
         private void btnLoadDanhSach0_Click(object sender, EventArgs e)
         {
+            string queryNgay = "select GiaTri from thamso where TenTS = 'SoNgayMuonToiDa'";
+            myConnection = new SqlConnection(strKetNoi);
+            myConnection.Open();
+            myCommand = new SqlCommand(queryNgay, myConnection);
+            SoNgayMuonToiDa = Convert.ToInt32(myCommand.ExecuteScalar());
+            myConnection.Close();
             txtNDTimKiem.Text = "";
             btnNhap.Enabled = true;
             btnChoMuon0.Enabled = false;
@@ -257,10 +272,8 @@ namespace qltv
             }
             return maTuDong;
         }
-
         public int xuly;
         public static DateTime today = DateTime.Now;  //Get Date time now on system
-        public static DateTime newday = today.AddDays(5);
         private void btnThem_Click(object sender, EventArgs e)
         {
             layMaDGMuon();
@@ -280,12 +293,13 @@ namespace qltv
             cboMaSach0.Text = "";
             txtSLMuon0.Text = "";
             dtmNgayMuon0.Text = Convert.ToString(today); ;
-            dtmNgayTra0.Text = Convert.ToString(newday);
+            dtmNgayTra0.Text = Convert.ToString(today.AddDays(SoNgayMuonToiDa));
             //dtmNgayTra0.Text = "";
             txtGhiChu0.Text = "";
 
             lblNhapSLNhap.Text = "";
             xuly = 0;
+            dtmNgayTra0.Enabled = false;
         }
 
         public string ngaymuon, thangmuon, nammuon, ngaytra, thangtra, namtra, ngaydgmuon, ngaydgtra;
@@ -293,7 +307,8 @@ namespace qltv
 
         private void dtmNgayMuon0_ValueChanged(object sender, EventArgs e)
         {
-            dtmNgayTra0.Value = dtmNgayMuon0.Value.AddDays(5);
+
+            dtmNgayTra0.Value = dtmNgayMuon0.Value.AddDays(4);
         }
 
         public void soSanhNgay()
@@ -451,7 +466,7 @@ namespace qltv
                                 {
                                     string strluuSLSauChoMuon = luuSLSauChoMuon.ToString();
                                     string strCapNhatSLCon = "update tblSach set SLNhap='" + strluuSLSauChoMuon + " ' where MaSach='" + cboMaSach0.Text + "'";
-                         
+
                                     myConnection = new SqlConnection(strKetNoi);
                                     myConnection.Open();
                                     myCommand = new SqlCommand(strCapNhatSLCon, myConnection);
@@ -462,7 +477,7 @@ namespace qltv
                                     myConnection = new SqlConnection(strKetNoi);
                                     myConnection.Open();
                                     myCommand = new SqlCommand(query, myConnection);
-   
+
                                     int cnt = (int)myCommand.ExecuteScalar();
                                     if (cnt == 0)
                                     {
@@ -636,7 +651,7 @@ namespace qltv
             txtSLMuon0.Text = slMuon0;
             dtmNgayMuon0.Text = Convert.ToString(today);
 
-            dtmNgayTra0.Text = Convert.ToString(newday);
+            dtmNgayTra0.Text = Convert.ToString(today.AddDays(SoNgayMuonToiDa));
             txtGhiChu0.Text = ghiChu0;
 
             setControlsMuon(true);
@@ -848,17 +863,22 @@ namespace qltv
                 //DateTime ngayMuon = Convert.ToDateTime(row["NgayMuon"]);
                 DateTime ngayTra = Convert.ToDateTime(row["NgayTra"]);
                 int soNgayMuon = (DateTime.Now - ngayTra).Days;
-
+                if (soNgayMuon < 0) soNgayMuon = 0;
                 //if (soNgayMuon > 4) // Nếu mượn sách quá 4 ngày
                 //{
-                    //int soNgayNo = soNgayMuon - 4; // Số ngày nợ bắt đầu từ ngày thứ 5
-                    tongno += soNgayMuon * 1000; // Mỗi ngày nợ 1.000 đồng
+                //int soNgayNo = soNgayMuon - 4; // Số ngày nợ bắt đầu từ ngày thứ 5
+                tongno += soNgayMuon * 1000; // Mỗi ngày nợ 1.000 đồng
                 //}
             }
 
             // Cập nhật tổng nợ vào bảng tblDocGia
             query = "UPDATE tblDocGia SET TongNo = " + tongno + " WHERE MaDG = '" + maDG + "'";
             ketnoi(query);
+        }
+
+        private void dtmNgayTra0_ValueChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 
