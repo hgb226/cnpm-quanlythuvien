@@ -468,12 +468,16 @@ namespace qltv
                                     {
                                         try
                                         {
-                                            query = "SELECT MaCTPT AS MaPhieu, * FROM ChiTietPM";
+                                            query = "SELECT * FROM ChiTietPM";
                                             myConnection = new SqlConnection(strKetNoi);
                                             myConnection.Open();
                                             myCommand = new SqlCommand(query, myConnection);
-                                            dataGridViewDSMuon0.DataSource = (int)myCommand.ExecuteScalar();
-                                            dataGridViewDSMuon0.AutoGenerateColumns = false;
+                                            if(myCommand.ExecuteScalar().ToString() != "")
+                                            {
+                                                dataGridViewDSMuon0.DataSource = (int)myCommand.ExecuteScalar();
+                                                dataGridViewDSMuon0.AutoGenerateColumns = false;
+                                            }
+                                            
                                             myConnection.Close();
                                         }
                                         catch (Exception) { }
