@@ -1,15 +1,15 @@
-Tên đề tài: QUẢN LÝ THƯ VIỆN__
-Mã lớp: SE104.P11__
-__
-Thành viên nhóm 3:__
-21521023 - Nguyễn Đức Trung Kiên__
-21520604 - Huỳnh Gia Bảo__
-21522149 - Nguyễn Đặng Thanh Huy__
-21522604 - Phùng Nam Thanh__
-21522530 - Hoàng Tất Quý__
+Tên đề tài: QUẢN LÝ THƯ VIỆN  
+Mã lớp: SE104.P11  
+  
+Thành viên nhóm 3:  
+21521023 - Nguyễn Đức Trung Kiên  
+21520604 - Huỳnh Gia Bảo  
+21522149 - Nguyễn Đặng Thanh Huy  
+21522604 - Phùng Nam Thanh  
+21522530 - Hoàng Tất Quý  
 
-- Download Source Code from Github__
-- Create an App.config file and change its content to your need__
+- Download Source Code from Github  
+- Create an App.config file and change its content to your need  
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
@@ -24,6 +24,6 @@ Thành viên nhóm 3:__
   </appSettings>
 </configuration>
 ```
-__
-- Run database from Database/DoAnQLTV.sql__
-- Run application__
+  
+- Run database from Database/DoAnQLTV.sql  
+- Run application  
