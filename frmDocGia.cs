@@ -32,30 +32,18 @@ namespace qltv
         private DataTable myTable;
 
 
-
-
         private DataTable ketnoi(string truyvan)
         {
             myConnection = new SqlConnection(strKetNoi);
             myConnection.Open();
-            string thuchiencaulenh = truyvan;
-            myCommand = new SqlCommand(thuchiencaulenh, myConnection);
+
+            myCommand = new SqlCommand(truyvan, myConnection);
+
             myDataAdapter = new SqlDataAdapter(myCommand);
             myTable = new DataTable();
             myDataAdapter.Fill(myTable);
-            dataGridViewDSSach0.DataSource = myTable;
+
             return myTable;
-        }
-
-
-
-        private void frmDocGia_Load(object sender, EventArgs e)
-        {
-            string cauTruyVan = "select * from tblSach";
-            dataGridViewDSSach0.DataSource = ketnoi(cauTruyVan);
-            dataGridViewDSSach0.AutoGenerateColumns = false;
-            myConnection.Close();
-            dataGridViewDSSach0.Enabled = true;
         }
 
         private void txtNDTimKiem_TextChanged(object sender, EventArgs e)
@@ -112,6 +100,15 @@ namespace qltv
         private void dataGridViewDSSach0_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void frmDocGia_Load(object sender, EventArgs e)
+        {
+            string cauTruyVan = "select * from tblSach";
+            dataGridViewDSSach0.DataSource = ketnoi(cauTruyVan);
+            dataGridViewDSSach0.AutoGenerateColumns = false;
+            myConnection.Close();
+            dataGridViewDSSach0.Enabled = true;
         }
     }
 }
