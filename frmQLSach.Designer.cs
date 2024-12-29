@@ -149,18 +149,18 @@
             grpTTSach.Controls.Add(label2);
             grpTTSach.Controls.Add(txtMaSach);
             grpTTSach.Controls.Add(label1);
-            grpTTSach.Location = new Point(19, 158);
+            grpTTSach.Location = new Point(19, 115);
             grpTTSach.Name = "grpTTSach";
-            grpTTSach.Size = new Size(713, 216);
+            grpTTSach.Size = new Size(713, 310);
             grpTTSach.TabIndex = 2;
             grpTTSach.TabStop = false;
-            grpTTSach.Text = "Thông tin Sách";
+            grpTTSach.Text = "Thông tin sách";
             // 
             // cboTheLoai
             // 
             cboTheLoai.DropDownStyle = ComboBoxStyle.DropDownList;
             cboTheLoai.FormattingEnabled = true;
-            cboTheLoai.Location = new Point(489, 55);
+            cboTheLoai.Location = new Point(491, 31);
             cboTheLoai.Name = "cboTheLoai";
             cboTheLoai.Size = new Size(198, 27);
             cboTheLoai.TabIndex = 14;
@@ -177,7 +177,7 @@
             // 
             dtmNgNhapSach.CustomFormat = "dd/MM/yyyy";
             dtmNgNhapSach.Format = DateTimePickerFormat.Custom;
-            dtmNgNhapSach.Location = new Point(488, 22);
+            dtmNgNhapSach.Location = new Point(162, 267);
             dtmNgNhapSach.Name = "dtmNgNhapSach";
             dtmNgNhapSach.Size = new Size(169, 27);
             dtmNgNhapSach.TabIndex = 12;
@@ -186,7 +186,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(356, 26);
+            label11.Location = new Point(30, 271);
             label11.Name = "label11";
             label11.Size = new Size(122, 19);
             label11.TabIndex = 11;
@@ -262,7 +262,7 @@
             cboTinhTrang.DropDownStyle = ComboBoxStyle.DropDownList;
             cboTinhTrang.FormattingEnabled = true;
             cboTinhTrang.Items.AddRange(new object[] { "Mới", "Cũ" });
-            cboTinhTrang.Location = new Point(489, 145);
+            cboTinhTrang.Location = new Point(491, 172);
             cboTinhTrang.Name = "cboTinhTrang";
             cboTinhTrang.Size = new Size(198, 27);
             cboTinhTrang.TabIndex = 8;
@@ -270,16 +270,16 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(379, 149);
+            label8.Location = new Point(379, 176);
             label8.Name = "label8";
-            label8.Size = new Size(89, 19);
+            label8.Size = new Size(82, 19);
             label8.TabIndex = 0;
-            label8.Text = "Tình Trạng :";
+            label8.Text = "Tình trạng:";
             // 
             // txtGhiChu
             // 
             txtGhiChu.BorderStyle = BorderStyle.FixedSingle;
-            txtGhiChu.Location = new Point(489, 174);
+            txtGhiChu.Location = new Point(491, 219);
             txtGhiChu.Name = "txtGhiChu";
             txtGhiChu.Size = new Size(198, 27);
             txtGhiChu.TabIndex = 7;
@@ -287,16 +287,16 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(379, 179);
+            label9.Location = new Point(379, 223);
             label9.Name = "label9";
-            label9.Size = new Size(70, 19);
+            label9.Size = new Size(62, 19);
             label9.TabIndex = 0;
-            label9.Text = "Ghi Chú:";
+            label9.Text = "Ghi chú";
             // 
             // txtTriGia
             // 
             txtTriGia.BorderStyle = BorderStyle.FixedSingle;
-            txtTriGia.Location = new Point(489, 116);
+            txtTriGia.Location = new Point(491, 125);
             txtTriGia.Name = "txtTriGia";
             txtTriGia.Size = new Size(198, 27);
             txtTriGia.TabIndex = 7;
@@ -304,16 +304,16 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(379, 119);
+            label7.Location = new Point(379, 129);
             label7.Name = "label7";
-            label7.Size = new Size(61, 19);
+            label7.Size = new Size(57, 19);
             label7.TabIndex = 0;
-            label7.Text = "Trị Giá:";
+            label7.Text = "Trị giá:";
             // 
             // txtSLNhap
             // 
             txtSLNhap.BorderStyle = BorderStyle.FixedSingle;
-            txtSLNhap.Location = new Point(489, 85);
+            txtSLNhap.Location = new Point(491, 78);
             txtSLNhap.Name = "txtSLNhap";
             txtSLNhap.Size = new Size(198, 27);
             txtSLNhap.TabIndex = 5;
@@ -321,16 +321,16 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(379, 89);
+            label6.Location = new Point(379, 82);
             label6.Name = "label6";
-            label6.Size = new Size(71, 19);
+            label6.Size = new Size(110, 19);
             label6.TabIndex = 0;
-            label6.Text = "SL Nhập:";
+            label6.Text = "Số lượng nhập:";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(379, 59);
+            label5.Location = new Point(379, 35);
             label5.Name = "label5";
             label5.Size = new Size(69, 19);
             label5.TabIndex = 0;
@@ -339,16 +339,16 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(36, 178);
+            label10.Location = new Point(30, 223);
             label10.Name = "label10";
-            label10.Size = new Size(77, 19);
+            label10.Size = new Size(105, 19);
             label10.TabIndex = 0;
-            label10.Text = "Năm XB :";
+            label10.Text = "Năm xuất bản:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(36, 148);
+            label4.Location = new Point(30, 176);
             label4.Name = "label4";
             label4.Size = new Size(68, 19);
             label4.TabIndex = 0;
@@ -357,16 +357,16 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(36, 118);
+            label3.Location = new Point(30, 129);
             label3.Name = "label3";
-            label3.Size = new Size(66, 19);
+            label3.Size = new Size(62, 19);
             label3.TabIndex = 0;
-            label3.Text = "Tác Giả:";
+            label3.Text = "Tác giả:";
             // 
             // txtNamXB
             // 
             txtNamXB.BorderStyle = BorderStyle.FixedSingle;
-            txtNamXB.Location = new Point(127, 175);
+            txtNamXB.Location = new Point(139, 219);
             txtNamXB.Name = "txtNamXB";
             txtNamXB.Size = new Size(196, 27);
             txtNamXB.TabIndex = 1;
@@ -374,7 +374,7 @@
             // txtNXB
             // 
             txtNXB.BorderStyle = BorderStyle.FixedSingle;
-            txtNXB.Location = new Point(127, 145);
+            txtNXB.Location = new Point(139, 172);
             txtNXB.Name = "txtNXB";
             txtNXB.Size = new Size(196, 27);
             txtNXB.TabIndex = 1;
@@ -382,7 +382,7 @@
             // txtTacGia
             // 
             txtTacGia.BorderStyle = BorderStyle.FixedSingle;
-            txtTacGia.Location = new Point(127, 115);
+            txtTacGia.Location = new Point(139, 125);
             txtTacGia.Name = "txtTacGia";
             txtTacGia.Size = new Size(196, 27);
             txtTacGia.TabIndex = 1;
@@ -390,7 +390,7 @@
             // txtTenSach
             // 
             txtTenSach.BorderStyle = BorderStyle.FixedSingle;
-            txtTenSach.Location = new Point(127, 85);
+            txtTenSach.Location = new Point(139, 78);
             txtTenSach.Name = "txtTenSach";
             txtTenSach.Size = new Size(196, 27);
             txtTenSach.TabIndex = 1;
@@ -398,16 +398,16 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(36, 88);
+            label2.Location = new Point(30, 82);
             label2.Name = "label2";
-            label2.Size = new Size(79, 19);
+            label2.Size = new Size(39, 19);
             label2.TabIndex = 0;
-            label2.Text = "Tên Sách :";
+            label2.Text = "Tên:";
             // 
             // txtMaSach
             // 
             txtMaSach.BorderStyle = BorderStyle.FixedSingle;
-            txtMaSach.Location = new Point(127, 56);
+            txtMaSach.Location = new Point(139, 31);
             txtMaSach.Name = "txtMaSach";
             txtMaSach.Size = new Size(196, 27);
             txtMaSach.TabIndex = 0;
@@ -415,11 +415,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(36, 58);
+            label1.Location = new Point(30, 35);
             label1.Name = "label1";
-            label1.Size = new Size(76, 19);
+            label1.Size = new Size(70, 19);
             label1.TabIndex = 0;
-            label1.Text = "Mã Sách :";
+            label1.Text = "Mã sách:";
             label1.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // dataGridViewDSSach
@@ -433,116 +433,127 @@
             dataGridViewDSSach.Name = "dataGridViewDSSach";
             dataGridViewDSSach.RowHeadersWidth = 32;
             dataGridViewDSSach.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewDSSach.Size = new Size(1023, 430);
+            dataGridViewDSSach.Size = new Size(1106, 430);
             dataGridViewDSSach.TabIndex = 2;
             dataGridViewDSSach.CellClick += dataGridViewDSSach_CellClick;
             dataGridViewDSSach.RowEnter += dataGridViewDSSach_RowEnter;
             // 
             // colMaSach
             // 
+            colMaSach.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             colMaSach.DataPropertyName = "MaSach";
-            colMaSach.HeaderText = "Mã Sách";
+            colMaSach.HeaderText = "Mã sách";
             colMaSach.MinimumWidth = 8;
             colMaSach.Name = "colMaSach";
             colMaSach.ReadOnly = true;
-            colMaSach.Width = 90;
+            colMaSach.Width = 94;
             // 
             // colNgayNhapSach
             // 
+            colNgayNhapSach.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             colNgayNhapSach.DataPropertyName = "NgNhapSach";
-            colNgayNhapSach.HeaderText = "Ngày Nhập";
+            colNgayNhapSach.HeaderText = "Ngày nhập";
             colNgayNhapSach.MinimumWidth = 6;
             colNgayNhapSach.Name = "colNgayNhapSach";
-            colNgayNhapSach.Width = 125;
+            colNgayNhapSach.Width = 108;
             // 
             // colTenSach
             // 
+            colTenSach.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             colTenSach.DataPropertyName = "TenSach";
-            colTenSach.HeaderText = "Tên Sách";
+            colTenSach.HeaderText = "Tên";
             colTenSach.MinimumWidth = 8;
             colTenSach.Name = "colTenSach";
             colTenSach.ReadOnly = true;
-            colTenSach.Width = 140;
+            colTenSach.Width = 63;
             // 
             // colTenLoai
             // 
+            colTenLoai.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             colTenLoai.DataPropertyName = "TheLoai";
             colTenLoai.HeaderText = "Thể loại";
             colTenLoai.MinimumWidth = 8;
             colTenLoai.Name = "colTenLoai";
             colTenLoai.ReadOnly = true;
-            colTenLoai.Width = 80;
+            colTenLoai.Width = 93;
             // 
             // colTenTG
             // 
+            colTenTG.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             colTenTG.DataPropertyName = "TacGia";
-            colTenTG.HeaderText = "Tác Giả";
+            colTenTG.HeaderText = "Tác giả";
             colTenTG.MinimumWidth = 8;
             colTenTG.Name = "colTenTG";
             colTenTG.ReadOnly = true;
-            colTenTG.Width = 150;
+            colTenTG.Width = 86;
             // 
             // colMaNXB
             // 
+            colMaNXB.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             colMaNXB.DataPropertyName = "NXB";
             colMaNXB.HeaderText = "NXB";
             colMaNXB.MinimumWidth = 8;
             colMaNXB.Name = "colMaNXB";
             colMaNXB.ReadOnly = true;
-            colMaNXB.Width = 150;
+            colMaNXB.Width = 73;
             // 
             // colNamXB
             // 
+            colNamXB.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             colNamXB.DataPropertyName = "NamXB";
-            colNamXB.HeaderText = "Năm XB";
+            colNamXB.HeaderText = "Năm xuất bản";
             colNamXB.MinimumWidth = 8;
             colNamXB.Name = "colNamXB";
-            colNamXB.Width = 150;
+            colNamXB.Width = 129;
             // 
             // colSoLuong
             // 
+            colSoLuong.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             colSoLuong.DataPropertyName = "SLNhap";
-            colSoLuong.HeaderText = "SL Nhập";
+            colSoLuong.HeaderText = "Số lượng nhập";
             colSoLuong.MinimumWidth = 8;
             colSoLuong.Name = "colSoLuong";
             colSoLuong.ReadOnly = true;
-            colSoLuong.Width = 50;
+            colSoLuong.Width = 134;
             // 
             // colTriGia
             // 
+            colTriGia.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             colTriGia.DataPropertyName = "TriGia";
-            colTriGia.HeaderText = "Đơn Giá";
+            colTriGia.HeaderText = "Đơn giá";
             colTriGia.MinimumWidth = 8;
             colTriGia.Name = "colTriGia";
             colTriGia.ReadOnly = true;
-            colTriGia.Width = 60;
+            colTriGia.Width = 91;
             // 
             // colTinhTrang
             // 
+            colTinhTrang.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             colTinhTrang.DataPropertyName = "TinhTrang";
-            colTinhTrang.HeaderText = "Tình Trạng";
+            colTinhTrang.HeaderText = "Tình trạng";
             colTinhTrang.MinimumWidth = 8;
             colTinhTrang.Name = "colTinhTrang";
             colTinhTrang.ReadOnly = true;
-            colTinhTrang.Width = 50;
+            colTinhTrang.Width = 106;
             // 
             // colGhiChu
             // 
+            colGhiChu.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             colGhiChu.DataPropertyName = "GhiChu";
-            colGhiChu.HeaderText = "Ghi Chú";
+            colGhiChu.HeaderText = "Ghi chú";
             colGhiChu.MinimumWidth = 8;
             colGhiChu.Name = "colGhiChu";
-            colGhiChu.Width = 150;
+            colGhiChu.Width = 91;
             // 
             // groupBox2
             // 
             groupBox2.Controls.Add(dataGridViewDSSach);
             groupBox2.Location = new Point(19, 431);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(1029, 456);
+            groupBox2.Size = new Size(1124, 456);
             groupBox2.TabIndex = 9;
             groupBox2.TabStop = false;
-            groupBox2.Text = "Danh sách Sách";
+            groupBox2.Text = "Danh sách sách";
             // 
             // groupBox3
             // 
@@ -553,7 +564,7 @@
             groupBox3.Size = new Size(713, 97);
             groupBox3.TabIndex = 0;
             groupBox3.TabStop = false;
-            groupBox3.Text = "Tìm kiếm Sách";
+            groupBox3.Text = "Tìm kiếm sách";
             // 
             // grpTimKiem
             // 
@@ -563,7 +574,7 @@
             grpTimKiem.Size = new Size(258, 60);
             grpTimKiem.TabIndex = 1;
             grpTimKiem.TabStop = false;
-            grpTimKiem.Text = "Nhập thông tin cần Tìm Kiếm";
+            grpTimKiem.Text = "Nhập thông tin cần tìm kiếm";
             // 
             // txtNDTimKiem
             // 
@@ -585,17 +596,17 @@
             groupBox4.Size = new Size(384, 60);
             groupBox4.TabIndex = 0;
             groupBox4.TabStop = false;
-            groupBox4.Text = "Tìm Theo";
+            groupBox4.Text = "Tìm theo";
             // 
             // radTenCD
             // 
             radTenCD.AutoSize = true;
             radTenCD.Location = new Point(296, 24);
             radTenCD.Name = "radTenCD";
-            radTenCD.Size = new Size(82, 23);
+            radTenCD.Size = new Size(78, 23);
             radTenCD.TabIndex = 3;
             radTenCD.TabStop = true;
-            radTenCD.Text = "Tên CD";
+            radTenCD.Text = "Chủ đề";
             radTenCD.UseVisualStyleBackColor = true;
             // 
             // radTenTG
@@ -603,10 +614,10 @@
             radTenTG.AutoSize = true;
             radTenTG.Location = new Point(208, 24);
             radTenTG.Name = "radTenTG";
-            radTenTG.Size = new Size(80, 23);
+            radTenTG.Size = new Size(78, 23);
             radTenTG.TabIndex = 2;
             radTenTG.TabStop = true;
-            radTenTG.Text = "Tên TG";
+            radTenTG.Text = "Tác giả";
             radTenTG.UseVisualStyleBackColor = true;
             // 
             // radTenSach
@@ -614,10 +625,10 @@
             radTenSach.AutoSize = true;
             radTenSach.Location = new Point(111, 24);
             radTenSach.Name = "radTenSach";
-            radTenSach.Size = new Size(91, 23);
+            radTenSach.Size = new Size(55, 23);
             radTenSach.TabIndex = 1;
             radTenSach.TabStop = true;
-            radTenSach.Text = "Tên Sách";
+            radTenSach.Text = "Tên";
             radTenSach.UseVisualStyleBackColor = true;
             // 
             // radMaSach
@@ -625,10 +636,10 @@
             radMaSach.AutoSize = true;
             radMaSach.Location = new Point(18, 24);
             radMaSach.Name = "radMaSach";
-            radMaSach.Size = new Size(88, 23);
+            radMaSach.Size = new Size(86, 23);
             radMaSach.TabIndex = 0;
             radMaSach.TabStop = true;
-            radMaSach.Text = "Mã Sách";
+            radMaSach.Text = "Mã sách";
             radMaSach.UseVisualStyleBackColor = true;
             // 
             // btnThoat
@@ -636,9 +647,9 @@
             btnThoat.BackColor = Color.AliceBlue;
             btnThoat.Image = Properties.Resources.home;
             btnThoat.ImageAlign = ContentAlignment.MiddleLeft;
-            btnThoat.Location = new Point(188, 115);
+            btnThoat.Location = new Point(738, 168);
             btnThoat.Name = "btnThoat";
-            btnThoat.Size = new Size(87, 39);
+            btnThoat.Size = new Size(178, 39);
             btnThoat.TabIndex = 8;
             btnThoat.Text = "Home";
             btnThoat.TextAlign = ContentAlignment.MiddleRight;
@@ -649,7 +660,7 @@
             // 
             btnHuy.Image = Properties.Resources.cancel;
             btnHuy.ImageAlign = ContentAlignment.MiddleLeft;
-            btnHuy.Location = new Point(522, 380);
+            btnHuy.Location = new Point(831, 303);
             btnHuy.Name = "btnHuy";
             btnHuy.Size = new Size(85, 39);
             btnHuy.TabIndex = 7;
@@ -662,7 +673,7 @@
             // 
             btnLuu.Image = Properties.Resources.save;
             btnLuu.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLuu.Location = new Point(431, 380);
+            btnLuu.Location = new Point(831, 257);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(85, 39);
             btnLuu.TabIndex = 6;
@@ -675,7 +686,7 @@
             // 
             btnXoa.Image = Properties.Resources.delete;
             btnXoa.ImageAlign = ContentAlignment.MiddleLeft;
-            btnXoa.Location = new Point(340, 380);
+            btnXoa.Location = new Point(738, 348);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(85, 39);
             btnXoa.TabIndex = 5;
@@ -688,7 +699,7 @@
             // 
             btnSua.Image = Properties.Resources.change;
             btnSua.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSua.Location = new Point(249, 380);
+            btnSua.Location = new Point(738, 303);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(85, 39);
             btnSua.TabIndex = 4;
@@ -701,7 +712,7 @@
             // 
             btnThem.Image = Properties.Resources.add;
             btnThem.ImageAlign = ContentAlignment.MiddleLeft;
-            btnThem.Location = new Point(158, 380);
+            btnThem.Location = new Point(738, 258);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(85, 39);
             btnThem.TabIndex = 3;
@@ -714,11 +725,11 @@
             // 
             btnLoadDS.Image = Properties.Resources.load;
             btnLoadDS.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLoadDS.Location = new Point(281, 115);
+            btnLoadDS.Location = new Point(738, 213);
             btnLoadDS.Name = "btnLoadDS";
-            btnLoadDS.Size = new Size(155, 39);
+            btnLoadDS.Size = new Size(178, 39);
             btnLoadDS.TabIndex = 1;
-            btnLoadDS.Text = "Load Danh Sách";
+            btnLoadDS.Text = "Load danh sách";
             btnLoadDS.TextAlign = ContentAlignment.MiddleRight;
             btnLoadDS.UseVisualStyleBackColor = true;
             btnLoadDS.Click += btnLoadDS_Click;
@@ -759,11 +770,11 @@
             // 
             btnThemTheLoai.Image = Properties.Resources.add;
             btnThemTheLoai.ImageAlign = ContentAlignment.MiddleLeft;
-            btnThemTheLoai.Location = new Point(738, 23);
+            btnThemTheLoai.Location = new Point(738, 25);
             btnThemTheLoai.Name = "btnThemTheLoai";
             btnThemTheLoai.Size = new Size(153, 39);
             btnThemTheLoai.TabIndex = 10;
-            btnThemTheLoai.Text = "Thêm Thể Loại";
+            btnThemTheLoai.Text = "Thêm thể loại";
             btnThemTheLoai.TextAlign = ContentAlignment.MiddleRight;
             btnThemTheLoai.UseVisualStyleBackColor = true;
             btnThemTheLoai.Click += btnThemTheLoai_Click;
@@ -771,7 +782,7 @@
             // txtThemTheLoai
             // 
             txtThemTheLoai.BorderStyle = BorderStyle.FixedSingle;
-            txtThemTheLoai.Location = new Point(910, 51);
+            txtThemTheLoai.Location = new Point(897, 31);
             txtThemTheLoai.Name = "txtThemTheLoai";
             txtThemTheLoai.Size = new Size(119, 27);
             txtThemTheLoai.TabIndex = 11;
@@ -784,7 +795,7 @@
             button1.Name = "button1";
             button1.Size = new Size(153, 39);
             button1.TabIndex = 12;
-            button1.Text = "Xóa Thể Loại";
+            button1.Text = "Xóa thể loại";
             button1.TextAlign = ContentAlignment.MiddleRight;
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
@@ -794,7 +805,7 @@
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(1060, 899);
+            ClientSize = new Size(1153, 899);
             Controls.Add(button1);
             Controls.Add(txtThemTheLoai);
             Controls.Add(btnThemTheLoai);
@@ -813,7 +824,7 @@
             MaximizeBox = false;
             Name = "frmQLSach";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Quản Lý Sách";
+            Text = "Quản lý sách";
             Load += frmQLSach_Load;
             grpTTSach.ResumeLayout(false);
             grpTTSach.PerformLayout();
@@ -894,6 +905,10 @@
         private System.Windows.Forms.Label lblNhapNgaySinh;
         private System.Windows.Forms.DateTimePicker dtmNgNhapSach;
         private System.Windows.Forms.Label label11;
+        private ComboBox cboTheLoai;
+        private Button btnThemTheLoai;
+        private TextBox txtThemTheLoai;
+        private Button button1;
         private DataGridViewTextBoxColumn colMaSach;
         private DataGridViewTextBoxColumn colNgayNhapSach;
         private DataGridViewTextBoxColumn colTenSach;
@@ -905,9 +920,5 @@
         private DataGridViewTextBoxColumn colTriGia;
         private DataGridViewTextBoxColumn colTinhTrang;
         private DataGridViewTextBoxColumn colGhiChu;
-        private ComboBox cboTheLoai;
-        private Button btnThemTheLoai;
-        private TextBox txtThemTheLoai;
-        private Button button1;
     }
 }

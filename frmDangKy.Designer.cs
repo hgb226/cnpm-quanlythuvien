@@ -84,9 +84,10 @@
             // btnThoat
             // 
             btnThoat.BackColor = Color.CornflowerBlue;
+            btnThoat.ForeColor = Color.Transparent;
             btnThoat.Image = (Image)resources.GetObject("btnThoat.Image");
             btnThoat.ImageAlign = ContentAlignment.MiddleLeft;
-            btnThoat.Location = new Point(332, 201);
+            btnThoat.Location = new Point(117, 201);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(98, 39);
             btnThoat.TabIndex = 60;
@@ -98,13 +99,14 @@
             // btnThem
             // 
             btnThem.BackColor = Color.CornflowerBlue;
+            btnThem.ForeColor = Color.Transparent;
             btnThem.Image = (Image)resources.GetObject("btnThem.Image");
             btnThem.ImageAlign = ContentAlignment.MiddleLeft;
-            btnThem.Location = new Point(205, 201);
+            btnThem.Location = new Point(11, 201);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(100, 39);
             btnThem.TabIndex = 59;
-            btnThem.Text = "Đăng Ký";
+            btnThem.Text = "Đăng ký";
             btnThem.TextAlign = ContentAlignment.MiddleRight;
             btnThem.UseVisualStyleBackColor = false;
             btnThem.Click += btnThem_Click;
@@ -112,7 +114,7 @@
             // txtGhiChu
             // 
             txtGhiChu.BorderStyle = BorderStyle.FixedSingle;
-            txtGhiChu.Location = new Point(125, 132);
+            txtGhiChu.Location = new Point(125, 131);
             txtGhiChu.Name = "txtGhiChu";
             txtGhiChu.Size = new Size(169, 27);
             txtGhiChu.TabIndex = 58;
@@ -120,17 +122,17 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(11, 136);
+            label9.Location = new Point(11, 135);
             label9.Name = "label9";
-            label9.Size = new Size(70, 19);
+            label9.Size = new Size(67, 19);
             label9.TabIndex = 57;
-            label9.Text = "Ghi Chú:";
+            label9.Text = "Ghi chú:";
             // 
             // txtTenTK
             // 
             txtTenTK.BorderStyle = BorderStyle.FixedSingle;
             txtTenTK.Enabled = false;
-            txtTenTK.Location = new Point(454, 73);
+            txtTenTK.Location = new Point(482, 73);
             txtTenTK.Name = "txtTenTK";
             txtTenTK.Size = new Size(169, 27);
             txtTenTK.TabIndex = 56;
@@ -138,16 +140,16 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(347, 78);
+            label8.Location = new Point(347, 77);
             label8.Name = "label8";
-            label8.Size = new Size(64, 19);
+            label8.Size = new Size(104, 19);
             label8.TabIndex = 55;
-            label8.Text = "Tên TK:";
+            label8.Text = "Tên tài khoản:";
             // 
             // txtNhapLaiMK
             // 
             txtNhapLaiMK.BorderStyle = BorderStyle.FixedSingle;
-            txtNhapLaiMK.Location = new Point(454, 131);
+            txtNhapLaiMK.Location = new Point(482, 131);
             txtNhapLaiMK.Name = "txtNhapLaiMK";
             txtNhapLaiMK.Size = new Size(169, 27);
             txtNhapLaiMK.TabIndex = 53;
@@ -155,16 +157,16 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(347, 137);
+            label10.Location = new Point(347, 135);
             label10.Name = "label10";
-            label10.Size = new Size(101, 19);
+            label10.Size = new Size(134, 19);
             label10.TabIndex = 52;
-            label10.Text = "Nhập lại MK:";
+            label10.Text = "Nhập lại mật khẩu:";
             // 
             // txtMK
             // 
             txtMK.BorderStyle = BorderStyle.FixedSingle;
-            txtMK.Location = new Point(454, 102);
+            txtMK.Location = new Point(482, 102);
             txtMK.Name = "txtMK";
             txtMK.Size = new Size(169, 27);
             txtMK.TabIndex = 54;
@@ -172,17 +174,17 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(347, 108);
+            label7.Location = new Point(347, 106);
             label7.Name = "label7";
-            label7.Size = new Size(80, 19);
+            label7.Size = new Size(71, 19);
             label7.TabIndex = 51;
-            label7.Text = "Mật Khẩu:";
+            label7.Text = "Mật khẩu";
             // 
             // dtmNgaySinh
             // 
             dtmNgaySinh.CustomFormat = "dd/MM/yyyy";
             dtmNgaySinh.Format = DateTimePickerFormat.Custom;
-            dtmNgaySinh.Location = new Point(125, 74);
+            dtmNgaySinh.Location = new Point(125, 73);
             dtmNgaySinh.Name = "dtmNgaySinh";
             dtmNgaySinh.Size = new Size(169, 27);
             dtmNgaySinh.TabIndex = 48;
@@ -192,7 +194,7 @@
             cboGioiTinh.DropDownStyle = ComboBoxStyle.DropDownList;
             cboGioiTinh.FormattingEnabled = true;
             cboGioiTinh.Items.AddRange(new object[] { "Nam", "Nữ" });
-            cboGioiTinh.Location = new Point(454, 16);
+            cboGioiTinh.Location = new Point(482, 15);
             cboGioiTinh.Name = "cboGioiTinh";
             cboGioiTinh.Size = new Size(169, 27);
             cboGioiTinh.TabIndex = 49;
@@ -200,7 +202,7 @@
             // txtEmail
             // 
             txtEmail.BorderStyle = BorderStyle.FixedSingle;
-            txtEmail.Location = new Point(125, 103);
+            txtEmail.Location = new Point(125, 102);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(169, 27);
             txtEmail.TabIndex = 50;
@@ -219,32 +221,32 @@
             label5.AutoSize = true;
             label5.Location = new Point(347, 48);
             label5.Name = "label5";
-            label5.Size = new Size(70, 19);
+            label5.Size = new Size(63, 19);
             label5.TabIndex = 44;
-            label5.Text = "Địa Chỉ: ";
+            label5.Text = "Địa chỉ:";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Location = new Point(347, 19);
             label4.Name = "label4";
-            label4.Size = new Size(79, 19);
+            label4.Size = new Size(75, 19);
             label4.TabIndex = 43;
-            label4.Text = "Giới Tính:";
+            label4.Text = "Giới tính:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(11, 78);
+            label3.Location = new Point(11, 77);
             label3.Name = "label3";
-            label3.Size = new Size(83, 19);
+            label3.Size = new Size(81, 19);
             label3.TabIndex = 42;
-            label3.Text = "Ngày Sinh:";
+            label3.Text = "Ngày sinh:";
             // 
             // txtTenDG
             // 
             txtTenDG.BorderStyle = BorderStyle.FixedSingle;
-            txtTenDG.Location = new Point(125, 45);
+            txtTenDG.Location = new Point(125, 44);
             txtTenDG.Name = "txtTenDG";
             txtTenDG.Size = new Size(169, 27);
             txtTenDG.TabIndex = 47;
@@ -254,15 +256,15 @@
             label2.AutoSize = true;
             label2.Location = new Point(11, 48);
             label2.Name = "label2";
-            label2.Size = new Size(100, 19);
+            label2.Size = new Size(93, 19);
             label2.TabIndex = 41;
-            label2.Text = "Tên Độc Giả:";
+            label2.Text = "Tên độc giả:";
             // 
             // txtMaDG
             // 
             txtMaDG.BorderStyle = BorderStyle.FixedSingle;
             txtMaDG.Enabled = false;
-            txtMaDG.Location = new Point(125, 16);
+            txtMaDG.Location = new Point(125, 15);
             txtMaDG.Name = "txtMaDG";
             txtMaDG.Size = new Size(169, 27);
             txtMaDG.TabIndex = 46;
@@ -270,17 +272,17 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(11, 18);
+            label1.Location = new Point(11, 19);
             label1.Name = "label1";
-            label1.Size = new Size(97, 19);
+            label1.Size = new Size(90, 19);
             label1.TabIndex = 40;
-            label1.Text = "Mã Độc Giả:";
+            label1.Text = "Mã độc giả:";
             label1.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // txtDiaChi
             // 
             txtDiaChi.BorderStyle = BorderStyle.FixedSingle;
-            txtDiaChi.Location = new Point(454, 45);
+            txtDiaChi.Location = new Point(482, 44);
             txtDiaChi.Name = "txtDiaChi";
             txtDiaChi.Size = new Size(169, 27);
             txtDiaChi.TabIndex = 61;
@@ -310,7 +312,7 @@
             dtmNgayLapThe.CustomFormat = "dd/MM/yyyy";
             dtmNgayLapThe.Enabled = false;
             dtmNgayLapThe.Format = DateTimePickerFormat.Custom;
-            dtmNgayLapThe.Location = new Point(125, 162);
+            dtmNgayLapThe.Location = new Point(125, 160);
             dtmNgayLapThe.Name = "dtmNgayLapThe";
             dtmNgayLapThe.Size = new Size(169, 27);
             dtmNgayLapThe.TabIndex = 64;
@@ -320,7 +322,7 @@
             cbLoaiDG.DropDownStyle = ComboBoxStyle.DropDownList;
             cbLoaiDG.FormattingEnabled = true;
             cbLoaiDG.Items.AddRange(new object[] { "X", "Y" });
-            cbLoaiDG.Location = new Point(454, 162);
+            cbLoaiDG.Location = new Point(482, 160);
             cbLoaiDG.Name = "cbLoaiDG";
             cbLoaiDG.Size = new Size(169, 27);
             cbLoaiDG.TabIndex = 65;
@@ -328,20 +330,20 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(347, 165);
+            label11.Location = new Point(347, 164);
             label11.Name = "label11";
-            label11.Size = new Size(106, 19);
+            label11.Size = new Size(99, 19);
             label11.TabIndex = 63;
-            label11.Text = "Loại Độc Giả:";
+            label11.Text = "Loại độc giả:";
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(11, 166);
+            label12.Location = new Point(11, 164);
             label12.Name = "label12";
-            label12.Size = new Size(107, 19);
+            label12.Size = new Size(98, 19);
             label12.TabIndex = 62;
-            label12.Text = "Ngày Lập Thẻ:";
+            label12.Text = "Ngày lập thẻ:";
             // 
             // dataGridViewDSTT
             // 
